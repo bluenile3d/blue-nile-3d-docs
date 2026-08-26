@@ -1,5 +1,7 @@
 # BLUE NILE 3D Tools and Add-On Documentation
 
+https://docs.bluenile.design/
+
 Public documentation for BLUE NILE 3D tools, add-ons, resources, and related products.
 
 This repository contains documentation only. Do not add paid product source code, distributable files, license keys, customer information, or private assets.
