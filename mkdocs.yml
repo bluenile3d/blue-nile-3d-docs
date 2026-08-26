@@ -1,0 +1,62 @@
+site_name: BLUE NILE 3D Tools and Add-On Documentation
+site_description: Official documentation for BLUE NILE 3D tools, add-ons, resources, and related products.
+site_author: BLUE NILE 3D
+site_url: https://bluenile3d.github.io/blue-nile-3d-docs/
+repo_url: https://github.com/bluenile3d/blue-nile-3d-docs
+repo_name: bluenile3d/blue-nile-3d-docs
+
+theme:
+  name: material
+  language: en
+  font: false
+  features:
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
+    - toc.follow
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+
+extra_css:
+  - assets/stylesheets/extra.css
+
+copyright: Copyright &copy; BLUE NILE 3D
+
+nav:
+  - Home: index.md
+  - Old Modifier Menu:
+      - Overview: old-modifier-menu/index.md
+      - User Guide: old-modifier-menu/user-guide.md
+      - FAQ: old-modifier-menu/faq.md
