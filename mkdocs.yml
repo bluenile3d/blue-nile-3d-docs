@@ -63,3 +63,7 @@ nav:
       - Overview: old-modifier-menu/index.md
       - User Guide: old-modifier-menu/user-guide.md
       - FAQ: old-modifier-menu/faq.md
+  - RUNIC:
+      - Overview: runic/index.md
+      - User Guide: runic/user-guide.md
+      - FAQ: runic/faq.md

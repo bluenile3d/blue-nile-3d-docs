@@ -19,6 +19,14 @@ Official installation instructions, user guides, feature references, FAQs, and t
 
     [Open Old Modifier Menu documentation](old-modifier-menu/index.md)
 
+-   **RUNIC**
+
+    ---
+
+    Creates editable runes, symbols, lettering, and decorative marks on paths, points, faces, and surfaces in Blender.
+
+    [Open RUNIC documentation](runic/index.md)
+
 </div>
 
 ## Support information
