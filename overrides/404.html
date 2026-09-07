@@ -1,0 +1,17 @@
+{% extends "main.html" %}
+
+{% block htmltitle %}Page not found - {{ config.site_name }}{% endblock %}
+
+{% block content %}
+  <section class="blue-nile-not-found" aria-labelledby="not-found-heading">
+    <div class="blue-nile-not-found__mark">
+      <img class="blue-nile-not-found__logo blue-nile-not-found__logo--on-light" src="{{ 'assets/images/brand/blue-nile-block-symbol-dark-solid.svg' | url }}" alt="">
+      <img class="blue-nile-not-found__logo blue-nile-not-found__logo--on-dark" src="{{ 'assets/images/brand/blue-nile-block-symbol-bone-solid.svg' | url }}" alt="">
+    </div>
+    <p class="blue-nile-not-found__status" aria-hidden="true">404</p>
+    <h1 id="not-found-heading">Page not found</h1>
+    <p>This address does not point to a published BLUE NILE 3D documentation page.</p>
+    <p>The page may have moved, been renamed, or no longer be available.</p>
+    <p><a class="md-button md-button--primary" href="{{ 'index.html' | url }}">Return to documentation</a></p>
+  </section>
+{% endblock %}

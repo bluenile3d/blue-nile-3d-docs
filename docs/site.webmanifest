@@ -1,0 +1,23 @@
+{
+  "name": "BLUE NILE 3D Documentation",
+  "short_name": "BLUE NILE 3D",
+  "description": "Documentation for BLUE NILE 3D tools, add-ons, resources, and related products.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#E7E3D6",
+  "theme_color": "#030307",
+  "icons": [
+    {
+      "src": "/assets/images/brand/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/images/brand/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+
+{% block extrahead %}
+  {{ super() }}
+  <link rel="manifest" href="{{ 'site.webmanifest' | url }}">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ 'assets/images/brand/apple-touch-icon.png' | url }}">
+  <meta name="theme-color" content="#030307">
+{% endblock %}

@@ -81,6 +81,86 @@
   color: var(--md-default-fg-color);
 }
 
+.blue-nile-docs-brand {
+  width: min(100%, 23rem);
+  margin: 0.35rem 0 1.25rem;
+}
+
+.blue-nile-docs-brand__lockup {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.blue-nile-docs-brand__lockup--on-dark {
+  display: none;
+}
+
+[data-md-color-scheme="slate"] .blue-nile-docs-brand__lockup--on-light {
+  display: none;
+}
+
+[data-md-color-scheme="slate"] .blue-nile-docs-brand__lockup--on-dark {
+  display: block;
+}
+
+.blue-nile-docs-brand + h1 {
+  margin-top: 0;
+}
+
+.md-header__button.md-logo img {
+  width: auto;
+  height: 1.5rem;
+}
+
+.blue-nile-not-found {
+  max-width: 36rem;
+  margin: clamp(2rem, 8vh, 6rem) auto;
+  text-align: center;
+}
+
+.blue-nile-not-found__mark {
+  width: min(8rem, 42vw);
+  margin: 0 auto 1.25rem;
+}
+
+.blue-nile-not-found__logo {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.blue-nile-not-found__logo--on-dark {
+  display: none;
+}
+
+[data-md-color-scheme="slate"] .blue-nile-not-found__logo--on-light {
+  display: none;
+}
+
+[data-md-color-scheme="slate"] .blue-nile-not-found__logo--on-dark {
+  display: block;
+}
+
+.blue-nile-not-found__status {
+  margin: 0;
+  color: var(--md-typeset-a-color);
+  font-family: var(--md-code-font);
+  font-size: 0.8rem;
+  letter-spacing: 0.14em;
+}
+
+.blue-nile-not-found h1 {
+  margin-top: 0.25rem;
+  border: 0;
+}
+
+.blue-nile-not-found > p:not(.blue-nile-not-found__status) {
+  max-width: 32rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
 .md-typeset h2 {
   padding-bottom: 0.22em;
   border-bottom: 1px solid var(--blue-nile-rule);

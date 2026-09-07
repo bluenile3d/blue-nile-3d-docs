@@ -1,7 +1,7 @@
-site_name: BLUE NILE 3D Tools and Add-On Documentation
+site_name: BLUE NILE 3D Documentation
 site_description: Official documentation for BLUE NILE 3D tools, add-ons, resources, and related products.
 site_author: BLUE NILE 3D
-site_url: https://bluenile3d.github.io/blue-nile-3d-docs/
+site_url: https://docs.bluenile.design/
 repo_url: https://github.com/bluenile3d/blue-nile-3d-docs
 repo_name: bluenile3d/blue-nile-3d-docs
 
@@ -9,6 +9,9 @@ theme:
   name: material
   language: en
   font: false
+  custom_dir: overrides
+  logo: assets/images/brand/blue-nile-block-symbol-bone-solid.svg
+  favicon: assets/images/brand/favicon.ico
   features:
     - navigation.sections
     - navigation.indexes

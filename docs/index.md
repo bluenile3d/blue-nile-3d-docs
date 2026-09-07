@@ -1,4 +1,9 @@
-# BLUE NILE 3D Tools and Add-On Documentation
+<div class="blue-nile-docs-brand">
+  <img class="blue-nile-docs-brand__lockup blue-nile-docs-brand__lockup--on-light" src="assets/images/brand/blue-nile-horizontal-flow-dark-solid.svg" alt="BLUE NILE">
+  <img class="blue-nile-docs-brand__lockup blue-nile-docs-brand__lockup--on-dark" src="assets/images/brand/blue-nile-horizontal-flow-bone-solid.svg" alt="">
+</div>
+
+# Tools and Add-On Documentation
 
 Official installation instructions, user guides, feature references, FAQs, and troubleshooting information for BLUE NILE 3D tools, add-ons, resources, and related products.
 
