@@ -67,3 +67,7 @@ nav:
       - Overview: runic/index.md
       - User Guide: runic/user-guide.md
       - FAQ: runic/faq.md
+  - Magic Eye Maker:
+      - Overview: magic-eye-maker/index.md
+      - User Guide: magic-eye-maker/user-guide.md
+      - FAQ: magic-eye-maker/faq.md

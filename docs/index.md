@@ -27,6 +27,14 @@ Official installation instructions, user guides, feature references, FAQs, and t
 
     [Open RUNIC documentation](runic/index.md)
 
+-   **Magic Eye Maker**
+
+    ---
+
+    Creates autostereograms with hidden three-dimensional forms from Blender scene depth.
+
+    [Open Magic Eye Maker documentation](magic-eye-maker/index.md)
+
 </div>
 
 ## Support information
