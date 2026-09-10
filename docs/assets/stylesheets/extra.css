@@ -222,6 +222,31 @@
   max-width: min(100%, 34rem);
 }
 
+/* Reusable interactive comparisons hosted on this documentation site. */
+.md-typeset .blue-nile-interactive-proof {
+  margin: 1.25rem 0 1.75rem;
+}
+
+.md-typeset .blue-nile-interactive-proof iframe {
+  display: block;
+  width: 100%;
+  height: 820px;
+  border: 1px solid var(--blue-nile-rule);
+  background: var(--blue-nile-ink);
+}
+
+.md-typeset .blue-nile-interactive-proof > p {
+  margin: 0.55rem 0 0;
+  font-family: var(--md-code-font);
+  font-size: 0.68rem;
+}
+
+@media screen and (max-width: 720px) {
+  .md-typeset .blue-nile-interactive-proof iframe {
+    height: 720px;
+  }
+}
+
 :focus-visible {
   outline: 2px solid var(--md-accent-fg-color);
   outline-offset: 2px;
