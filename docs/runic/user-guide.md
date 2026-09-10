@@ -22,7 +22,11 @@ The normal order of work is:
 4. Assign materials or generate UVs if needed.
 5. Keep the RUNIC object editable, or create a separate finished mesh when the design is ready.
 
+![RUNIC controls for text, placement, appearance, materials, and finishing](../assets/images/runic/interface.png){ .docs-shot .docs-shot--compact loading=lazy width=241 height=726 }
+
 ## Creating RUNIC objects
+
+![RUNIC creation panel with surface drawing, path presets, and library import controls](../assets/images/runic/creation-panel.png){ .docs-shot .docs-shot--compact loading=lazy width=238 height=283 }
 
 ### Existing curve
 
@@ -36,6 +40,8 @@ When no curve is selected, use a RUNIC preset:
 - **Circle** creates a closed circular path that can fill its circumference with symbols.
 - **Arch** creates an editable curved path.
 - **Single Rune** creates one editable point without a curve.
+
+![Examples created with RUNIC paths and individual rune placement](../assets/images/runic/creation-modes.png){ .docs-shot loading=lazy width=1189 height=840 }
 
 ### Selected mesh edges
 
@@ -58,6 +64,14 @@ Surface placement has two modes:
 - **Clean** keeps each rune rigid while placing it against the surface. It is generally the clearest choice for hard-surface objects.
 - **Wrap** bends rune points to follow the target more closely. It suits smoother organic forms but can distort symbols on tight or uneven geometry.
 
+=== "Before Wrap"
+
+    ![Runes before being wrapped to a curved mesh surface](../assets/images/runic/surface-before-wrap.png){ .docs-shot loading=lazy width=1289 height=875 }
+
+=== "After Wrap"
+
+    ![Runes wrapped to follow a curved mesh surface](../assets/images/runic/surface-after-wrap.png){ .docs-shot loading=lazy width=1272 height=880 }
+
 Use **Change Surface** to choose another target or **Detach from Surface** to remove surface attachment.
 
 ## Fonts and text sources
@@ -75,6 +89,8 @@ Click **Browse Fonts** to open the font browser. The bundled library is organize
 
 Each font has its own preview card. Choose a font before setting up text or symbol content.
 
+![RUNIC font browser showing font categories and a preview card](../assets/images/runic/font-browser-crop.png){ .docs-shot .docs-shot--compact loading=lazy width=535 height=391 }
+
 ### Random
 
 **Random** fills the selected path or object with valid symbols from the selected font. Set a **Seed** to make an arrangement repeatable; change the seed to generate a different arrangement.
@@ -88,6 +104,8 @@ The available placement points limit how many symbols can be placed. A Single Ru
 ### Symbols
 
 **Symbols** lets you select individual glyphs from the font browser. The gallery is based on the font's character map.
+
+[![RUNIC symbol browser showing selectable glyphs from the current font](../assets/images/runic/symbol-browser-crop.png){ .docs-shot loading=lazy width=904 height=418 }](../assets/images/runic/symbol-browser-crop.png)
 
 ### Phrase
 
@@ -104,12 +122,12 @@ Use these controls to arrange runes along a curve or selected edges:
 - **Rune Size** controls overall scale.
 - **Character Spacing** adjusts the gap between glyphs.
 - **Word Spacing** adjusts the gap between words.
-- **Along Offset** moves the whole arrangement along the path.
-- **Baseline Offset** moves runes sideways from the path.
+- **Move Along Path** moves the whole arrangement along the path.
+- **Move Across Path** moves runes sideways from the path.
 - **Reverse Direction** flips the reading direction.
-- **Rotation** rotates the runes around the path.
-- **Clear Ends** reserves empty space at open-path ends.
-- **Corner Avoidance** reduces crowding around sharp corners.
+- **Rotate Runes** rotates the runes around the path.
+- **Keep Clear of Ends** reserves empty space at open-path ends.
+- **Avoid Sharp Corners** reduces crowding around sharp corners.
 - **Fill Closed Paths** distributes the result around a cyclic curve.
 
 **Show Path Guide** displays temporary viewport-only guide points. They are not rendered, exported, or retained when the modifier is applied.
@@ -136,6 +154,14 @@ If raised, outlined, or bevelled geometry shows artifacts around sharp turns, co
 - Increase segments gradually when curves look faceted.
 - Use **Clean** rather than **Wrap** if surface symbols become visibly distorted.
 
+=== "Artifacts visible"
+
+    [![Raised rune geometry showing artifacts around a tight inner curve](../assets/images/runic/font-repair-before-detail.png){ .docs-shot loading=lazy width=670 height=400 }](../assets/images/runic/font-repair-before-detail.png)
+
+=== "After repair"
+
+    [![Raised rune geometry after repairing the tight inner curve](../assets/images/runic/font-repair-after-detail.png){ .docs-shot loading=lazy width=670 height=400 }](../assets/images/runic/font-repair-after-detail.png)
+
 ## Materials, UVs, and finished meshes
 
 The **Materials** panel can assign separate materials to:
@@ -153,6 +179,8 @@ The **Finish** panel includes:
 - **Create Finished Mesh** to make a separate ordinary mesh copy while leaving the original RUNIC object editable.
 - **Remove RUNIC** to remove RUNIC's procedural setup while keeping the original editable object in the scene. This does not create a finished mesh copy.
 
+![Finished RUNIC lettering applied along a sword blade](../assets/images/runic/finished-sword.png){ .docs-shot loading=lazy width=1706 height=691 }
+
 ## Personal libraries
 
 ### Importing a font
@@ -166,6 +194,12 @@ Use the review gallery to choose whether the library should provide **Text + Sym
 Choose **Import Drawings** and select a PNG, JPG, JPEG, TIFF, or TIF image. The review workflow can treat the image as one rune, find separate marks automatically, or divide a regular sheet into rows and columns.
 
 Use the controls to invert artwork, adjust threshold and speck cleanup, join gaps, set padding and cell edges, control tracing detail, and approve or ignore detected runes. RUNIC turns the approved drawings into vector contours and stores them as a reusable personal library.
+
+For a regular sheet like this example, choose **Even Grid** and set the number of rows and columns. Separate dots and strokes within a cell remain part of the same rune.
+
+![Four hand-drawn symbols from the supplied drawing template](../assets/images/runic/drawing-sheet-example.png){ .docs-shot loading=lazy width=1000 height=354 }
+
+[![Import Drawings review using Even Grid with one row and four columns, keeping all four symbols](../assets/images/runic/drawing-import-review.png){ .docs-shot loading=lazy width=914 height=647 }](../assets/images/runic/drawing-import-review.png)
 
 ## Troubleshooting and support
 

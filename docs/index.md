@@ -3,11 +3,11 @@
   <img class="blue-nile-docs-brand__lockup blue-nile-docs-brand__lockup--on-dark" src="assets/images/brand/blue-nile-horizontal-flow-bone-solid.svg" alt="">
 </div>
 
-# Tools and Add-On Documentation
+# Product Documentation
 
 Official installation instructions, user guides, feature references, FAQs, and troubleshooting information for BLUE NILE 3D tools, add-ons, resources, and related products.
 
-## Available documentation
+## Blender Add-ons
 
 <div class="grid cards" markdown>
 
@@ -34,6 +34,14 @@ Official installation instructions, user guides, feature references, FAQs, and t
     Creates autostereograms with hidden three-dimensional forms from Blender scene depth.
 
     [Open Magic Eye Maker documentation](magic-eye-maker/index.md)
+
+-   **Style Thief**
+
+    ---
+
+    Transfers the colour style of one image to another with multiple matching methods, strength presets, batch processing, and colour-profile handling.
+
+    [Open Style Thief documentation](style-thief/index.md)
 
 </div>
 

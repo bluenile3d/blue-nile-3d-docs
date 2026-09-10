@@ -1,38 +1,15 @@
-# Old Modifier Menu — User Documentation
+# Old Modifier Menu — User Guide
 
-Old Modifier Menu puts every Blender modifier back in one clear, organized menu. The interface adapts to the active object, so it presents relevant tools for meshes, curves, text, lattices, volumes, hair curves, and Grease Pencil objects.
+Old Modifier Menu brings back Blender's traditional modifier menu with visible, organized categories. It adapts to the active object and supports meshes, curves, surfaces, text, lattices, volumes, hair curves, and Grease Pencil objects.
 
-This guide describes the add-on's stable features and workflows. Edition differences are summarized below.
-
-## Contents
-
-1. [Edition comparison](#edition-comparison)
-2. [Installation](#installation)
-3. [Updating or changing editions](#updating-or-changing-editions)
-4. [Quick start](#quick-start)
-5. [Interface overview](#interface-overview)
-6. [Adding modifiers](#adding-modifiers)
-7. [Search](#search)
-8. [Pie menu](#pie-menu)
-9. [Favorites](#favorites)
-10. [Modifier Stacks](#modifier-stacks)
-11. [Custom Node Modifiers](#custom-node-modifiers)
-12. [Blender Essentials assets](#blender-essentials-assets)
-13. [Hair curve assets](#hair-curve-assets)
-14. [Effectors](#effectors)
-15. [Modifier-management tools](#modifier-management-tools)
-16. [Object and modifier reference](#object-and-modifier-reference)
-17. [Preferences reference](#preferences-reference)
-18. [Troubleshooting](#troubleshooting)
-19. [Uninstallation](#uninstallation)
-20. [Support and bug reports](#support-and-bug-reports)
+The comparison below summarizes the available editions. The remaining sections describe the complete feature set.
 
 ## Edition comparison
 
 | Feature | Lite | Paid |
 |---|:---:|:---:|
 | Object-aware modifier menu | Yes | Yes |
-| Mesh, Curve, Text, Lattice, Volume, Hair, and Grease Pencil support | Yes | Yes |
+| Mesh, Curve, Surface, Text, Lattice, Volume, Hair, and Grease Pencil support | Yes | Yes |
 | Menu-location and size controls | Yes | Yes |
 | Blender Essentials Geometry Nodes integration | Yes | Yes |
 | Modifier Search button | — | Yes |
@@ -48,6 +25,8 @@ Install only one edition at a time; one edition replaces the other.
 
 ## Installation
 
+Old Modifier Menu supports **Blender 4.3 or later**. Individual Essentials assets have additional version requirements described under [Blender Essentials assets](#blender-essentials-assets).
+
 1. Download the ZIP for your edition.
 2. Leave the downloaded file as a ZIP. Do not extract or rearrange its contents.
 3. Open Blender.
@@ -58,22 +37,22 @@ Install only one edition at a time; one edition replaces the other.
 8. Enable **Old Modifier Menu** if Blender does not enable it automatically.
 9. Select a supported object and verify that the menu appears in the configured location.
 
-If Blender reports that an extension with the same ID is already installed, remove the existing Old Modifier Menu installation before installing the new edition.
+For an existing installation, follow [Updating or changing editions](#updating-or-changing-editions) to choose the matching ZIP and retain your settings.
 
 ## Updating or changing editions
 
 Old Modifier Menu settings—including Favorites, Stacks, shortcut choices, and custom paths—are stored in Blender preferences. They are not stored in the current `.blend` scene.
 
-For a clean update:
+To update the same edition:
 
-1. Record any important Favorites, Stacks, custom asset paths, and shortcut changes.
-2. Disable Old Modifier Menu.
-3. Remove the installed version.
-4. Close and restart Blender.
-5. Install the new ZIP using **Install from Disk**.
-6. Re-enable the extension and restore any settings that were not retained.
+1. Download the update ZIP that matches your installed extension.
+2. Use **Install from Disk** to install it over the existing extension. Do not uninstall first.
+3. Check that your Favorites, Stacks, shortcut, and custom paths are retained.
+4. Use **Save Preferences** if Blender's automatic preference saving is disabled.
 
-Use the same procedure when moving between editions. Do not install both editions simultaneously.
+If your download contains both `old_modifier_menu_…zip` and `old_mod_menu_…zip`, install the file whose name matches your existing package. They contain the same complete edition. For a fresh installation, use `old_modifier_menu_…zip`.
+
+When switching editions, record the settings you want to keep, remove the previous edition, and install the replacement. Settings are not guaranteed to transfer between editions. Install only one edition or compatibility package at a time.
 
 ## Quick start
 
@@ -85,7 +64,7 @@ Use the same procedure when moving between editions. Do not install both edition
 
 Additional features described in this guide include:
 
-- Click the magnifying-glass button to search Blender’s Add Modifier menu.
+- Click the magnifying-glass button to search compatible modifiers and supported node assets by name.
 - Press **Ctrl + Right Mouse Button** in the 3D Viewport to open the pie menu.
 - Configure Favorites, Stacks, effectors, and custom Geometry Nodes in the add-on preferences.
 
@@ -93,40 +72,50 @@ Additional features described in this guide include:
 
 ### Main modifier button
 
-The main button opens Old Modifier Menu for the active object. The displayed menu depends on the object type and is divided into categories such as:
+The main button opens Old Modifier Menu for the active object. Use the page buttons to switch between:
 
-- Edit
-- Generate
-- Deform
-- Normals
-- Physics
-- Hair
-- Grease Pencil Edit, Generate, Deform, and Color
+- **Modifiers:** Edit, Generate, Deform, Normals, and Physics, or the applicable Grease Pencil categories.
+- **Essentials:** Hair, Instances, and Simulation.
+
+The menu adjusts to the available space. Use the arrow buttons to move between pages when needed.
+
+=== "Modifiers"
+
+    ![Old Modifier Menu showing organized modifier categories, Favorites, Stacks, and Custom Nodes](../assets/images/old-modifier-menu/main-menu-modifiers.png){ .omm-ui-shot loading=lazy width=800 height=550 }
+
+=== "Essentials"
+
+    ![Old Modifier Menu showing Hair, Instances, and Simulation assets on the Essentials page](../assets/images/old-modifier-menu/main-menu-essentials.png){ .omm-ui-shot loading=lazy width=680 height=485 }
 
 Categories and individual modifier entries can be enabled or disabled in the add-on preferences. The menu also adapts to the active object type, so it does not show choices that Blender does not support for that object.
 
 ### Search button
 
-The magnifying-glass button opens Blender’s standard Add Modifier search menu. Use the **Show Search** toggle in the add-on preferences to display or hide this button.
+The magnifying-glass button opens the add-on's modifier search. Use **Interface → Menu Controls → Show Search** in the add-on preferences to display or hide this button.
 
 ### Effector button
 
-The Effector button opens a dialog for adding helper objects such as a Wire Cube, Wire Sphere, or Empty Axes. A cube or sphere can, for example, be positioned and used as a Boolean object, while Empty Axes can provide a non-rendering reference or control object. Custom helper objects can also be loaded from a `.blend` file. Use the **Show Add Effector Button** toggle in the add-on preferences to display or hide this button.
+The Effector button opens a popup for adding helper objects such as a Wire Cube, Wire Sphere, or Empty Axes. A cube or sphere can, for example, be positioned and used as a Boolean object, while Empty Axes can provide a non-rendering reference or control object. Custom helper objects can also be loaded from a `.blend` file. Use **Interface → Menu Controls → Show Effectors** to display or hide the button in the regular interface and pie menu.
 
-### Extras row
+### Modifier actions {#extras-row}
 
-When the add-on is placed **Under Default Menu**, the Extras row provides bulk modifier actions. Use the **Show Extras** toggle in the add-on preferences to display or hide it.
+**Apply All**, **Remove All**, and **Toggle Visibility** are available in Modifier Properties, the toolbar, and the header. **Expand / Collapse** is available only in Modifier Properties. Use **Interface → Menu Controls → Show Modifier Actions** to display or hide these controls.
+
+The pie menu has its own **Show Modifier Actions** setting under **Interface → Pie Menu**.
+
+### Modifier Window button
+
+Click **Modifier Window** in the pie menu, or the window icon in the toolbar or header, to open Modifier Properties for the active object. See [Opening a separate Properties window](#opening-a-separate-properties-window).
 
 ### Menu locations
 
-The **Addon Location** preference lists the positions available in the installed edition. These can include:
+Choose **Interface → Menu Placement → Location** in the add-on preferences:
 
-- **Under Default Menu:** Places the interface in Blender’s Modifier Properties area.
-- **T Menu:** Places it in the configured 3D View tool region.
-- **3D View Header:** Places a compact control in the 3D Viewport header.
-- **Status Bar:** Places the interface in Blender’s status bar.
+- **Modifier Properties:** Places the interface below Blender's default Add Modifier button.
+- **3D View Toolbar:** Places the controls vertically in the 3D Viewport toolbar.
+- **3D View Header:** Places compact icon buttons in the 3D Viewport header.
 
-Use the **Menu Size** setting in the add-on preferences to adjust the scale of the interface in its selected location.
+**Menu Size** changes button height in Modifier Properties and the toolbar. In the header, the setting becomes **Button Width** and changes width without increasing the header's height. Toolbar and header icons retain a minimum button size to keep them distinct and clickable.
 
 ## Adding modifiers
 
@@ -134,10 +123,12 @@ Use the **Menu Size** setting in the add-on preferences to adjust the scale of t
 
 1. Select a supported object.
 2. Open Old Modifier Menu.
-3. Locate the required category.
+3. Choose **Modifiers** or **Essentials**, then locate the required category. Use the page arrows if needed.
 4. Click the modifier name.
 
 The modifier is added to the active object. Old Modifier Menu does not replace Blender’s modifier settings; configuration continues in Blender’s normal Modifier Properties.
+
+Press **Right Mouse Button** or **Esc** to close the menu without adding anything. The same cancellation controls work in modifier searches and the Effector popup.
 
 ### Object-aware choices
 
@@ -155,11 +146,11 @@ Examples:
 
 The operation acts on the active object. If several objects are selected, only the active object receives the chosen modifier.
 
-If no compatible active object exists, relevant operators are disabled and the add-on reports **Select an object that supports modifiers**.
+If no compatible active object exists, relevant operators are disabled and the add-on reports **Select an editable object that supports modifiers**.
 
 ## Search
 
-The Search button calls Blender’s standard `OBJECT_MT_modifier_add` menu. Search contents come from Blender and are filtered by the active object and current Blender version.
+Search lists native modifiers and the node assets supported by Old Modifier Menu, filtered for the active object and the available Blender libraries. Results use readable modifier names and are sorted alphabetically.
 
 To use Search:
 
@@ -168,7 +159,11 @@ To use Search:
 3. Type part of a modifier’s name.
 4. Select the required result.
 
-The regular interface Search and pie-menu Search both target Blender's standard modifier collection.
+The regular interface and pie-menu Search use the same list. Category and individual visibility settings control the menus; they do not hide compatible results from Search.
+
+Search does not index arbitrary external Asset Browser libraries. Configure your own Geometry Nodes groups in the four [Custom Node Modifier slots](#custom-node-modifiers). Favorites and Stack searches select native modifier types, rather than saving configured modifier settings or node assets.
+
+Press **Right Mouse Button** or **Esc** to cancel without adding a modifier or changing a saved list.
 
 ## Pie menu
 
@@ -176,22 +171,28 @@ The regular interface Search and pie-menu Search both target Blender's standard 
 
 The default shortcut is **Ctrl + Right Mouse Button** while the cursor is over the 3D Viewport.
 
-The pie menu contains object-appropriate modifier categories and may also include Search, Favorites, Stacks, and Custom Node Modifiers when those features are enabled.
+The pie menu provides quick access to modifier categories and other Old Modifier Menu tools. Hair, Instances, and Simulation are grouped under **Essentials**.
+
+![Old Modifier Menu pie menu with modifier categories, Search, Favorites, Stacks, and Essentials](../assets/images/old-modifier-menu/pie-menu.png){ .omm-ui-shot loading=lazy width=560 height=270 }
 
 ### Changing the shortcut
 
 1. Open the Old Modifier Menu preferences.
-2. Locate **Pie Menu**.
-3. Enable **Enable Pie Menu**.
-4. Edit the displayed Shortcut field.
+2. Choose **Interface → Pie Menu**.
+3. Turn on **Enable Shortcut**.
+4. Set **Input**, **Shortcut**, and **Trigger**, then choose any **Ctrl**, **Shift**, **Alt**, or **OS** modifiers.
 
-Disabling **Enable Pie Menu** removes the add-on’s shortcut. Re-enabling it restores the configured pie-menu keymap.
+Turning off **Enable Shortcut** disables the binding. Re-enabling it restores the configured shortcut.
 
 ### Opening a separate Properties window
 
-**Open New Window After Adding Modifiers** controls whether a modifier chosen from the pie menu opens a separate Properties window focused on modifiers.
+**Open Modifier Properties after Adding**, under **Interface → Pie Menu**, controls automatic opening after adding a modifier from the pie's category lists, Favorites, Stacks, or Custom Nodes. It is enabled by default. Search adds its selected modifier without automatically opening the window.
 
-Disable this setting in the add-on preferences if you prefer the modifier to be added silently to the existing interface.
+Turn this setting off to keep working in the existing interface. You can still open the window manually with **Modifier Window** in the pie or the window icon in the toolbar or header.
+
+The separate editor is pinned to the selected object. Opening it again reuses the same window and updates the pinned object.
+
+![Old Modifier Menu controls in Modifier Properties with a Bevel modifier below](../assets/images/old-modifier-menu/modifier-window.png){ .omm-ui-shot .omm-ui-shot--compact loading=lazy width=464 height=280 }
 
 ## Favorites
 
@@ -199,22 +200,24 @@ Favorites provide quick access to individual modifiers you use frequently.
 
 ### Enabling Favorites
 
-1. Open the add-on preferences.
-2. Enable **Favorites**.
+1. Open the **Favorites** tab in the add-on preferences.
+2. Enable **Show Favorites in the Menu**.
 3. Click **Add Favorite**.
 4. Search for and select a modifier.
 
-The selection is added only after you choose a real modifier; dismissing the search or leaving the placeholder selected does not create an entry.
+The selection is added only after you choose a modifier. Cancelling the search does not create an entry.
+
+[![Favorites preferences with saved modifiers and ordering controls](../assets/images/old-modifier-menu/preferences-favorites-crop.png){ .docs-shot loading=lazy width=917 height=367 }](../assets/images/old-modifier-menu/preferences-favorites-crop.png)
 
 ### Managing Favorites
 
-Use the controls beside each entry to:
+Use the up/down arrows and **X** beside each entry to:
 
 - Move the Favorite up.
 - Move the Favorite down.
 - Remove the Favorite.
 
-Use **Clear Favorites** in the add-on preferences to remove the complete list.
+Use **Sort** to order Favorites alphabetically, or **Clear** to remove the complete list after confirmation. Favorite choices use Blender's readable modifier names.
 
 ### Applying a Favorite
 
@@ -223,7 +226,7 @@ Use **Clear Favorites** in the add-on preferences to remove the complete list.
 3. Open the Favorites section.
 4. Click a Favorite.
 
-The selected modifier is added to the active object.
+The selected modifier is added to the active object. Incompatible Favorites are disabled for the current object.
 
 ## Modifier Stacks
 
@@ -231,31 +234,35 @@ A Stack is an ordered preset that adds several modifiers in one action. Four ind
 
 ### Creating a Stack
 
-1. Open the add-on preferences.
-2. Enable **Stacks**.
-3. Enable the required Stack slot.
+1. Open the **Stacks** tab in the add-on preferences.
+2. Enable **Show Stacks in the Menu**.
+3. Select one of the four Stack tabs and turn on **Enabled**.
 4. Enter a descriptive Stack name.
-5. Click the plus button for that Stack.
+5. Click **Add Modifier** for that Stack.
 6. Search for and select a modifier.
 7. Repeat until the modifiers appear in the required order.
 
-The visible order is the order in which modifiers are created on the object.
+The visible order is the order in which modifiers are created on the object. Use the arrows beside an entry to move it up or down, or **X** to remove it. A Stack stores modifier types and their order; it does not capture settings from an existing object's modifiers.
+
+[![A Hard Surface Stack containing Mirror, Bevel, Subdivision Surface, and Weighted Normal](../assets/images/old-modifier-menu/preferences-stacks-crop.png){ .docs-shot loading=lazy width=917 height=409 }](../assets/images/old-modifier-menu/preferences-stacks-crop.png)
 
 ### Running a Stack
 
-1. Select a mesh object.
+1. Select an object compatible with every modifier in the Stack.
 2. Open the Stacks section in the regular menu or pie menu.
 3. Click the saved Stack name.
 
-Each modifier is added to the active object in the saved order.
+Each modifier is added to the active object in the saved order. Running a Stack is one scene operation, so **Undo** removes that addition in one step.
 
 ### Clearing a Stack
 
-Click the trash button for the required Stack in the add-on preferences. This clears its modifier list without deleting or renaming the Stack slot.
+Select the required Stack in preferences, click **Clear**, and confirm. This clears its modifier list without deleting or renaming the Stack slot.
 
 ### Empty or invalid Stacks
 
-An empty Stack displays **Stack List Is Empty** in the menu and will not run. If an entry is invalid in the active Blender version, the Stack cancels with an error identifying the modifier it could not add.
+An empty Stack has **(Empty)** after its name and is disabled. Stacks with entries that are incompatible with the active object are also disabled.
+
+If a Stack cannot be added, Blender reports the incompatible entry and leaves the object's existing modifiers unchanged.
 
 ## Custom Node Modifiers
 
@@ -263,21 +270,21 @@ Four configurable shortcuts are available for Geometry Nodes groups stored in yo
 
 ### Configuring a slot
 
-1. Open Old Modifier Menu preferences.
-2. Enable **Custom Node Mods**.
-3. Choose one of the four slots.
-4. Select the source `.blend` file.
-5. Enter the exact node-group datablock name.
-6. Enable that Custom Node Mod slot.
+1. Open the **Assets** tab in Old Modifier Menu preferences.
+2. Enable **Show Custom Node Modifiers**.
+3. Choose one of the four **Custom Node Modifier** slots.
+4. Set **Blend File** to the source `.blend` file.
+5. Set **Node Group** to the exact node-group datablock name.
+6. Enable that slot.
 
 ### Using a custom node modifier
 
-1. Select an object that supports modifiers.
+1. Select an object that supports Geometry Nodes modifiers.
 2. Open Old Modifier Menu or its pie menu.
-3. Open **Custom Node Mods**.
+3. Find **Custom Node Modifiers** in the main menu or open **Custom Nodes** in the pie.
 4. Click the configured node-group name.
 
-The add-on appends the node group and creates a Geometry Nodes modifier that uses it. If a node group with the same name already exists in the current file, that existing group is reused.
+The add-on appends the node group and creates a Geometry Nodes modifier that uses it. If a Geometry Nodes group with the same name already exists in the current file, that existing group is reused. The node group must have a Geometry output.
 
 ### Path behavior
 
@@ -289,16 +296,23 @@ Node-group names must match the source datablock name exactly, including spaces 
 
 ## Blender Essentials assets
 
-Old Modifier Menu provides access to Blender Essentials Geometry Nodes assets, including:
+Old Modifier Menu provides access to selected Blender Essentials Geometry Nodes assets without requiring custom file paths. Availability depends on the running Blender version, its asset libraries, and the active object.
 
-- Smooth by Angle
-- Procedural hair node groups
+| Menu group | Assets | Availability |
+|---|---|---|
+| **Modifiers → Normals** | Smooth by Angle | Supported Blender 4.3 and later installations. |
+| **Modifiers → Generate** | Array, Curve to Tube, Scatter on Surface | Blender 5.0 or later. |
+| **Essentials → Hair** | Procedural hair groups listed below | Supported Blender 4.3 and later installations; Hair is off by default. |
+| **Essentials → Instances** | Instance on Elements, Randomize Transforms | Blender 5.0 or later. |
+| **Essentials → Simulation** | Hair Dynamics, Collider, Cloth Dynamics (Experimental) | Requires the Blender 5.2 Essentials simulation library. |
 
-These built-in choices do not require a custom asset path.
+Hair, Instances, and Simulation use the same Essentials grouping in preferences, the main menu, and the pie. Smooth by Angle and the Generate assets stay with their corresponding modifier categories. When the Essentials Array is available, the traditional Array modifier is labeled **Array (Legacy)**.
 
 ## Hair curve assets
 
-Hair curve features use Blender Essentials Geometry Nodes groups. They are disabled by default and can be enabled by category and individual asset in the add-on preferences.
+Hair curve features use Blender Essentials Geometry Nodes groups. Open **Modifiers → Essentials → Hair** in the add-on preferences and enable **Show Hair in the Menu**. Use **Hair Category** to choose a group, then enable its category and individual assets.
+
+Hair is disabled by default. Enable it to show your selected Hair assets under **Essentials**.
 
 ### Deformation
 
@@ -336,7 +350,7 @@ Hair curve features use Blender Essentials Geometry Nodes groups. They are disab
 
 - Set Hair Curve Profile
 
-The menu also exposes applicable built-in hair/curve modifiers and information groups according to Blender support and the enabled preferences.
+Compatible built-in modifiers remain on the Modifiers page. Asset visibility also depends on the selected object type and available Blender libraries.
 
 ## Effectors
 
@@ -348,48 +362,54 @@ Effectors are helper objects added to the current scene. They can be used as Boo
 - Wire Sphere
 - Empty Axes
 
-To add one, click the Effector button and select the desired helper.
+To add one, click the Effector button in the regular interface or pie and select the desired helper. Press **Right Mouse Button** or **Esc** to close the popup without adding an object.
+
+![Effector popup with Wire Cube, Wire Sphere, Empty Axes, custom effector, and placement controls](../assets/images/old-modifier-menu/effector-menu.png){ .omm-ui-shot loading=lazy width=365 height=160 }
 
 ### Effector location
 
-Choose one of the following in the add-on preferences:
+Choose **Assets → Effectors → Placement** in the add-on preferences:
 
 - **3D Cursor:** Places the appended object at the 3D Cursor.
-- **Active Object:** Places it at the active object’s location. If no active object exists, it falls back to the world origin.
+- **Active Object:** Places it at the selected object's location. If no object is selected, it uses the world origin.
 - **World Origin:** Places it at `(0, 0, 0)`.
 
 ### Custom effectors
 
 To add your own helper object:
 
-1. Set **Effector — Blend File** to an existing `.blend` file.
-2. Set **Effector — Object Name** to the exact object datablock name.
-3. Open the Effector dialog.
+1. Open **Assets → Effectors** and set **Custom Blend File** to an existing `.blend` file.
+2. Set **Object Name** to the exact object datablock name.
+3. Open the Effector popup.
 4. Click the custom entry.
 
 The source object is appended rather than linked, so the new scene object is local to the current file.
 
 ## Modifier-management tools
 
-The Extras row contains four bulk operations.
+Use **Show Modifier Actions** under **Interface → Menu Controls** for Modifier Properties, the toolbar, and the header. The pie has its own toggle under **Interface → Pie Menu**. These operations affect the active object's modifiers.
 
 ### Apply All
 
-Processes all modifiers on the active object. Enabled modifiers are applied where Blender allows it. Disabled modifiers, or enabled modifiers that Blender cannot apply, are removed.
+In **Object Mode**, applies viewport-enabled modifiers in order where Blender allows it. Disabled modifiers and modifiers that cannot be applied are kept, with a report identifying those that remain.
 
 This operation changes object data and should be treated as destructive.
 
 ### Remove All
 
-Removes every modifier from the active object.
+Removes every modifier from the active object after confirmation. The dialog shows the target object and modifier count.
+
+Enable **Don't ask again this session** in that dialog, then confirm removal, to skip further Remove All confirmations until Blender restarts.
+
+![Remove All Modifiers confirmation with Don't ask again this session enabled](../assets/images/old-modifier-menu/remove-all-confirmation.png){ .omm-ui-shot loading=lazy width=390 height=155 }
 
 ### Enable/Disable All
 
-Sets viewport visibility for every modifier on the active object. Repeated use toggles between enabled and disabled.
+Sets viewport visibility for every modifier on the active object. If any modifier is visible, the action hides them all; if all are hidden, it shows them all. It does not change their render visibility.
 
 ### Expand/Collapse All
 
-Changes the expanded state of every modifier panel in the active object’s stack.
+Available only in **Modifier Properties**. If any modifier panel is expanded, the action collapses all panels; otherwise, it expands them all. This control is not shown in the toolbar, header, or pie.
 
 Save the file before Apply All or Remove All, or be prepared to use Blender’s Undo command.
 
@@ -416,6 +436,7 @@ The exact menu is object-dependent. This reference summarizes the full set repre
 - Bevel
 - Boolean
 - Build
+- Curve to Tube
 - Decimate
 - Edge Split
 - Geometry Nodes
@@ -423,6 +444,7 @@ The exact menu is object-dependent. This reference summarizes the full set repre
 - Mirror
 - Multiresolution
 - Remesh
+- Scatter on Surface
 - Screw
 - Skin
 - Solidify
@@ -431,6 +453,8 @@ The exact menu is object-dependent. This reference summarizes the full set repre
 - Volume to Mesh
 - Weld
 - Wireframe
+
+The node-based Array, Curve to Tube, and Scatter on Surface require Blender 5.0 or later. The traditional Array remains available and is labeled **Array (Legacy)** when the node asset is present.
 
 **Deform**
 
@@ -466,12 +490,12 @@ The exact menu is object-dependent. This reference summarizes the full set repre
 - Fluid
 - Ocean
 - Particle Instance
-- Particle System entry
+- Particle System
 - Soft Body
 
 ### Curve and Text objects
 
-Curve and Text menus expose relevant subsets of Edit, Generate, Deform, Normals, and Soft Body tools. Unsupported mesh-only choices are omitted.
+Curve and Text menus expose relevant subsets of Edit, Generate, Deform, and Soft Body tools. Unsupported mesh-only choices are omitted.
 
 ### Lattice objects
 
@@ -479,7 +503,7 @@ Lattices receive compatible cache, deformation, and Soft Body choices.
 
 ### Volume objects
 
-Volumes expose relevant conversion and volume operations, including Mesh to Volume, Volume to Mesh, and Volume Displace where supported.
+Volume objects expose Mesh to Volume, Volume Displace, Mesh Sequence Cache, and Geometry Nodes where supported. Volume to Mesh belongs to the mesh object's modifier list.
 
 ### Hair Curves
 
@@ -498,147 +522,103 @@ Only choices supported by the active Blender version and enabled in the add-on p
 
 ## Preferences reference
 
+The preferences use five tabs:
+
+| Tab | Contents |
+|---|---|
+| **Interface** | Menu placement and sizing, control visibility, pie shortcut, and automatic Properties-window opening. |
+| **Modifiers** | Modifiers, Essentials, and Grease Pencil category and individual-entry visibility, with a text filter. |
+| **Favorites** | Saved Favorite modifiers, ordering, sorting, and menu visibility. |
+| **Stacks** | Four ordered modifier lists, names, per-slot controls, and menu visibility. |
+| **Assets** | Four Custom Node Modifier slots and Effector configuration. |
+
+=== "Interface"
+
+    [![Interface preferences for menu placement, controls, and the pie shortcut](../assets/images/old-modifier-menu/preferences-interface-crop.png){ .docs-shot loading=lazy width=917 height=487 }](../assets/images/old-modifier-menu/preferences-interface-crop.png)
+
+=== "Modifier visibility"
+
+    [![Modifiers preferences showing the Generate category and individual visibility toggles](../assets/images/old-modifier-menu/preferences-modifiers-crop.png){ .docs-shot loading=lazy width=917 height=401 }](../assets/images/old-modifier-menu/preferences-modifiers-crop.png)
+
+Settings are stored in Blender preferences. Use **Save Preferences** if automatic saving is disabled. Editing these saved lists is separate from scene undo; adding a modifier or running a Stack can be undone in the scene.
+
 ### Add Effectors
 
-- **Show Add Effector Button:** Displays or hides the main-interface Effector button.
-- **Effector Location:** Selects 3D Cursor, Active Object, or World Origin placement.
-- **Custom Effector Blend File:** Selects the source `.blend` file.
-- **Custom Effector Object Name:** Identifies the exact object datablock to append.
+- **Interface → Menu Controls → Show Effectors:** Displays or hides the Effector button in the regular interface and pie.
+- **Assets → Effectors → Placement:** Selects 3D Cursor, Active Object, or World Origin placement.
+- **Custom Blend File:** Selects the source `.blend` file for a custom effector.
+- **Object Name:** Identifies the exact object datablock to append.
 
 ### Menu Location
 
-- **Addon Location:** Chooses where the interface appears.
-- **Menu Size:** Scales the interface.
-- **Show Search:** Displays the modifier Search button.
-- **Show Extras:** Displays the bulk-operation row where applicable.
+These controls are in **Interface**:
+
+- **Location:** Chooses Modifier Properties, 3D View Toolbar, or 3D View Header.
+- **Menu Size / Button Width:** Changes button height in Modifier Properties and the toolbar, or button width in the header. Header and toolbar icons keep a minimum usable button size.
+- **Show Search:** Displays the modifier Search button in the regular interface and pie.
+- **Show Modifier Actions:** Displays Apply All, Remove All, and visibility controls in the regular interface, plus Expand / Collapse in Modifier Properties only. It does not hide the toolbar/header window icon.
 
 ### Pie Menu
 
-- **Enable Pie Menu:** Registers or removes the pie-menu shortcut.
-- **Shortcut:** Edits the key combination used in the 3D Viewport.
-- **Open New Window After Adding Modifiers:** Opens a separate Modifier Properties window after a pie-menu choice.
+These controls are in **Interface → Pie Menu**:
+
+- **Enable Shortcut:** Enables or disables the configured pie binding.
+- **Input, Shortcut, Trigger:** Set the input type, key or button, and triggering event.
+- **Ctrl, Shift, Alt, OS:** Set the required modifier keys.
+- **Show Modifier Actions:** Displays Apply All, Remove All, and visibility in the pie. Effectors follows its own visibility setting; Modifier Window remains available.
+- **Open Modifier Properties after Adding:** Automatically opens or reuses the separate Properties window after additions from the pie's category lists, Favorites, Stacks, or Custom Nodes.
 
 ### Category visibility
 
-High-level toggles control the main groups:
+In the **Modifiers** tab, choose a family and category:
 
-- Edit
-- Generate
-- Deform
-- Physics
-- Normals
-- Hair
-- Grease Pencil categories
+- **Modifiers:** Edit, Generate, Deform, Physics, and Normals.
+- **Essentials:** Hair, Instances, and Simulation.
+- **Grease Pencil:** Edit, Generate, Deform, and Color.
 
-Disabling a category removes it from the menu without changing existing modifiers.
+Use the category toggle to show or hide that group, or filter by a modifier or category name. Disabling a category removes its menu entries without changing existing modifiers.
 
 ### Individual modifier visibility
 
 Each built-in modifier can be enabled or disabled separately. Use these controls to create a smaller menu containing only tools relevant to your workflow.
 
-These visibility settings do not prevent Blender’s standard Search menu from showing its own supported results.
+These visibility settings do not hide compatible results from the add-on's Search. Unavailable assets are disabled in preferences and omitted from the menus and Search.
 
 ### Favorites
 
-- Enables the Favorites menu section.
-- Adds, removes, clears, and reorders Favorite modifiers.
+- **Show Favorites in the Menu:** Enables the Favorites section.
+- **Add Favorite:** Searches native modifier names.
+- **Sort:** Orders Favorites alphabetically.
+- **Clear:** Removes the saved list after confirmation.
+- **Up/down arrows and X:** Reorder or remove individual entries.
 
 ### Stacks
 
-- Enables the Stacks menu section.
-- Enables or disables each of four slots.
-- Sets each Stack’s display name.
-- Adds or clears modifier entries.
+- **Show Stacks in the Menu:** Enables the Stacks section.
+- **Stack 1–4 tabs:** Select the list to edit.
+- **Enabled and name:** Control the selected slot's visibility and display name.
+- **Add Modifier / Clear:** Add entries or clear the selected list after confirmation.
+- **Up/down arrows and X:** Change the order or remove individual entries. Stacks run from top to bottom.
 
-### Custom Node Mods
+### Custom Node Modifiers {#custom-node-mods}
 
-- Enables the Custom Node Mods section.
-- Enables each of four slots.
-- Stores a `.blend` file path and node-group name for each slot.
+These controls are in **Assets**:
+
+- **Show Custom Node Modifiers:** Enables the menu section.
+- **Custom Node Modifier 1–4:** Enables each slot.
+- **Blend File / Node Group:** Store the source file and exact Geometry Nodes group name for each slot.
 
 ### Hair controls
 
-- Enables the overall Hair category.
-- Enables Deformation, Generation, Guides, Utility, and Write subcategories.
-- Enables individual Blender Essentials hair-node groups.
+These controls are in **Modifiers → Essentials → Hair**:
+
+- **Show Hair in the Menu:** Enables Hair; off by default.
+- **Hair Category:** Selects Deformation, Generation, Guides, Utility, or Write for editing.
+- **Category and individual toggles:** Select the Hair assets shown in the menu. The main menu displays enabled entries directly on the Essentials page.
 
 ### Grease Pencil controls
 
-- Enables Edit, Generate, Deform, and Color categories.
-- Enables individual Grease Pencil modifier entries.
-
-## Troubleshooting
-
-### The menu is missing
-
-1. Confirm that Old Modifier Menu is enabled.
-2. Select a supported object.
-3. Check **Addon Location** in the add-on preferences.
-4. Look in the location selected in the **Addon Location** preference.
-5. Restart Blender after changing editions or replacing an old installation.
-
-### The menu is present but a modifier is missing
-
-- Confirm that Blender supports the modifier for the active object type.
-- Check whether its category is enabled.
-- Check whether the individual modifier is enabled in the add-on preferences.
-- Use the Search button to inspect Blender’s standard choices for the active object.
-
-### The Search button opens the wrong list
-
-The regular and pie-menu Search buttons should both open Blender's standard Add Modifier menu. If they do not, update or reinstall Old Modifier Menu.
-
-### The pie-menu shortcut does not work
-
-1. Confirm that **Enable Pie Menu** is enabled.
-2. Move the mouse over a 3D Viewport before pressing the shortcut.
-3. Check whether another add-on or Blender keymap action uses the same combination.
-4. Assign a different shortcut in Old Modifier Menu preferences.
-
-### A Favorite does nothing or reports that it no longer exists
-
-The saved Favorite index may have become stale after preferences were edited or migrated. Remove the affected Favorite and add it again.
-
-### A Stack says it is empty
-
-Add one or more modifiers to the Stack in the add-on preferences, or disable the unused Stack slot.
-
-### A Stack stops on a modifier
-
-The active object or Blender version may not support an entry. Review the error message, remove the incompatible entry, and try again on the intended object type.
-
-### A custom node slot is unassigned
-
-Both an existing `.blend` file and a non-placeholder node-group name are required. Re-select the file, enter the exact group name, and enable the slot.
-
-### A node group was not found
-
-Open the source file and check the Geometry Nodes group’s datablock name. Correct the saved name in the add-on preferences. Matching is exact.
-
-### An Essentials asset cannot be loaded
-
-Old Modifier Menu normally uses the current Blender installation and then its bundled fallback. If both fail:
-
-1. Reinstall the complete Old Modifier Menu ZIP.
-2. Check that Blender’s installation data has not been manually removed.
-3. Test with an official Blender build.
-4. Include the complete error in a support request.
-
-### An effector object was not found
-
-For a custom effector, confirm that the source `.blend` file exists and that the Object Name matches the object datablock exactly. Collection names and visible labels are not substitutes for the object name.
-
-### Icons are missing, blank, or incorrect
-
-Remove the old installation, restart Blender, and install the complete release ZIP without modifying its contents.
-
-### Apply All removed a modifier
-
-This is expected when the modifier was disabled or Blender could not apply it. Apply All is destructive; use Undo or reopen a saved file if the result is not wanted.
-
-### Updating Blender removed the add-on
-
-Blender stores configuration separately for different versions. Import the previous version’s preferences during first-run setup, or install Old Modifier Menu into the new Blender version using the original ZIP.
+In **Modifiers → Grease Pencil**, choose Edit, Generate, Deform, or Color, then set its category and individual modifier visibility.
 
 ## Uninstallation
 
@@ -646,9 +626,11 @@ Blender stores configuration separately for different versions. Import the previ
 2. Find Old Modifier Menu.
 3. Disable it.
 4. Choose **Uninstall** or **Remove**.
-5. Restart Blender before installing a different edition or replacement build.
+5. Restart Blender before installing a different edition.
 
 Uninstalling the add-on does not remove modifiers, node groups, or effector objects already saved inside your `.blend` files. It removes the interface and add-on preferences.
+
+For a normal update, install the matching ZIP over the existing extension as described in [Updating or changing editions](#updating-or-changing-editions).
 
 ## Support and bug reports
 

@@ -205,6 +205,23 @@
   border-radius: 0;
 }
 
+/* Product interface and workflow screenshots. */
+.md-typeset img.omm-ui-shot,
+.md-typeset img.docs-shot {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 1.15rem auto 1.5rem;
+  border: 1px solid var(--blue-nile-rule);
+  background: #252525;
+}
+
+.md-typeset img.omm-ui-shot--compact,
+.md-typeset img.docs-shot--compact {
+  width: auto;
+  max-width: min(100%, 34rem);
+}
+
 :focus-visible {
   outline: 2px solid var(--md-accent-fg-color);
   outline-offset: 2px;

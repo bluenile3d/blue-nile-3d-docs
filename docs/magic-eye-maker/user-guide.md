@@ -12,6 +12,8 @@ Magic Eye Maker uses the active camera and scene geometry as depth for an autost
 
 The panel is in **3D Viewport → Sidebar → Magic Eye**. Installation may take longer than a smaller add-on because the required components are included in the package.
 
+[![Magic Eye Maker panel with Preview, Generate, output, and depth controls](../assets/images/magic-eye-maker/output-depth-controls.png){ .docs-shot .docs-shot--compact loading=lazy width=486 height=743 }](../assets/images/magic-eye-maker/output-depth-controls.png)
+
 ## Output and frames
 
 Choose a dedicated **Output Folder** for each project. A later run will overwrite existing files with the same name.
@@ -53,6 +55,24 @@ Fit the Mist range before changing Gamma. Gamma cannot restore detail already cl
 
 Use **Preview** to render a processed-depth image when judging the final depth mapping.
 
+This example uses the same Suzanne object and camera throughout. Open an image to inspect it at full size.
+
+=== "Scene"
+
+    [![Suzanne as seen by the camera before stereogram generation](../assets/images/magic-eye-maker/example-scene.png){ .docs-shot loading=lazy width=960 height=640 }](../assets/images/magic-eye-maker/example-scene.png)
+
+=== "Processed depth"
+
+    [![Processed depth of Suzanne, with lighter values closer to the camera in this example](../assets/images/magic-eye-maker/example-depth.png){ .docs-shot loading=lazy width=960 height=640 }](../assets/images/magic-eye-maker/example-depth.png)
+
+=== "Pattern"
+
+    [![Repeating Organic Noise pattern before depth is applied](../assets/images/magic-eye-maker/example-pattern.png){ .docs-shot loading=lazy width=960 height=640 }](../assets/images/magic-eye-maker/example-pattern.png)
+
+=== "Stereogram"
+
+    [![Final autostereogram generated from Suzanne and the Organic Noise pattern](../assets/images/magic-eye-maker/example-stereogram.png){ .docs-shot loading=lazy width=960 height=640 }](../assets/images/magic-eye-maker/example-stereogram.png)
+
 ## Pattern sources
 
 | Pattern Source | Description |
@@ -61,6 +81,22 @@ Use **Preview** to render a processed-depth image when judging the final depth m
 | **Graphic Motifs** | Repeating pebbles, dashes, or angular chips. |
 | **Noise** | Procedural cell, weave, line, wave, or checker textures. |
 | **Image Pattern** | One image or a list of image layers. |
+
+=== "Organic Noise"
+
+    ![Organic Noise pattern with the Tidal palette](../assets/images/magic-eye-maker/pattern-organic.png){ .docs-shot loading=lazy width=576 height=288 }
+
+=== "Graphic Motifs"
+
+    ![Graphic Motifs pattern with the Studio palette](../assets/images/magic-eye-maker/pattern-graphic.png){ .docs-shot loading=lazy width=576 height=288 }
+
+=== "Noise"
+
+    ![A procedural Noise pattern](../assets/images/magic-eye-maker/pattern-noise.png){ .docs-shot loading=lazy width=576 height=288 }
+
+=== "Image Pattern"
+
+    ![Repeating image pattern using one of the supplied carved textures](../assets/images/magic-eye-maker/pattern-image-pattern.png){ .docs-shot loading=lazy width=576 height=288 }
 
 **Pattern Width** controls the width of the repeating horizontal strip. Smaller widths create more repetitions; larger widths create fewer repetitions and can be harder to view.
 
@@ -87,6 +123,8 @@ Use **Cell Size**, **Texture Style**, and **Style Strength** to control the stru
 ## Image Pattern and layers
 
 Choose **Image Pattern**, then select a Blender image in **Single Image** or use the folder button to load one. **Preserve Aspect** keeps the source proportions while it is resized and tiled.
+
+[![Image Pattern controls with a Single Image assigned and no image layers](../assets/images/magic-eye-maker/image-pattern-controls.png){ .docs-shot .docs-shot--compact loading=lazy width=468 height=519 }](../assets/images/magic-eye-maker/image-pattern-controls.png)
 
 Use **Add Layer Images** to load several files or **Add Empty Layer** to select images already in Blender. Each layer has wrapped **X Offset** and **Y Offset** controls. If any layer has an assigned image, Single Image is ignored.
 
@@ -119,6 +157,8 @@ The cycle closes on the next sample after the final exported frame. For frames 1
 Loop Output Range affects pattern movement only. Animated geometry, camera movement, and animated image sources must be looped separately if the complete result needs to repeat seamlessly.
 
 ## Advanced settings
+
+[![Advanced controls grouped into final stereogram, rendered depth, and processing settings](../assets/images/magic-eye-maker/advanced-controls.png){ .docs-shot .docs-shot--compact loading=lazy width=468 height=443 }](../assets/images/magic-eye-maker/advanced-controls.png)
 
 ### Final Stereogram Only
 

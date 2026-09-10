@@ -51,6 +51,7 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.tabbed:
       alternate_style: true
+  - pymdownx.keys
 
 extra_css:
   - assets/stylesheets/extra.css
@@ -59,15 +60,20 @@ copyright: Copyright &copy; BLUE NILE 3D
 
 nav:
   - Home: index.md
-  - Old Modifier Menu:
-      - Overview: old-modifier-menu/index.md
-      - User Guide: old-modifier-menu/user-guide.md
-      - FAQ: old-modifier-menu/faq.md
-  - RUNIC:
-      - Overview: runic/index.md
-      - User Guide: runic/user-guide.md
-      - FAQ: runic/faq.md
-  - Magic Eye Maker:
-      - Overview: magic-eye-maker/index.md
-      - User Guide: magic-eye-maker/user-guide.md
-      - FAQ: magic-eye-maker/faq.md
+  - Blender Add-ons:
+      - Old Modifier Menu:
+          - Overview: old-modifier-menu/index.md
+          - User Guide: old-modifier-menu/user-guide.md
+          - FAQ: old-modifier-menu/faq.md
+      - RUNIC:
+          - Overview: runic/index.md
+          - User Guide: runic/user-guide.md
+          - FAQ: runic/faq.md
+      - Magic Eye Maker:
+          - Overview: magic-eye-maker/index.md
+          - User Guide: magic-eye-maker/user-guide.md
+          - FAQ: magic-eye-maker/faq.md
+      - Style Thief:
+          - Overview: style-thief/index.md
+          - User Guide: style-thief/user-guide.md
+          - FAQ: style-thief/faq.md

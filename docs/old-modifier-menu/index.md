@@ -1,15 +1,8 @@
 # Old Modifier Menu
 
-Old Modifier Menu puts every Blender modifier back in one clear, organized menu. Its interface adapts to the active object and presents relevant tools for meshes, curves, text, lattices, volumes, hair curves, and Grease Pencil objects.
+Old Modifier Menu brings back Blender's traditional modifier menu with visible, organized categories. It adapts to the active object and supports meshes, curves, surfaces, text, lattices, volumes, hair curves, and Grease Pencil objects.
 
-## Editions
-
-| Edition | Designed for |
-|---|---|
-| **Lite** | A streamlined, categorized modifier-menu workflow. |
-| **Paid** | The complete workflow with Search, a pie menu, Favorites, modifier Stacks, Geometry Nodes assets, effectors, and modifier-management tools. |
-
-Install only one edition at a time; one edition replaces the other.
+The full feature set groups the main menu into **Modifiers** and **Essentials** pages, with menu placement, category visibility, Favorites, Stacks, and custom assets organized in dedicated preference tabs.
 
 ## Documentation
 
@@ -19,7 +12,7 @@ Install only one edition at a time; one edition replaces the other.
 
     ---
 
-    Installation, interface, features, preferences, workflows, and troubleshooting.
+    Installation, interface, features, preferences, and workflows.
 
     [Read the User Guide](user-guide.md)
 
@@ -27,8 +20,17 @@ Install only one edition at a time; one edition replaces the other.
 
     ---
 
-    Short answers covering installation, menu behavior, Stacks, Geometry Nodes, effectors, icons, and support.
+    Answers to common questions about menu behavior, Stacks, Geometry Nodes, effectors, and support.
 
     [Read the FAQ](faq.md)
 
 </div>
+
+## Editions
+
+| Edition | Designed for |
+|---|---|
+| **Lite** | A streamlined, categorized modifier-menu workflow. |
+| **Paid** | The complete workflow with Search, a pie menu, Favorites, modifier Stacks, Geometry Nodes assets, effectors, and modifier-management tools. |
+
+Install only one edition at a time; one edition replaces the other.
