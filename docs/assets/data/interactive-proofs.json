@@ -3,7 +3,7 @@
     "product": "STYLE THIEF",
     "label": "INTERACTIVE PROOF / MATCHING METHODS",
     "title": "Ten methods. One image pair.",
-    "description": "Switch between the source, target and each result. The texture stays fixed while the colour interpretation changes.",
+    "description": "Choose a method to see its result. Use Source and Target to check the original images.",
     "defaultState": "mk-ultra",
     "credit": "Source and target: Style Thief test set.",
     "states": [
@@ -112,5 +112,30 @@
         "caption": "A more stable PCCM interpretation with aligned light and dark direction."
       }
     ]
+  },
+  "style-thief-before-after": {
+    "type": "comparison",
+    "product": "STYLE THIEF",
+    "label": "BEFORE / AFTER",
+    "title": "See the colour change.",
+    "description": "Drag the divider to compare the original texture with the MK Ultra result.",
+    "aspectRatio": "1761 / 1569",
+    "credit": "Source and target: Style Thief test set.",
+    "before": {
+      "label": "Original",
+      "image": "../assets/images/style-thief/matching-modes/01_input.webp",
+      "alt": "Original cobblestone texture before colour matching"
+    },
+    "after": {
+      "label": "MK Ultra",
+      "image": "../assets/images/style-thief/matching-modes/03_mk_ultra.webp",
+      "alt": "The same cobblestone texture after matching to the moss reference with MK Ultra"
+    },
+    "target": {
+      "label": "Target reference",
+      "image": "../assets/images/style-thief/matching-modes/02_target.webp",
+      "alt": "Moss-covered cobblestones used as the colour reference",
+      "caption": "The reference used for this result."
+    }
   }
 }
