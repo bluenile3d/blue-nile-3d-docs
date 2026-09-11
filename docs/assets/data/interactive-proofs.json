@@ -116,11 +116,11 @@
   "style-thief-photo-before-after": {
     "type": "comparison",
     "product": "STYLE THIEF",
-    "label": "PHOTOGRAPH / FILM REFERENCE",
+    "label": "PHOTOGRAPH / FILM COLOURS",
     "title": "Borrow the colours of a film photograph.",
-    "description": "Drag the divider to compare the original green foliage with the MK Ultra result. The faded film photograph below supplies the new palette—not its shapes or texture.",
+    "description": "Drag the divider to compare the original photo with the result.",
     "aspectRatio": "16 / 9",
-    "credit": "Source and reference photographs by Blue Nile. Result made with Style Thief 1.4.0, MK Ultra. No retouching of the result.",
+    "credit": "Photographs by Blue Nile.",
     "before": {
       "label": "Original",
       "image": "../assets/images/style-thief/personal-photo-comparison/source.webp",
@@ -132,10 +132,10 @@
       "alt": "The same foliage with faded blue and pink colours transferred by Style Thief"
     },
     "target": {
-      "label": "Film reference",
+      "label": "Colour target",
       "image": "../assets/images/style-thief/personal-photo-comparison/target.webp",
-      "alt": "Blue Nile film double exposure used as the colour reference",
-      "caption": "A different subject, used only for its colours."
+      "alt": "Blue Nile film double exposure used as the colour target",
+      "caption": "A film double exposure."
     }
   },
   "style-thief-before-after": {
