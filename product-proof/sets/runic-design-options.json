@@ -1,0 +1,61 @@
+{
+  "product": "RUNIC",
+  "title": "Try a different finish. Or a different script.",
+  "description": "These are different versions of the same pendant, made with RUNIC. Choose a button to inspect each one.",
+  "type": "states",
+  "theme": {
+    "bg": "#070A12",
+    "fg": "#E7E3D6",
+    "accent": "#C8E83E",
+    "surface": "#171B1B",
+    "line": "#717C73",
+    "muted": "#D0D1C9"
+  },
+  "nativePixels": false,
+  "stereogram": false,
+  "defaultState": "raised",
+  "credit": "Demonstration pendant by Blue Nile. Fonts: Elder Futhark — BabelStone; Interlace Set — Peter Baker. Additional font: Phoenician — Noto.",
+  "states": [
+    {
+      "id": "flat",
+      "label": "Flat",
+      "image": "./media/runic/runic-pendant-flat.png",
+      "thumb": "./media/runic/thumb-runic-pendant-flat.webp",
+      "alt": "RUNIC: Flat",
+      "caption": "Filled glyph shapes without raised depth."
+    },
+    {
+      "id": "raised",
+      "label": "Raised",
+      "image": "./media/runic/runic-pendant-raised.png",
+      "thumb": "./media/runic/thumb-runic-pendant-raised.webp",
+      "alt": "RUNIC: Raised",
+      "caption": "Raised lettering with a solid face and sides."
+    },
+    {
+      "id": "outline",
+      "label": "Outline",
+      "image": "./media/runic/runic-pendant-outline.png",
+      "thumb": "./media/runic/thumb-runic-pendant-outline.webp",
+      "alt": "RUNIC: Outline",
+      "caption": "Outline geometry instead of a filled glyph."
+    },
+    {
+      "id": "script",
+      "label": "Another script",
+      "image": "./media/runic/runic-pendant-alternate-script.png",
+      "thumb": "./media/runic/thumb-runic-pendant-alternate-script.webp",
+      "alt": "RUNIC: Another script",
+      "caption": "Change the script while keeping the same path and model."
+    },
+    {
+      "id": "materials",
+      "label": "Face + side materials",
+      "image": "./media/runic/runic-pendant-materials.png",
+      "thumb": "./media/runic/thumb-runic-pendant-materials.webp",
+      "alt": "RUNIC: Face + side materials",
+      "caption": "Separate material choices for the glyph faces and sides."
+    }
+  ],
+  "aspectRatio": "1600 / 1100"
+}

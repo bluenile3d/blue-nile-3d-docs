@@ -1,0 +1,45 @@
+{
+  "product": "RUNIC",
+  "title": "The same glyphs. A different path.",
+  "description": "Compare the same ten-glyph sequence on a line, an arch and a circle. Change the carrier curve to fit the space on your model.",
+  "type": "states",
+  "theme": {
+    "bg": "#E7E3D6",
+    "fg": "#070A12",
+    "accent": "#164F4B",
+    "surface": "#D9DDD0",
+    "line": "#6F7971",
+    "muted": "#414B47"
+  },
+  "nativePixels": false,
+  "stereogram": false,
+  "defaultState": "line",
+  "credit": "Sample prop by Blue Nile. Font: Elder Futhark — BabelStone.",
+  "states": [
+    {
+      "id": "line",
+      "label": "Line",
+      "image": "./media/runic/runic-path-line.png",
+      "thumb": "./media/runic/thumb-runic-path-line.webp",
+      "alt": "RUNIC: Line",
+      "caption": "A straight arrangement on the sample prop."
+    },
+    {
+      "id": "arch",
+      "label": "Arch",
+      "image": "./media/runic/runic-path-arch.png",
+      "thumb": "./media/runic/thumb-runic-path-arch.webp",
+      "alt": "RUNIC: Arch",
+      "caption": "The glyphs follow part of an arched carrier curve."
+    },
+    {
+      "id": "circle",
+      "label": "Circle",
+      "image": "./media/runic/runic-path-circle.png",
+      "thumb": "./media/runic/thumb-runic-path-circle.webp",
+      "alt": "RUNIC: Circle",
+      "caption": "The same sequence follows a circular path."
+    }
+  ],
+  "aspectRatio": "1600 / 1100"
+}

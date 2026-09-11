@@ -1,0 +1,1732 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Official documentation for BLUE NILE 3D tools, add-ons, resources, and related products.">
+      
+      
+        <meta name="author" content="BLUE NILE 3D">
+      
+      
+        <link rel="canonical" href="https://docs.bluenile.design/magic-eye-maker/user-guide/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../faq/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/brand/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>User Guide - BLUE NILE 3D Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  
+  <link rel="manifest" href="../../site.webmanifest">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/brand/apple-touch-icon.png">
+  <meta name="theme-color" content="#030307">
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#magic-eye-maker-user-guide" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="BLUE NILE 3D Documentation" class="md-header__button md-logo" aria-label="BLUE NILE 3D Documentation" data-md-component="logo">
+      
+  <img src="../../assets/images/brand/blue-nile-block-symbol-bone-solid.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            BLUE NILE 3D Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              User Guide
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/bluenile3d/blue-nile-3d-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    bluenile3d/blue-nile-3d-docs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="BLUE NILE 3D Documentation" class="md-nav__button md-logo" aria-label="BLUE NILE 3D Documentation" data-md-component="logo">
+      
+  <img src="../../assets/images/brand/blue-nile-block-symbol-bone-solid.svg" alt="logo">
+
+    </a>
+    BLUE NILE 3D Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/bluenile3d/blue-nile-3d-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    bluenile3d/blue-nile-3d-docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Blender Add-ons
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Blender Add-ons
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../old-modifier-menu/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Old Modifier Menu
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Old Modifier Menu
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../old-modifier-menu/user-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    User Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../old-modifier-menu/faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../runic/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RUNIC
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    RUNIC
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../runic/user-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    User Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../runic/faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Magic Eye Maker
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Magic Eye Maker
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    User Guide
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    User Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output-and-frames" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Output and frames
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#depth-map-viewport" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Depth Map / Viewport
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Depth Map / Viewport">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fit-mist-range" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fit Mist Range
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#depth-controls" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Depth controls
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pattern-sources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pattern sources
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pattern sources">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#organic-noise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Organic Noise
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#graphic-motifs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Graphic Motifs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#noise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Noise
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#look-preset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Look Preset
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#image-pattern-and-layers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Image Pattern and layers
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pattern-animation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pattern animation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Advanced settings
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Advanced settings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#final-stereogram-only" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Final Stereogram Only
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rendered-depth-only" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rendered Depth Only
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Output files
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#improving-quality-and-speed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Improving quality and speed
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#viewing-the-result" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Viewing the result
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting-and-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting and support
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../style-thief/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Style Thief
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Style Thief
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../style-thief/user-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    User Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../style-thief/faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output-and-frames" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Output and frames
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#depth-map-viewport" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Depth Map / Viewport
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Depth Map / Viewport">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fit-mist-range" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fit Mist Range
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#depth-controls" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Depth controls
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pattern-sources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pattern sources
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pattern sources">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#organic-noise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Organic Noise
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#graphic-motifs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Graphic Motifs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#noise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Noise
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#look-preset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Look Preset
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#image-pattern-and-layers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Image Pattern and layers
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pattern-animation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pattern animation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Advanced settings
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Advanced settings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#final-stereogram-only" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Final Stereogram Only
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rendered-depth-only" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rendered Depth Only
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Output files
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#improving-quality-and-speed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Improving quality and speed
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#viewing-the-result" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Viewing the result
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting-and-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting and support
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="magic-eye-maker-user-guide">Magic Eye Maker — User Guide<a class="headerlink" href="#magic-eye-maker-user-guide" title="Permanent link">&para;</a></h1>
+<p>Magic Eye Maker uses the active camera and scene geometry as depth for an autostereogram. A procedural pattern or your own images provide the visible surface.</p>
+<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Download the Magic Eye Maker release ZIP.</li>
+<li>Leave the ZIP intact.</li>
+<li>Open <strong>Edit → Preferences → Get Extensions</strong>.</li>
+<li>Open the menu in the upper-right corner and choose <strong>Install from Disk</strong>.</li>
+<li>Select the ZIP and enable <strong>Magic Eye Maker</strong> if Blender does not do so automatically.</li>
+</ol>
+<p>The panel is in <strong>3D Viewport → Sidebar → Magic Eye</strong>. Installation may take longer than a smaller add-on because the required components are included in the package.</p>
+<p><a href="../../assets/images/magic-eye-maker/output-depth-controls.png"><img alt="Magic Eye Maker panel with Preview, Generate, output, and depth controls" class="docs-shot docs-shot--compact" height="743" loading="lazy" src="../../assets/images/magic-eye-maker/output-depth-controls.png" width="486" /></a></p>
+<h2 id="output-and-frames">Output and frames<a class="headerlink" href="#output-and-frames" title="Permanent link">&para;</a></h2>
+<p>Choose a dedicated <strong>Output Folder</strong> for each project. A later run will overwrite existing files with the same name.</p>
+<p><strong>Remove Temp Files</strong> removes the internal <code>_TempDepth</code> folder after a run. <strong>Open Folder When Finished</strong> opens the output folder after a successful preview or completed generation run.</p>
+<p><strong>Current Frame</strong> creates one stereogram. <strong>Animation Range</strong> uses Magic Eye Maker's own <strong>Start</strong>, <strong>End</strong>, and <strong>Step</strong> values, independently of Blender's timeline range. Preview always processes the current frame.</p>
+<p>For animation depth:</p>
+<ul>
+<li><strong>Per Frame</strong> renders new depth for every output frame. Use it when geometry or the camera changes.</li>
+<li><strong>Static Depth</strong> renders depth once and reuses it. Use it when only the visible pattern changes.</li>
+<li><strong>Static Depth Frame</strong> selects the source frame. <code>-1</code> uses the first output frame.</li>
+</ul>
+<p>Set resolution and final image format in Blender's <strong>Output Properties</strong>. Animation output is an image sequence. PNG, TIFF, Targa, BMP, and lossless WebP are supported for final stereograms; other selections use PNG.</p>
+<h2 id="depth-map-viewport">Depth Map / Viewport<a class="headerlink" href="#depth-map-viewport" title="Permanent link">&para;</a></h2>
+<h3 id="fit-mist-range">Fit Mist Range<a class="headerlink" href="#fit-mist-range" title="Permanent link">&para;</a></h3>
+<p>After framing the subject with the active camera, click <strong>Fit Mist Range</strong>. It estimates suitable <strong>Mist Start</strong> and <strong>Mist Range Length</strong> values from render-enabled object bounds inside the camera view.</p>
+<p>Start with <strong>Mist Falloff: Linear</strong> and <strong>Depth Gamma: 1</strong>. Refit after moving the camera or important objects. The result is a starting point; occluded geometry, transparency, render-only changes, or animation may require manual adjustment.</p>
+<h3 id="depth-controls">Depth controls<a class="headerlink" href="#depth-controls" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Control</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Mist Start</strong></td>
+<td>Camera distance where the Mist range begins.</td>
+</tr>
+<tr>
+<td><strong>Mist Range Length</strong></td>
+<td>Distance covered by the range. Its far end is Start plus Range Length.</td>
+</tr>
+<tr>
+<td><strong>Mist Falloff</strong></td>
+<td>Changes the response between near and far depth. Linear is the neutral starting point.</td>
+</tr>
+<tr>
+<td><strong>Depth Gamma</strong></td>
+<td>Reshapes values within the range. A value of 1 is neutral.</td>
+</tr>
+<tr>
+<td><strong>Smooth Depth</strong></td>
+<td>Softens jagged or abrupt depth edges.</td>
+</tr>
+<tr>
+<td><strong>Depth Smooth Radius</strong></td>
+<td>Controls the amount of smoothing.</td>
+</tr>
+</tbody>
+</table>
+<p>Fit the Mist range before changing Gamma. Gamma cannot restore detail already clipped or compressed by an unsuitable range.</p>
+<p><strong>Preview Mist</strong> temporarily shows Mist, Gamma, and smoothing in the viewport. It does not show <strong>Normalize Depth</strong>, <strong>Depth Inversion</strong>, <strong>Stereogram Depth Strength</strong>, <strong>Stereogram Smoothing</strong>, or <strong>Reduce Banding</strong>. These controls are found under <strong>Advanced</strong> and affect rendered depth or the final stereogram.</p>
+<p>Use <strong>Preview</strong> to render a processed-depth image when judging the final depth mapping.</p>
+<p>This example uses the same Suzanne object and camera throughout. Open an image to inspect it at full size.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:4"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Scene</label><label for="__tabbed_1_2">Processed depth</label><label for="__tabbed_1_3">Pattern</label><label for="__tabbed_1_4">Stereogram</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><a href="../../assets/images/magic-eye-maker/example-scene.png"><img alt="Suzanne as seen by the camera before stereogram generation" class="docs-shot" height="640" loading="lazy" src="../../assets/images/magic-eye-maker/example-scene.png" width="960" /></a></p>
+</div>
+<div class="tabbed-block">
+<p><a href="../../assets/images/magic-eye-maker/example-depth.png"><img alt="Processed depth of Suzanne, with lighter values closer to the camera in this example" class="docs-shot" height="640" loading="lazy" src="../../assets/images/magic-eye-maker/example-depth.png" width="960" /></a></p>
+</div>
+<div class="tabbed-block">
+<p><a href="../../assets/images/magic-eye-maker/example-pattern.png"><img alt="Repeating Organic Noise pattern before depth is applied" class="docs-shot" height="640" loading="lazy" src="../../assets/images/magic-eye-maker/example-pattern.png" width="960" /></a></p>
+</div>
+<div class="tabbed-block">
+<p><a href="../../assets/images/magic-eye-maker/example-stereogram.png"><img alt="Final autostereogram generated from Suzanne and the Organic Noise pattern" class="docs-shot" height="640" loading="lazy" src="../../assets/images/magic-eye-maker/example-stereogram.png" width="960" /></a></p>
+</div>
+</div>
+</div>
+<h2 id="pattern-sources">Pattern sources<a class="headerlink" href="#pattern-sources" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Pattern Source</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Organic Noise</strong></td>
+<td>Full-coverage, ink-like regions with fine structure.</td>
+</tr>
+<tr>
+<td><strong>Graphic Motifs</strong></td>
+<td>Repeating pebbles, dashes, or angular chips.</td>
+</tr>
+<tr>
+<td><strong>Noise</strong></td>
+<td>Procedural cell, weave, line, wave, or checker textures.</td>
+</tr>
+<tr>
+<td><strong>Image Pattern</strong></td>
+<td>One image or a list of image layers.</td>
+</tr>
+</tbody>
+</table>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:4"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><input id="__tabbed_2_4" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Organic Noise</label><label for="__tabbed_2_2">Graphic Motifs</label><label for="__tabbed_2_3">Noise</label><label for="__tabbed_2_4">Image Pattern</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><img alt="Organic Noise pattern with the Tidal palette" class="docs-shot" height="288" loading="lazy" src="../../assets/images/magic-eye-maker/pattern-organic.png" width="576" /></p>
+</div>
+<div class="tabbed-block">
+<p><img alt="Graphic Motifs pattern with the Studio palette" class="docs-shot" height="288" loading="lazy" src="../../assets/images/magic-eye-maker/pattern-graphic.png" width="576" /></p>
+</div>
+<div class="tabbed-block">
+<p><img alt="A procedural Noise pattern" class="docs-shot" height="288" loading="lazy" src="../../assets/images/magic-eye-maker/pattern-noise.png" width="576" /></p>
+</div>
+<div class="tabbed-block">
+<p><img alt="Repeating image pattern using one of the supplied carved textures" class="docs-shot" height="288" loading="lazy" src="../../assets/images/magic-eye-maker/pattern-image-pattern.png" width="576" /></p>
+</div>
+</div>
+</div>
+<p><strong>Pattern Width</strong> controls the width of the repeating horizontal strip. Smaller widths create more repetitions; larger widths create fewer repetitions and can be harder to view.</p>
+<p><strong>Seed</strong> controls procedural variation. <code>-1</code> creates a new seed for each run. Use a fixed value when comparing settings or testing animation.</p>
+<p><strong>Palette</strong> controls procedural colors. Strong tonal and color differences usually provide clearer matching detail than a nearly uniform palette.</p>
+<h3 id="organic-noise">Organic Noise<a class="headerlink" href="#organic-noise" title="Permanent link">&para;</a></h3>
+<p>Use <strong>Feature Size</strong> for the scale of the main regions and <strong>Fine Detail</strong> for smaller structure. Smaller features generally provide more stereo cues.</p>
+<h3 id="graphic-motifs">Graphic Motifs<a class="headerlink" href="#graphic-motifs" title="Permanent link">&para;</a></h3>
+<p>Choose <strong>Pebbles</strong>, <strong>Dashes</strong>, or <strong>Chips</strong> with <strong>Motif Family</strong>. <strong>Density</strong> controls the spacing. The first palette color is the background.</p>
+<h3 id="noise">Noise<a class="headerlink" href="#noise" title="Permanent link">&para;</a></h3>
+<p>Use <strong>Cell Size</strong>, <strong>Texture Style</strong>, and <strong>Style Strength</strong> to control the structure. Choose Grayscale, palette-based color, or RGB Noise.</p>
+<h3 id="look-preset">Look Preset<a class="headerlink" href="#look-preset" title="Permanent link">&para;</a></h3>
+<p><strong>Look Preset</strong> provides ready-made treatments for <strong>Noise</strong> and <strong>Image Pattern</strong>. <strong>Soft</strong> reduces contrast, <strong>Graphic</strong> sharpens the pattern, <strong>Retro</strong> reduces color steps, <strong>Organic</strong> softens the colors, <strong>Minimal</strong> reduces color detail, and <strong>Noisy</strong> adds texture. These presets affect the visible pattern without changing the hidden form.</p>
+<h2 id="image-pattern-and-layers">Image Pattern and layers<a class="headerlink" href="#image-pattern-and-layers" title="Permanent link">&para;</a></h2>
+<p>Choose <strong>Image Pattern</strong>, then select a Blender image in <strong>Single Image</strong> or use the folder button to load one. <strong>Preserve Aspect</strong> keeps the source proportions while it is resized and tiled.</p>
+<p><a href="../../assets/images/magic-eye-maker/image-pattern-controls.png"><img alt="Image Pattern controls with a Single Image assigned and no image layers" class="docs-shot docs-shot--compact" height="519" loading="lazy" src="../../assets/images/magic-eye-maker/image-pattern-controls.png" width="468" /></a></p>
+<p>Use <strong>Add Layer Images</strong> to load several files or <strong>Add Empty Layer</strong> to select images already in Blender. Each layer has wrapped <strong>X Offset</strong> and <strong>Y Offset</strong> controls. If any layer has an assigned image, Single Image is ignored.</p>
+<p>Layer modes are:</p>
+<ul>
+<li><strong>Stack Bands</strong> divides the pattern into horizontal bands, one per active image.</li>
+<li><strong>Tile Bands</strong> repeats the prepared band sequence down the pattern.</li>
+<li><strong>Overlay</strong> composites full-size layers in list order, with later layers above earlier layers.</li>
+</ul>
+<p>In Overlay mode, <strong>Overlay Opacity</strong> affects layers after the first and <strong>Image Background</strong> appears behind transparent areas. The final stereogram is flattened to RGB.</p>
+<p>For animated images, select an Image Sequence or Movie image datablock. <strong>Image Frames: Scene Frame</strong> follows the scene/output frame; <strong>Static</strong> holds one source frame. <strong>Frame Offset</strong> changes the chosen source frame, and <strong>Loop Movie/Sequence</strong> wraps playback.</p>
+<p>For dependable playback, use a numbered image sequence with no missing frames. <strong>Image Frames</strong> chooses which source image is used, while <strong>Pattern Animation</strong> moves or changes the resulting pattern. If both are animated, they change at the same time but are controlled separately.</p>
+<h2 id="pattern-animation">Pattern animation<a class="headerlink" href="#pattern-animation" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Mode</th>
+<th>Behavior</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Static</strong></td>
+<td>Keeps the pattern placement fixed.</td>
+</tr>
+<tr>
+<td><strong>Jump</strong></td>
+<td>Regenerates procedural patterns or changes image offsets each frame.</td>
+</tr>
+<tr>
+<td><strong>Flow</strong></td>
+<td>Moves the pattern along a smooth drifting path.</td>
+</tr>
+<tr>
+<td><strong>Crawl</strong></td>
+<td>Moves the pattern horizontally.</td>
+</tr>
+<tr>
+<td><strong>Scroll</strong></td>
+<td>Moves the pattern vertically.</td>
+</tr>
+</tbody>
+</table>
+<p>Enable <strong>Loop Output Range</strong> to fit whole Flow, Crawl, or Scroll cycles into the output <strong>Start</strong>, <strong>End</strong>, and <strong>Step</strong> range. <strong>Loop Count</strong> sets the number of cycles.</p>
+<p>The cycle closes on the next sample after the final exported frame. For frames 1–24 at Step 1, frame 25 would match frame 1; a duplicate closing frame is not exported.</p>
+<p>Loop Output Range affects pattern movement only. Animated geometry, camera movement, and animated image sources must be looped separately if the complete result needs to repeat seamlessly.</p>
+<h2 id="advanced-settings">Advanced settings<a class="headerlink" href="#advanced-settings" title="Permanent link">&para;</a></h2>
+<p><a href="../../assets/images/magic-eye-maker/advanced-controls.png"><img alt="Advanced controls grouped into final stereogram, rendered depth, and processing settings" class="docs-shot docs-shot--compact" height="443" loading="lazy" src="../../assets/images/magic-eye-maker/advanced-controls.png" width="468" /></a></p>
+<h3 id="final-stereogram-only">Final Stereogram Only<a class="headerlink" href="#final-stereogram-only" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Stereogram Depth Strength</strong> changes how strongly depth affects pattern spacing. High values can create artifacts or break the stereogram illusion. Start with the default and increase it gradually while testing.</li>
+<li><strong>Stereogram Smoothing</strong> calculates at a larger internal size before reducing the result, producing a smoother image.</li>
+<li><strong>Reduce Banding</strong> uses at least 2× smoothing to reduce stepped depth contours.</li>
+</ul>
+<h3 id="rendered-depth-only">Rendered Depth Only<a class="headerlink" href="#rendered-depth-only" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Normalize Depth</strong> maps the rendered depth range across the available values.</li>
+<li><strong>Depth Inversion</strong> reverses the near/far mapping when the hidden form appears inside-out.</li>
+</ul>
+<p>These controls affect processed depth and the final stereogram, but not the viewport Mist preview.</p>
+<p>Leave <strong>Acceleration</strong> on <strong>Auto</strong> for normal use. The first accelerated generation can take longer while its calculation is prepared. <strong>16-bit Depth Preview</strong> changes the precision of the exported processed-depth PNG only.</p>
+<h2 id="output-files">Output files<a class="headerlink" href="#output-files" title="Permanent link">&para;</a></h2>
+<p>For frame 1, Magic Eye Maker creates files such as:</p>
+<div class="highlight"><pre><span></span><code>MagicEyeOutput/
+    stereogram_0001.png
+    PatternPreview/
+        pattern_0001.png
+    DepthMaps/
+        depth_0001_raw_.exr
+    ProcessedDepthPreview/
+        processed_depth_0001.png
+</code></pre></div>
+<p><strong>Preview</strong> creates the pattern, raw-depth, and processed-depth files. <strong>Generate</strong> creates the final stereogram and does not create a new preview set.</p>
+<p><strong>Latest Outputs</strong> shows the most recently recorded file of each type. Entries can come from different runs, so use the output folder when checking a complete animation sequence.</p>
+<h2 id="improving-quality-and-speed">Improving quality and speed<a class="headerlink" href="#improving-quality-and-speed" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Fit the Mist range before changing Gamma.</li>
+<li>Use small, distributed pattern details with visible tonal differences.</li>
+<li>Keep Stereogram Depth Strength moderate.</li>
+<li>Use Smooth Depth only when abrupt depth edges need softening.</li>
+<li>Keep Reduce Banding enabled when stepped displacement is visible.</li>
+<li>Compare the Pattern Preview, processed depth, and final stereogram to locate a problem.</li>
+<li>Avoid lossy compression or non-uniform resizing after generation.</li>
+</ul>
+<p>For faster tests, reduce the resolution, shorten the frame range, and use Static Depth when the hidden form does not move.</p>
+<h2 id="viewing-the-result">Viewing the result<a class="headerlink" href="#viewing-the-result" title="Permanent link">&para;</a></h2>
+<p>Open the final image at a comfortable size. Relax your focus and look through the image as though focusing behind the screen until repeated parts of the pattern merge. Take a break if viewing becomes uncomfortable.</p>
+<h2 id="troubleshooting-and-support">Troubleshooting and support<a class="headerlink" href="#troubleshooting-and-support" title="Permanent link">&para;</a></h2>
+<p>For common problems, see the <a href="../faq/">Magic Eye Maker FAQ</a>.</p>
+<p>When reporting a problem, include your Blender version, Magic Eye Maker version, operating system, pattern source, output frame range, exact reproduction steps, and the complete error message. The Pattern Preview, raw depth, and processed-depth files are also useful for depth or image-quality problems.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; BLUE NILE 3D
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.indexes", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
