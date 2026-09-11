@@ -330,6 +330,59 @@
       .comparison-hint { grid-column: 1 / -1; margin-top: 0; }
     }
 
+    /* A bounded marketplace window is not a full-width documentation page.
+       Opt in via ?layout=superhive; standalone/user-guide views stay unchanged. */
+    .marketplace .viewer {
+      height: 100vh;
+      min-height: 0;
+      padding: 16px;
+      display: grid;
+      grid-template-rows: auto auto minmax(0, 1fr) auto;
+      gap: 12px;
+    }
+    .marketplace .viewer-header { margin: 0; padding-top: 10px; }
+    .marketplace h1 { font-size: clamp(25px, 4.5vw, 36px); line-height: 1; }
+    .marketplace .product-code { display: none; }
+    .marketplace .viewer-description { margin: 0; font-size: 13px; }
+    .marketplace .viewer-body { display: grid; grid-template-columns: minmax(0, 1fr) 180px; gap: 14px; min-height: 0; align-items: stretch; }
+    .marketplace .stage { display: grid; grid-template-rows: minmax(0, 1fr) auto; min-height: 0; }
+    .marketplace .image-stage { height: 100%; min-height: 0; aspect-ratio: auto !important; }
+    .marketplace .proof-image { object-fit: contain; }
+    .marketplace .active-copy { min-height: 0; padding: 10px; }
+    .marketplace .active-group { font-size: 8px; }
+    .marketplace .active-label { display: block; font-size: 21px; }
+    .marketplace .active-caption { display: block; margin: 4px 0 0; font-size: 12px; }
+    .marketplace .controls { margin: 0; }
+    .marketplace .tab-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); overflow: visible; padding: 0; gap: 5px; }
+    .marketplace .tab-button { min-width: 0; min-height: 34px; padding: 6px; font-size: 14px; overflow-wrap: anywhere; }
+    .marketplace .control-group { padding: 9px 0; }
+    .marketplace .group-label { margin-bottom: 6px; font-size: 9px; }
+    .marketplace .credit { margin: 0; font-size: 8px; }
+    .marketplace .comparison-target { display: block; margin: 0; }
+    .marketplace .comparison-target img { max-height: 220px; object-fit: contain; }
+    .marketplace .comparison-target figcaption { margin-top: 10px; font-size: 12px; }
+    .marketplace .comparison-hint { display: none; }
+    .marketplace .comparison-actions { flex-wrap: nowrap; padding: 8px; }
+    .marketplace .comparison-actions button { flex: 1 1 0; }
+    @media (max-width: 559px) {
+      .marketplace .viewer { padding: 12px; gap: 8px; }
+      .marketplace .viewer-label { font-size: 8px; }
+      .marketplace .viewer-description { font-size: 12px; }
+      .marketplace .viewer-body { grid-template-columns: minmax(0, 1fr); grid-template-rows: minmax(140px, 1fr) auto; gap: 8px; }
+      .marketplace .control-group { padding: 5px 0; }
+      .marketplace .control-group:nth-child(2) .tab-list { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .marketplace .group-label { margin-bottom: 4px; font-size: 8px; }
+      .marketplace .tab-button { min-height: 30px; padding: 4px; font-size: 12px; }
+      .marketplace .active-copy { padding: 7px 9px; }
+      .marketplace .active-group { display: none; }
+      .marketplace .active-label { font-size: 19px; }
+      .marketplace .active-caption { font-size: 11px; }
+      .marketplace .comparison-target { display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: 5px 10px; padding-top: 8px; }
+      .marketplace .comparison-target .group-label { grid-column: 1 / -1; }
+      .marketplace .comparison-target img { max-height: 85px; }
+      .marketplace .comparison-target figcaption { margin: 0; }
+    }
+
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after { scroll-behavior: auto !important; }
     }
@@ -346,6 +399,7 @@
     (() => {
       const viewer = document.getElementById("viewer");
       const params = new URLSearchParams(window.location.search);
+      if (params.get('layout') === 'superhive') document.documentElement.classList.add('marketplace');
       const proofId = params.get("set") || "style-thief-matching-modes";
       const dataUrl = new URL("../assets/data/interactive-proofs.json", window.location.href);
       const customColour = (key) => /^[0-9a-f]{6}$/i.test(params.get(key) || "") ? `#${params.get(key)}` : null;
