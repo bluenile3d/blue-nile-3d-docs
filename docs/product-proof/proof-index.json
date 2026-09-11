@@ -1,0 +1,83 @@
+[
+  {
+    "id": "runic-inscription",
+    "slug": "runic",
+    "type": "comparison",
+    "states": 2,
+    "height": 630,
+    "mobileHeight": 440,
+    "url": "https://docs.bluenile.design/product-proof/?set=runic-inscription&layout=embed"
+  },
+  {
+    "id": "runic-design-options",
+    "slug": "runic",
+    "type": "states",
+    "states": 5,
+    "height": 730,
+    "mobileHeight": 520,
+    "url": "https://docs.bluenile.design/product-proof/?set=runic-design-options&layout=embed"
+  },
+  {
+    "id": "runic-editable-paths",
+    "slug": "runic",
+    "type": "states",
+    "states": 3,
+    "height": 650,
+    "mobileHeight": 440,
+    "url": "https://docs.bluenile.design/product-proof/?set=runic-editable-paths&layout=embed"
+  },
+  {
+    "id": "old-modifier-menu-explorer",
+    "slug": "old-modifier-menu",
+    "type": "states",
+    "states": 7,
+    "height": 780,
+    "mobileHeight": 620,
+    "url": "https://docs.bluenile.design/product-proof/?set=old-modifier-menu-explorer&layout=embed"
+  },
+  {
+    "id": "old-modifier-menu-stack-workflow",
+    "slug": "old-modifier-menu",
+    "type": "states",
+    "states": 3,
+    "height": 660,
+    "mobileHeight": 440,
+    "url": "https://docs.bluenile.design/product-proof/?set=old-modifier-menu-stack-workflow&layout=embed"
+  },
+  {
+    "id": "magic-eye-four-stages",
+    "slug": "magic-eye-maker",
+    "type": "states",
+    "states": 4,
+    "height": 690,
+    "mobileHeight": 480,
+    "url": "https://docs.bluenile.design/product-proof/?set=magic-eye-four-stages&layout=embed"
+  },
+  {
+    "id": "magic-eye-pattern-looks",
+    "slug": "magic-eye-maker",
+    "type": "states",
+    "states": 3,
+    "height": 650,
+    "mobileHeight": 440,
+    "url": "https://docs.bluenile.design/product-proof/?set=magic-eye-pattern-looks&layout=embed"
+  },
+  {
+    "id": "magic-eye-image-layers",
+    "slug": "magic-eye-maker",
+    "type": "states",
+    "states": 4,
+    "height": 690,
+    "mobileHeight": 480,
+    "url": "https://docs.bluenile.design/product-proof/?set=magic-eye-image-layers&layout=embed"
+  },
+  {
+    "id": "magic-eye-look-presets",
+    "slug": "magic-eye-maker",
+    "type": "states",
+    "states": 3,
+    "height": 650,
+    "mobileHeight": 440,
+    "url": "https://docs.bluenile.design/product-proof/?set=magic-eye-look-presets&layout=embed"
+  }
+]

@@ -1,0 +1,53 @@
+{
+  "product": "Magic Eye Maker",
+  "title": "From a 3D scene to a hidden image.",
+  "description": "Start with a camera view, check its depth, choose a pattern, then generate the stereogram. Switch between the stages to see how this example is built.",
+  "type": "states",
+  "theme": {
+    "bg": "#070A12",
+    "fg": "#E7E3D6",
+    "accent": "#C8E83E",
+    "surface": "#19131C",
+    "line": "#717C73",
+    "muted": "#D0D1C9"
+  },
+  "nativePixels": false,
+  "stereogram": true,
+  "defaultState": "scene",
+  "credit": "Original Blender scene and patterns by Blue Nile. Generated with Magic Eye Maker 4.0.",
+  "states": [
+    {
+      "id": "scene",
+      "label": "Scene",
+      "image": "./media/magic-eye-maker/magic-eye-word-scene.png",
+      "thumb": "./media/magic-eye-maker/thumb-magic-eye-word-scene.webp",
+      "alt": "Magic Eye Maker: Scene",
+      "caption": "An extruded word, a ring and spheres placed at different depths."
+    },
+    {
+      "id": "depth",
+      "label": "Depth",
+      "image": "./media/magic-eye-maker/magic-eye-word-plum-ink-depth.png",
+      "thumb": "./media/magic-eye-maker/thumb-magic-eye-word-plum-ink-depth.webp",
+      "alt": "Magic Eye Maker: Depth",
+      "caption": "The processed camera depth defines the hidden form."
+    },
+    {
+      "id": "pattern",
+      "label": "Pattern",
+      "image": "./media/magic-eye-maker/magic-eye-word-plum-ink-pattern.png",
+      "thumb": "./media/magic-eye-maker/thumb-magic-eye-word-plum-ink-pattern.webp",
+      "alt": "Magic Eye Maker: Pattern",
+      "caption": "The repeating pattern before depth is applied."
+    },
+    {
+      "id": "result",
+      "label": "Stereogram",
+      "image": "./media/magic-eye-maker/magic-eye-word-plum-ink-result.png",
+      "thumb": "./media/magic-eye-maker/thumb-magic-eye-word-plum-ink-result.webp",
+      "alt": "Magic Eye Maker: Stereogram",
+      "caption": "The complete image. Look through the repeating pattern to try to see the depth."
+    }
+  ],
+  "aspectRatio": "1200 / 800"
+}

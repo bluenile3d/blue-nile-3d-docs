@@ -1,0 +1,27 @@
+{
+  "product": "RUNIC",
+  "title": "A plain prop. A different story.",
+  "description": "Drag across the pendant to see what the lettering adds. The model, camera and lighting stay the same.",
+  "type": "comparison",
+  "theme": {
+    "bg": "#E7E3D6",
+    "fg": "#070A12",
+    "accent": "#164F4B",
+    "surface": "#D9DDD0",
+    "line": "#6F7971",
+    "muted": "#414B47"
+  },
+  "aspectRatio": "1600 / 1100",
+  "before": {
+    "label": "Unmarked",
+    "image": "./media/runic/runic-pendant-blank.png",
+    "alt": "Original blank demonstration pendant"
+  },
+  "after": {
+    "label": "Inscribed",
+    "image": "./media/runic/runic-pendant-raised.png",
+    "alt": "Same pendant with raised Runic inscriptions"
+  },
+  "caption": "RUNIC creates the glyph geometry. The pendant is a demonstration model, not a bundled asset.",
+  "credit": "Demonstration pendant by Blue Nile. Fonts: Elder Futhark — BabelStone; Interlace Set — Peter Baker."
+}
