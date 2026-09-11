@@ -24,14 +24,6 @@ The add-on includes eleven matching outputs, three strength presets, single-imag
 
     [Read the FAQ](faq.md)
 
--   **Visual Method Comparison**
-
-    ---
-
-    Keep one source and target fixed while switching between all matching outputs.
-
-    [Compare the Matching Modes](matching-modes.md)
-
 </div>
 
 ## Quick start
@@ -44,5 +36,3 @@ The add-on includes eleven matching outputs, three strength presets, single-imag
 6. Click **Steal That Style!**.
 
 The result keeps the source image's dimensions and appears in the Image Editor. Use **All Modes** when you want Style Thief to create every method for visual comparison.
-
-[Compare every matching output interactively](matching-modes.md)

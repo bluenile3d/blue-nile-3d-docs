@@ -79,10 +79,7 @@ Directory mode reads the supported image files in the selected folder in filenam
 
 Different methods interpret the same image pair differently. Begin with **MK Ultra**, then compare alternatives when you want a different balance of colour, contrast, or intensity.
 
-<div class="blue-nile-interactive-proof">
-  <iframe src="../../interactive-proof/?set=style-thief-matching-modes" title="Interactive comparison of Style Thief matching methods" width="1180" height="820" frameborder="0"></iframe>
-  <p><a href="../matching-modes/">Open the complete matching-mode comparison</a></p>
-</div>
+Want to judge every method on one fixed image pair? [Open the interactive matching-mode viewer](https://docs.bluenile.design/interactive-proof/?set=style-thief-matching-modes).
 
 ### Available methods
 
