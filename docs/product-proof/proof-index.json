@@ -6,7 +6,7 @@
     "states": 2,
     "height": 630,
     "mobileHeight": 440,
-    "url": "https://docs.bluenile.design/product-proof/?set=runic-inscription&layout=embed"
+    "url": "https://docs.bluenile.design/product-proof/?set=runic-inscription&bg=E7E3D6&fg=070A12&accent=164F4B&minh=440&maxh=630&layout=embed"
   },
   {
     "id": "runic-design-options",
@@ -15,7 +15,7 @@
     "states": 5,
     "height": 730,
     "mobileHeight": 520,
-    "url": "https://docs.bluenile.design/product-proof/?set=runic-design-options&layout=embed"
+    "url": "https://docs.bluenile.design/product-proof/?set=runic-design-options&bg=070A12&fg=E7E3D6&accent=C8E83E&minh=520&maxh=730&layout=embed"
   },
   {
     "id": "runic-editable-paths",
@@ -24,7 +24,7 @@
     "states": 3,
     "height": 650,
     "mobileHeight": 440,
-    "url": "https://docs.bluenile.design/product-proof/?set=runic-editable-paths&layout=embed"
+    "url": "https://docs.bluenile.design/product-proof/?set=runic-editable-paths&bg=E7E3D6&fg=070A12&accent=164F4B&minh=440&maxh=650&layout=embed"
   },
   {
     "id": "old-modifier-menu-explorer",
@@ -33,7 +33,7 @@
     "states": 7,
     "height": 780,
     "mobileHeight": 620,
-    "url": "https://docs.bluenile.design/product-proof/?set=old-modifier-menu-explorer&layout=embed"
+    "url": "https://docs.bluenile.design/product-proof/?set=old-modifier-menu-explorer&bg=E7E3D6&fg=070A12&accent=3E4943&minh=620&maxh=780&layout=embed"
   },
   {
     "id": "old-modifier-menu-stack-workflow",
@@ -42,7 +42,7 @@
     "states": 3,
     "height": 660,
     "mobileHeight": 440,
-    "url": "https://docs.bluenile.design/product-proof/?set=old-modifier-menu-stack-workflow&layout=embed"
+    "url": "https://docs.bluenile.design/product-proof/?set=old-modifier-menu-stack-workflow&bg=070A12&fg=E7E3D6&accent=C8E83E&minh=440&maxh=660&layout=embed"
   },
   {
     "id": "magic-eye-four-stages",
@@ -51,7 +51,7 @@
     "states": 4,
     "height": 690,
     "mobileHeight": 480,
-    "url": "https://docs.bluenile.design/product-proof/?set=magic-eye-four-stages&layout=embed"
+    "url": "https://docs.bluenile.design/product-proof/?set=magic-eye-four-stages&bg=070A12&fg=E7E3D6&accent=C8E83E&minh=480&maxh=690&layout=embed"
   },
   {
     "id": "magic-eye-pattern-looks",
@@ -60,7 +60,7 @@
     "states": 3,
     "height": 650,
     "mobileHeight": 440,
-    "url": "https://docs.bluenile.design/product-proof/?set=magic-eye-pattern-looks&layout=embed"
+    "url": "https://docs.bluenile.design/product-proof/?set=magic-eye-pattern-looks&bg=070A12&fg=E7E3D6&accent=C8E83E&minh=440&maxh=650&layout=embed"
   },
   {
     "id": "magic-eye-image-layers",
@@ -69,7 +69,7 @@
     "states": 4,
     "height": 690,
     "mobileHeight": 480,
-    "url": "https://docs.bluenile.design/product-proof/?set=magic-eye-image-layers&layout=embed"
+    "url": "https://docs.bluenile.design/product-proof/?set=magic-eye-image-layers&bg=070A12&fg=E7E3D6&accent=C8E83E&minh=480&maxh=690&layout=embed"
   },
   {
     "id": "magic-eye-look-presets",
@@ -78,6 +78,6 @@
     "states": 3,
     "height": 650,
     "mobileHeight": 440,
-    "url": "https://docs.bluenile.design/product-proof/?set=magic-eye-look-presets&layout=embed"
+    "url": "https://docs.bluenile.design/product-proof/?set=magic-eye-look-presets&bg=070A12&fg=E7E3D6&accent=C8E83E&minh=440&maxh=650&layout=embed"
   }
 ]
