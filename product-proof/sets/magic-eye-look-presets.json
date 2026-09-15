@@ -1,0 +1,45 @@
+{
+  "product": "Magic Eye Maker",
+  "title": "Sharper contrast or a retro finish.",
+  "description": "Look Presets give Noise and Image Pattern different treatments. Compare these three results from the same image pattern and unchanged camera view.",
+  "type": "states",
+  "theme": {
+    "bg": "#070A12",
+    "fg": "#E7E3D6",
+    "accent": "#C8E83E",
+    "surface": "#19131C",
+    "line": "#717C73",
+    "muted": "#D0D1C9"
+  },
+  "nativePixels": false,
+  "stereogram": true,
+  "defaultState": "original",
+  "credit": "Scene and original Blender-rendered image tile by Blue Nile.",
+  "states": [
+    {
+      "id": "original",
+      "label": "Original",
+      "image": "./media/magic-eye-maker/magic-eye-word-look-original-result.png",
+      "thumb": "./media/magic-eye-maker/thumb-magic-eye-word-look-original-result.webp",
+      "alt": "Magic Eye Maker: Original",
+      "caption": "The image pattern before a Look Preset is applied."
+    },
+    {
+      "id": "graphic",
+      "label": "Graphic",
+      "image": "./media/magic-eye-maker/magic-eye-word-look-graphic-result.png",
+      "thumb": "./media/magic-eye-maker/thumb-magic-eye-word-look-graphic-result.webp",
+      "alt": "Magic Eye Maker: Graphic",
+      "caption": "A brighter, sharper treatment of the same pattern."
+    },
+    {
+      "id": "retro",
+      "label": "Retro",
+      "image": "./media/magic-eye-maker/magic-eye-word-look-retro-result.png",
+      "thumb": "./media/magic-eye-maker/thumb-magic-eye-word-look-retro-result.webp",
+      "alt": "Magic Eye Maker: Retro",
+      "caption": "A darker, reduced-colour finish."
+    }
+  ],
+  "aspectRatio": "1200 / 800"
+}

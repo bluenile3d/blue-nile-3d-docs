@@ -1,0 +1,1793 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Official documentation for BLUE NILE 3D tools, add-ons, resources, and related products.">
+      
+      
+        <meta name="author" content="BLUE NILE 3D">
+      
+      
+        <link rel="canonical" href="https://docs.bluenile.design/runic/user-guide/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../faq/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/brand/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>User Guide - BLUE NILE 3D Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  
+  <link rel="manifest" href="../../site.webmanifest">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/brand/apple-touch-icon.png">
+  <meta name="theme-color" content="#030307">
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#runic-user-guide" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="BLUE NILE 3D Documentation" class="md-header__button md-logo" aria-label="BLUE NILE 3D Documentation" data-md-component="logo">
+      
+  <img src="../../assets/images/brand/blue-nile-block-symbol-bone-solid.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            BLUE NILE 3D Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              User Guide
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/bluenile3d/blue-nile-3d-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    bluenile3d/blue-nile-3d-docs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="BLUE NILE 3D Documentation" class="md-nav__button md-logo" aria-label="BLUE NILE 3D Documentation" data-md-component="logo">
+      
+  <img src="../../assets/images/brand/blue-nile-block-symbol-bone-solid.svg" alt="logo">
+
+    </a>
+    BLUE NILE 3D Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/bluenile3d/blue-nile-3d-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    bluenile3d/blue-nile-3d-docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Blender Add-ons
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Blender Add-ons
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../old-modifier-menu/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Old Modifier Menu
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Old Modifier Menu
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../old-modifier-menu/user-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    User Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../old-modifier-menu/faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RUNIC
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    RUNIC
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    User Guide
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    User Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-runic-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How RUNIC works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-runic-objects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creating RUNIC objects
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Creating RUNIC objects">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#existing-curve" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Existing curve
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#line-circle-arch-and-single-rune" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Line, Circle, Arch, and Single Rune
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selected-mesh-edges" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Selected mesh edges
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selected-mesh-faces" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Selected mesh faces
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#drawing-on-a-mesh-surface" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Drawing on a mesh surface
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fonts-and-text-sources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fonts and text sources
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fonts and text sources">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#choosing-a-font" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Choosing a font
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#random" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Random
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#text" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Text
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#symbols" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Symbols
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phrase" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phrase
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#placement-controls" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Placement controls
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Placement controls">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#paths-and-edges" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Paths and edges
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#single-rune" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Single Rune
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#appearance-and-geometry" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Appearance and geometry
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Appearance and geometry">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#repair-and-smoothing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Repair and smoothing
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#materials-uvs-and-finished-meshes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Materials, UVs, and finished meshes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#personal-libraries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Personal libraries
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Personal libraries">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#importing-a-font" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Importing a font
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#importing-hand-drawn-symbols" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Importing hand-drawn symbols
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting-and-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting and support
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../magic-eye-maker/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Magic Eye Maker
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Magic Eye Maker
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../magic-eye-maker/user-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    User Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../magic-eye-maker/faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../style-thief/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Style Thief
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Style Thief
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../style-thief/user-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    User Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../style-thief/faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-runic-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How RUNIC works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-runic-objects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creating RUNIC objects
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Creating RUNIC objects">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#existing-curve" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Existing curve
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#line-circle-arch-and-single-rune" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Line, Circle, Arch, and Single Rune
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selected-mesh-edges" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Selected mesh edges
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selected-mesh-faces" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Selected mesh faces
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#drawing-on-a-mesh-surface" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Drawing on a mesh surface
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fonts-and-text-sources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fonts and text sources
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fonts and text sources">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#choosing-a-font" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Choosing a font
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#random" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Random
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#text" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Text
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#symbols" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Symbols
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phrase" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phrase
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#placement-controls" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Placement controls
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Placement controls">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#paths-and-edges" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Paths and edges
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#single-rune" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Single Rune
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#appearance-and-geometry" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Appearance and geometry
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Appearance and geometry">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#repair-and-smoothing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Repair and smoothing
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#materials-uvs-and-finished-meshes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Materials, UVs, and finished meshes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#personal-libraries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Personal libraries
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Personal libraries">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#importing-a-font" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Importing a font
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#importing-hand-drawn-symbols" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Importing hand-drawn symbols
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting-and-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting and support
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="runic-user-guide">RUNIC — User Guide<a class="headerlink" href="#runic-user-guide" title="Permanent link">&para;</a></h1>
+<p>RUNIC creates editable lettering, runes, symbols, and decorative marks in Blender. Its generated geometry is controlled by Geometry Nodes, while the original curve or object remains available for further editing.</p>
+<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Download the RUNIC release ZIP.</li>
+<li>Leave the ZIP intact; do not extract or rearrange its contents.</li>
+<li>In Blender, open <strong>Edit → Preferences → Get Extensions</strong>.</li>
+<li>Open the menu in the upper-right corner and choose <strong>Install from Disk</strong>.</li>
+<li>Select the RUNIC ZIP and enable <strong>RUNIC</strong> if Blender does not do so automatically.</li>
+</ol>
+<h2 id="how-runic-works">How RUNIC works<a class="headerlink" href="#how-runic-works" title="Permanent link">&para;</a></h2>
+<p>RUNIC starts from a curve, generated path, point object, selected mesh faces or edges, or a path drawn on a surface. It places font glyphs on that starting geometry and keeps the placement, text, and geometry controls available in the RUNIC panels.</p>
+<p>The normal order of work is:</p>
+<ol>
+<li>Create or select a path, object, or mesh selection.</li>
+<li>Choose a font and text source.</li>
+<li>Set placement and appearance.</li>
+<li>Assign materials or generate UVs if needed.</li>
+<li>Keep the RUNIC object editable, or create a separate finished mesh when the design is ready.</li>
+</ol>
+<p><img alt="RUNIC controls for text, placement, appearance, materials, and finishing" class="docs-shot docs-shot--compact" height="726" loading="lazy" src="../../assets/images/runic/interface.png" width="241" /></p>
+<h2 id="creating-runic-objects">Creating RUNIC objects<a class="headerlink" href="#creating-runic-objects" title="Permanent link">&para;</a></h2>
+<p><img alt="RUNIC creation panel with surface drawing, path presets, and library import controls" class="docs-shot docs-shot--compact" height="283" loading="lazy" src="../../assets/images/runic/creation-panel.png" width="238" /></p>
+<h3 id="existing-curve">Existing curve<a class="headerlink" href="#existing-curve" title="Permanent link">&para;</a></h3>
+<p>Select a curve and click <strong>Add RUNIC to Selected Curve</strong>. The selected curve remains editable, including its multiple splines and closed paths.</p>
+<h3 id="line-circle-arch-and-single-rune">Line, Circle, Arch, and Single Rune<a class="headerlink" href="#line-circle-arch-and-single-rune" title="Permanent link">&para;</a></h3>
+<p>When no curve is selected, use a RUNIC preset:</p>
+<ul>
+<li><strong>Line</strong> creates a straight editable path.</li>
+<li><strong>Circle</strong> creates a closed circular path that can fill its circumference with symbols.</li>
+<li><strong>Arch</strong> creates an editable curved path.</li>
+<li><strong>Single Rune</strong> creates one editable point without a curve.</li>
+</ul>
+<p><img alt="Examples created with RUNIC paths and individual rune placement" class="docs-shot" height="840" loading="lazy" src="../../assets/images/runic/creation-modes.png" width="1189" /></p>
+<h3 id="selected-mesh-edges">Selected mesh edges<a class="headerlink" href="#selected-mesh-edges" title="Permanent link">&para;</a></h3>
+<p>In <strong>Edit Mode</strong>, select one or more edges and click <strong>RUNES along Selected Edges</strong>. RUNIC creates an editable curve path from the edge selection.</p>
+<h3 id="selected-mesh-faces">Selected mesh faces<a class="headerlink" href="#selected-mesh-faces" title="Permanent link">&para;</a></h3>
+<p>In <strong>Edit Mode</strong>, switch to Face Select, select one or more faces, and click <strong>RUNES on Selected Faces</strong>. RUNIC creates one editable rune object with one placement point per selected face.</p>
+<p>Use <strong>Fixed</strong> for one consistent rune size, or <strong>Fit Faces</strong> to scale each rune inside its face. <strong>Face Margin</strong>, <strong>Rotate Rune</strong>, and <strong>Surface Offset</strong> refine the result.</p>
+<h3 id="drawing-on-a-mesh-surface">Drawing on a mesh surface<a class="headerlink" href="#drawing-on-a-mesh-surface" title="Permanent link">&para;</a></h3>
+<p>Select a mesh in Object Mode and choose <strong>Draw RUNES on Surface</strong> to enter curve drawing mode.</p>
+<p>RUNIC creates a curve path and uses the mesh as its surface target. For an existing curve and mesh, select exactly one of each and use <strong>Add RUNIC to Curve on Surface</strong> or <strong>Attach to Selected Surface</strong>.</p>
+<p>Surface placement has two modes:</p>
+<ul>
+<li><strong>Clean</strong> keeps each rune rigid while placing it against the surface. It is generally the clearest choice for hard-surface objects.</li>
+<li><strong>Wrap</strong> bends rune points to follow the target more closely. It suits smoother organic forms but can distort symbols on tight or uneven geometry.</li>
+</ul>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Before Wrap</label><label for="__tabbed_1_2">After Wrap</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><img alt="Runes before being wrapped to a curved mesh surface" class="docs-shot" height="875" loading="lazy" src="../../assets/images/runic/surface-before-wrap.png" width="1289" /></p>
+</div>
+<div class="tabbed-block">
+<p><img alt="Runes wrapped to follow a curved mesh surface" class="docs-shot" height="880" loading="lazy" src="../../assets/images/runic/surface-after-wrap.png" width="1272" /></p>
+</div>
+</div>
+</div>
+<p>Use <strong>Change Surface</strong> to choose another target or <strong>Detach from Surface</strong> to remove surface attachment.</p>
+<h2 id="fonts-and-text-sources">Fonts and text sources<a class="headerlink" href="#fonts-and-text-sources" title="Permanent link">&para;</a></h2>
+<h3 id="choosing-a-font">Choosing a font<a class="headerlink" href="#choosing-a-font" title="Permanent link">&para;</a></h3>
+<p>Click <strong>Browse Fonts</strong> to open the font browser. The bundled library is organized into:</p>
+<ul>
+<li><strong>Historical</strong></li>
+<li><strong>Magical</strong></li>
+<li><strong>Latin</strong></li>
+<li><strong>Fictional</strong></li>
+<li><strong>Decorative</strong></li>
+<li><strong>My Runes</strong> for your imported libraries</li>
+</ul>
+<p>Each font has its own preview card. Choose a font before setting up text or symbol content.</p>
+<p><img alt="RUNIC font browser showing font categories and a preview card" class="docs-shot docs-shot--compact" height="391" loading="lazy" src="../../assets/images/runic/font-browser-crop.png" width="535" /></p>
+<h3 id="random">Random<a class="headerlink" href="#random" title="Permanent link">&para;</a></h3>
+<p><strong>Random</strong> fills the selected path or object with valid symbols from the selected font. Set a <strong>Seed</strong> to make an arrangement repeatable; change the seed to generate a different arrangement.</p>
+<p>The available placement points limit how many symbols can be placed. A Single Rune object or one-face rune object receives one symbol.</p>
+<h3 id="text">Text<a class="headerlink" href="#text" title="Permanent link">&para;</a></h3>
+<p><strong>Text</strong> uses characters supported by the selected font. If the normal text option is unavailable, the font may be a symbols-only library rather than a conventional alphabet.</p>
+<h3 id="symbols">Symbols<a class="headerlink" href="#symbols" title="Permanent link">&para;</a></h3>
+<p><strong>Symbols</strong> lets you select individual glyphs from the font browser. The gallery is based on the font's character map.</p>
+<p><a href="../../assets/images/runic/symbol-browser-crop.png"><img alt="RUNIC symbol browser showing selectable glyphs from the current font" class="docs-shot" height="418" loading="lazy" src="../../assets/images/runic/symbol-browser-crop.png" width="904" /></a></p>
+<h3 id="phrase">Phrase<a class="headerlink" href="#phrase" title="Permanent link">&para;</a></h3>
+<p>Some fonts include prepared phrase sets. Choose a phrase from the <strong>Phrase Bank</strong> and RUNIC converts it to the associated font symbols.</p>
+<p>Phrase mode is unavailable for a Single Rune object, a face-rune object with one selected face, or a font without a phrase set.</p>
+<h2 id="placement-controls">Placement controls<a class="headerlink" href="#placement-controls" title="Permanent link">&para;</a></h2>
+<h3 id="paths-and-edges">Paths and edges<a class="headerlink" href="#paths-and-edges" title="Permanent link">&para;</a></h3>
+<p>Use these controls to arrange runes along a curve or selected edges:</p>
+<ul>
+<li><strong>Rune Size</strong> controls overall scale.</li>
+<li><strong>Character Spacing</strong> adjusts the gap between glyphs.</li>
+<li><strong>Word Spacing</strong> adjusts the gap between words.</li>
+<li><strong>Move Along Path</strong> moves the whole arrangement along the path.</li>
+<li><strong>Move Across Path</strong> moves runes sideways from the path.</li>
+<li><strong>Reverse Direction</strong> flips the reading direction.</li>
+<li><strong>Rotate Runes</strong> rotates the runes around the path.</li>
+<li><strong>Keep Clear of Ends</strong> reserves empty space at open-path ends.</li>
+<li><strong>Avoid Sharp Corners</strong> reduces crowding around sharp corners.</li>
+<li><strong>Fill Closed Paths</strong> distributes the result around a cyclic curve.</li>
+</ul>
+<p><strong>Show Path Guide</strong> displays temporary viewport-only guide points. They are not rendered, exported, or retained when the modifier is applied.</p>
+<h3 id="single-rune">Single Rune<a class="headerlink" href="#single-rune" title="Permanent link">&para;</a></h3>
+<p>Single Rune uses a procedural mesh point rather than a curve. Move, rotate, or scale its object using Blender's normal transform tools. Phrase mode is unavailable because it has one placement point.</p>
+<h2 id="appearance-and-geometry">Appearance and geometry<a class="headerlink" href="#appearance-and-geometry" title="Permanent link">&para;</a></h2>
+<p>Choose an appearance in the RUNIC panels:</p>
+<ul>
+<li><strong>Flat</strong> creates a flat filled result.</li>
+<li><strong>Raised</strong> creates closed geometry with depth.</li>
+<li><strong>Outline</strong> creates an outline without a filled body.</li>
+</ul>
+<p>Surface workflows use <strong>Filled</strong> and <strong>Outline</strong> labels because the surface supplies the base.</p>
+<h3 id="repair-and-smoothing">Repair and smoothing<a class="headerlink" href="#repair-and-smoothing" title="Permanent link">&para;</a></h3>
+<p>If raised, outlined, or bevelled geometry shows artifacts around sharp turns, corners, thin strokes, or overlapping details, open <strong>Appearance → Advanced → Font Repair</strong>. Start with the lightest repair mode that removes the visible problem:</p>
+<ul>
+<li>Reduce bevel or outline width if fine details collapse.</li>
+<li>Increase segments gradually when curves look faceted.</li>
+<li>Use <strong>Clean</strong> rather than <strong>Wrap</strong> if surface symbols become visibly distorted.</li>
+</ul>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Artifacts visible</label><label for="__tabbed_2_2">After repair</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><a href="../../assets/images/runic/font-repair-before-detail.png"><img alt="Raised rune geometry showing artifacts around a tight inner curve" class="docs-shot" height="400" loading="lazy" src="../../assets/images/runic/font-repair-before-detail.png" width="670" /></a></p>
+</div>
+<div class="tabbed-block">
+<p><a href="../../assets/images/runic/font-repair-after-detail.png"><img alt="Raised rune geometry after repairing the tight inner curve" class="docs-shot" height="400" loading="lazy" src="../../assets/images/runic/font-repair-after-detail.png" width="670" /></a></p>
+</div>
+</div>
+</div>
+<h2 id="materials-uvs-and-finished-meshes">Materials, UVs, and finished meshes<a class="headerlink" href="#materials-uvs-and-finished-meshes" title="Permanent link">&para;</a></h2>
+<p>The <strong>Materials</strong> panel can assign separate materials to:</p>
+<ul>
+<li><strong>Faces</strong> for front or base rune faces.</li>
+<li><strong>Sides</strong> for raised or surface side walls.</li>
+<li><strong>Outline</strong> for outline geometry.</li>
+</ul>
+<p>If a side or outline material is empty, RUNIC reuses the face material.</p>
+<p>The <strong>Finish</strong> panel includes:</p>
+<ul>
+<li><strong>Generate UV Map</strong> to create and pack UVs for texturing or export.</li>
+<li><strong>UV Margin</strong> to control space between packed UV islands.</li>
+<li><strong>Create Finished Mesh</strong> to make a separate ordinary mesh copy while leaving the original RUNIC object editable.</li>
+<li><strong>Remove RUNIC</strong> to remove RUNIC's procedural setup while keeping the original editable object in the scene. This does not create a finished mesh copy.</li>
+</ul>
+<p><img alt="Finished RUNIC lettering applied along a sword blade" class="docs-shot" height="691" loading="lazy" src="../../assets/images/runic/finished-sword.png" width="1706" /></p>
+<h2 id="personal-libraries">Personal libraries<a class="headerlink" href="#personal-libraries" title="Permanent link">&para;</a></h2>
+<h3 id="importing-a-font">Importing a font<a class="headerlink" href="#importing-a-font" title="Permanent link">&para;</a></h3>
+<p>Choose <strong>Import Font File</strong> and select an OTF or TTF font. RUNIC inspects its character map and opens a review gallery.</p>
+<p>Use the review gallery to choose whether the library should provide <strong>Text + Symbols</strong> or <strong>Symbols Only</strong>, select the glyphs you need, and save the result as a reusable entry under <strong>My Runes</strong>.</p>
+<h3 id="importing-hand-drawn-symbols">Importing hand-drawn symbols<a class="headerlink" href="#importing-hand-drawn-symbols" title="Permanent link">&para;</a></h3>
+<p>Choose <strong>Import Drawings</strong> and select a PNG, JPG, JPEG, TIFF, or TIF image. The review workflow can treat the image as one rune, find separate marks automatically, or divide a regular sheet into rows and columns.</p>
+<p>Use the controls to invert artwork, adjust threshold and speck cleanup, join gaps, set padding and cell edges, control tracing detail, and approve or ignore detected runes. RUNIC turns the approved drawings into vector contours and stores them as a reusable personal library.</p>
+<p>For a regular sheet like this example, choose <strong>Even Grid</strong> and set the number of rows and columns. Separate dots and strokes within a cell remain part of the same rune.</p>
+<p><img alt="Four hand-drawn symbols from the supplied drawing template" class="docs-shot" height="354" loading="lazy" src="../../assets/images/runic/drawing-sheet-example.png" width="1000" /></p>
+<p><a href="../../assets/images/runic/drawing-import-review.png"><img alt="Import Drawings review using Even Grid with one row and four columns, keeping all four symbols" class="docs-shot" height="647" loading="lazy" src="../../assets/images/runic/drawing-import-review.png" width="914" /></a></p>
+<h2 id="troubleshooting-and-support">Troubleshooting and support<a class="headerlink" href="#troubleshooting-and-support" title="Permanent link">&para;</a></h2>
+<p>For common problems, see the <a href="../faq/">RUNIC FAQ</a>.</p>
+<p>When reporting a problem, include your Blender version, RUNIC version, operating system, the path or object workflow you used, exact reproduction steps, and the full error message or a screenshot.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; BLUE NILE 3D
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.indexes", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,1801 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Official documentation for BLUE NILE 3D tools, add-ons, resources, and related products.">
+      
+      
+        <meta name="author" content="BLUE NILE 3D">
+      
+      
+        <link rel="canonical" href="https://docs.bluenile.design/style-thief/user-guide/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../faq/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/brand/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>User Guide - BLUE NILE 3D Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  
+  <link rel="manifest" href="../../site.webmanifest">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/brand/apple-touch-icon.png">
+  <meta name="theme-color" content="#030307">
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#style-thief-user-guide" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="BLUE NILE 3D Documentation" class="md-header__button md-logo" aria-label="BLUE NILE 3D Documentation" data-md-component="logo">
+      
+  <img src="../../assets/images/brand/blue-nile-block-symbol-bone-solid.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            BLUE NILE 3D Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              User Guide
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/bluenile3d/blue-nile-3d-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    bluenile3d/blue-nile-3d-docs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="BLUE NILE 3D Documentation" class="md-nav__button md-logo" aria-label="BLUE NILE 3D Documentation" data-md-component="logo">
+      
+  <img src="../../assets/images/brand/blue-nile-block-symbol-bone-solid.svg" alt="logo">
+
+    </a>
+    BLUE NILE 3D Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/bluenile3d/blue-nile-3d-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    bluenile3d/blue-nile-3d-docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Blender Add-ons
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Blender Add-ons
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../old-modifier-menu/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Old Modifier Menu
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Old Modifier Menu
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../old-modifier-menu/user-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    User Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../old-modifier-menu/faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../runic/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RUNIC
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    RUNIC
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../runic/user-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    User Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../runic/faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../magic-eye-maker/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Magic Eye Maker
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Magic Eye Maker
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../magic-eye-maker/user-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    User Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../magic-eye-maker/faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Style Thief
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Style Thief
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    User Guide
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    User Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-colour-matching-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How colour matching works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#selecting-images" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Selecting images
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#processing-modes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Processing modes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Processing modes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#single" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Single
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#batch-input" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Batch Input
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#batch-target" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Batch Target
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#matching-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Matching methods
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Matching methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#available-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Available methods
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pccm-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PCCM output
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#strength" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Strength
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#all-modes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        All Modes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#colour-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Colour management
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Output settings
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Output settings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#blender-images-and-fake-user" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Blender images and Fake User
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#save-to-directory" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Save To Directory
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shader-nodes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shader nodes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preferences" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Preferences
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#improving-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Improving results
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting-and-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting and support
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-colour-matching-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How colour matching works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#selecting-images" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Selecting images
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#processing-modes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Processing modes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Processing modes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#single" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Single
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#batch-input" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Batch Input
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#batch-target" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Batch Target
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#matching-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Matching methods
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Matching methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#available-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Available methods
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pccm-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PCCM output
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#strength" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Strength
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#all-modes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        All Modes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#colour-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Colour management
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Output settings
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Output settings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#blender-images-and-fake-user" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Blender images and Fake User
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#save-to-directory" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Save To Directory
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shader-nodes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shader nodes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preferences" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Preferences
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#improving-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Improving results
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting-and-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting and support
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="style-thief-user-guide">Style Thief — User Guide<a class="headerlink" href="#style-thief-user-guide" title="Permanent link">&para;</a></h1>
+<p>Style Thief recolours an input image using the colour distribution of a target image. It changes colour and tone, not the shapes or subject in the input, and produces a result at the input image's resolution.</p>
+<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Download the Style Thief release ZIP.</li>
+<li>Leave the ZIP intact; do not extract or rearrange its contents.</li>
+<li>In Blender, open <strong>Edit → Preferences → Get Extensions</strong>.</li>
+<li>Open the menu in the upper-right corner and choose <strong>Install from Disk</strong>.</li>
+<li>Select the ZIP and enable <strong>Style Thief</strong> if Blender does not do so automatically.</li>
+</ol>
+<p>The panel is in <strong>Image Editor → Sidebar → Style Thief</strong>. Press <span class="keys"><kbd class="key-n">N</kbd></span> while the pointer is over the Image Editor if its sidebar is hidden.</p>
+<p><img alt="Style Thief controls in Blender's Image Editor" class="docs-shot docs-shot--compact" height="636" loading="lazy" src="../../assets/images/style-thief/interface-panel-crop.png" width="244" /></p>
+<h2 id="how-colour-matching-works">How colour matching works<a class="headerlink" href="#how-colour-matching-works" title="Permanent link">&para;</a></h2>
+<p>The <strong>Source Image</strong> is the image that will be changed. The <strong>Target Image</strong> supplies the colour style to borrow. The result keeps the source composition, dimensions, and alpha channel where present.</p>
+<p>The source and target do not need the same dimensions or show the same subject. Similar content or a compatible balance of light and dark areas can make the transfer more predictable, but contrasting images can produce useful creative results.</p>
+<h2 id="selecting-images">Selecting images<a class="headerlink" href="#selecting-images" title="Permanent link">&para;</a></h2>
+<p>The Source and Target rows provide several ways to choose an image.</p>
+<table>
+<thead>
+<tr>
+<th>Control</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Image field</strong></td>
+<td>Choose an image already loaded in the current Blender file.</td>
+</tr>
+<tr>
+<td><strong>Folder</strong></td>
+<td>Load an image from disk.</td>
+</tr>
+<tr>
+<td><strong>Paste</strong></td>
+<td>Create a Blender image from an image currently on the system clipboard.</td>
+</tr>
+<tr>
+<td><strong>Scissors</strong></td>
+<td>Capture a rectangular region of a screen.</td>
+</tr>
+<tr>
+<td><strong>Cube</strong></td>
+<td>Choose an image used by an Image Texture node on the active object. This appears when an object is active.</td>
+</tr>
+<tr>
+<td><strong>Cursor</strong></td>
+<td>Display the assigned image in the current Image Editor. This appears after an image is assigned.</td>
+</tr>
+</tbody>
+</table>
+<p>For screen capture, drag over the required region and confirm with <strong>Enter</strong> or <strong>Space</strong>. Press <strong>Esc</strong> to cancel.</p>
+<h2 id="processing-modes">Processing modes<a class="headerlink" href="#processing-modes" title="Permanent link">&para;</a></h2>
+<h3 id="single">Single<a class="headerlink" href="#single" title="Permanent link">&para;</a></h3>
+<p>Use <strong>Single</strong> for one source and one target.</p>
+<ol>
+<li>Assign the Source Image and Target Image.</li>
+<li>Choose a method and strength.</li>
+<li>Check the Input and Target colour profiles.</li>
+<li>Choose any output or node options.</li>
+<li>Click <strong>Steal That Style!</strong>.</li>
+</ol>
+<h3 id="batch-input">Batch Input<a class="headerlink" href="#batch-input" title="Permanent link">&para;</a></h3>
+<p><strong>Batch Input</strong> matches several source images to one target. It is useful for giving a set of textures, renders, or photographs a related palette.</p>
+<ol>
+<li>Choose <strong>Batch → Batch Input</strong>.</li>
+<li>Choose <strong>Loaded Images</strong> or <strong>Directory</strong>.</li>
+<li>For Loaded Images, click <strong>Add Image Slot</strong> and assign each source. For Directory, select the source folder.</li>
+<li>Assign one <strong>Target Image</strong>.</li>
+<li>Choose the method, strength, and colour profiles.</li>
+<li>Choose the output directory when required, then run the match.</li>
+</ol>
+<p>Directory mode reads the supported image files in the selected folder in filename order and writes the results to the output directory. PNG, JPEG, BMP, TIFF, HDR, and EXR files are supported by directory processing.</p>
+<p><img alt="Style Thief Batch Input controls" class="docs-shot docs-shot--compact" height="252" loading="lazy" src="../../assets/images/style-thief/batch-input-crop.png" width="244" /></p>
+<h3 id="batch-target">Batch Target<a class="headerlink" href="#batch-target" title="Permanent link">&para;</a></h3>
+<p><strong>Batch Target</strong> matches one source image separately to several targets. It is useful for generating look variations from one texture, render, or piece of artwork.</p>
+<ol>
+<li>Choose <strong>Batch → Batch Target</strong>.</li>
+<li>Assign one <strong>Source Image</strong>.</li>
+<li>Choose <strong>Loaded Images</strong> or <strong>Directory</strong> for the targets.</li>
+<li>For Loaded Images, click <strong>Add Target Slot</strong> and assign each target. For Directory, select the target folder.</li>
+<li>Choose the method, strength, colour profiles, and output options.</li>
+<li>Click <strong>Steal That Style!</strong>.</li>
+</ol>
+<p><img alt="Style Thief Batch Target controls" class="docs-shot docs-shot--compact" height="240" loading="lazy" src="../../assets/images/style-thief/batch-target-crop.png" width="244" /></p>
+<h2 id="matching-methods">Matching methods<a class="headerlink" href="#matching-methods" title="Permanent link">&para;</a></h2>
+<p>Different methods interpret the same image pair differently. Begin with <strong>MK Ultra</strong>, then compare alternatives when you want a different balance of colour, contrast, or intensity.</p>
+<p>Want to judge every method on one fixed image pair? <a href="https://docs.bluenile.design/interactive-proof/?set=style-thief-matching-modes">Open the interactive matching-mode viewer</a>.</p>
+<h3 id="available-methods">Available methods<a class="headerlink" href="#available-methods" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>When to try it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>MK Ultra</strong></td>
+<td>Start here for a balanced general-purpose result.</td>
+</tr>
+<tr>
+<td><strong>Compound A</strong></td>
+<td>Try when you want a stronger compound match or MK Ultra feels too restrained.</td>
+</tr>
+<tr>
+<td><strong>Compound B</strong></td>
+<td>Try for a different combination of histogram and colour-distribution matching.</td>
+</tr>
+<tr>
+<td><strong>Raging Heart</strong></td>
+<td>Useful for a natural global shift based on channel averages and variation.</td>
+</tr>
+<tr>
+<td><strong>Spectrum</strong></td>
+<td>Useful for smooth histogram-driven tonal and colour remapping.</td>
+</tr>
+<tr>
+<td><strong>MV Gaussian</strong></td>
+<td>Useful for a broad multivariate palette transfer.</td>
+</tr>
+<tr>
+<td><strong>Lab Shift</strong></td>
+<td>A fast option for direct, controlled palette changes and previews.</td>
+</tr>
+<tr>
+<td><strong>Crosscut</strong></td>
+<td>Offers a distinctive colour interpretation and is usually slower at high resolution.</td>
+</tr>
+<tr>
+<td><strong>Matrix</strong></td>
+<td>Produces a bold overall palette transfer.</td>
+</tr>
+<tr>
+<td><strong>PCCM Raw</strong></td>
+<td>A high-variance creative option. Inspect the result rather than assuming it will be physically intuitive.</td>
+</tr>
+<tr>
+<td><strong>PCCM Aligned</strong></td>
+<td>A more stable PCCM variation that reduces unexpected whole-image inversions.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="pccm-output">PCCM output<a class="headerlink" href="#pccm-output" title="Permanent link">&para;</a></h3>
+<p>When <strong>PCCM Raw</strong> is selected, the <strong>Output</strong> control appears:</p>
+<ul>
+<li><strong>Raw</strong> creates the original high-variance PCCM interpretation.</li>
+<li><strong>Aligned</strong> creates the more stable, direction-aligned interpretation.</li>
+<li><strong>Both</strong> creates separate PCCM Raw and PCCM Aligned results for comparison.</li>
+</ul>
+<p><img alt="Style Thief PCCM Both controls" class="docs-shot docs-shot--compact" height="205" loading="lazy" src="../../assets/images/style-thief/pccm-controls-crop.png" width="244" /></p>
+<p>Depending on the image pair, PCCM Raw can look inverted, unusually dark, or radically recoloured. Choose Aligned for a more stable interpretation, or keep Raw when you prefer its more unpredictable result.</p>
+<h2 id="strength">Strength<a class="headerlink" href="#strength" title="Permanent link">&para;</a></h2>
+<p>Every method supports the same three artist-facing presets:</p>
+<table>
+<thead>
+<tr>
+<th>Strength</th>
+<th>Behaviour</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Adaptive</strong></td>
+<td>Strong matching with automatic source-detail recovery when the proposed result has a higher clipping or out-of-range risk. Recommended starting point.</td>
+</tr>
+<tr>
+<td><strong>Strong</strong></td>
+<td>Produces the boldest transfer. Use it when Adaptive feels too restrained.</td>
+</tr>
+<tr>
+<td><strong>Safe</strong></td>
+<td>Blends more of the source character back into the result. Use when highlights, shadows, texture, or recognisable colours need more protection.</td>
+</tr>
+</tbody>
+</table>
+<p>Adaptive is not simply a weaker Strong preset. Its effect varies with the selected images, so Strong may still produce the preferred result. Judge the image rather than relying on the preset name.</p>
+<p><img alt="Style Thief strength comparison across matching methods" src="../../assets/images/style-thief/moss-cobbles-strength.jpg" /></p>
+<h2 id="all-modes">All Modes<a class="headerlink" href="#all-modes" title="Permanent link">&para;</a></h2>
+<p>Enable <strong>All Modes</strong> to generate all eleven outputs from the current source and target pair. The selected Method is disabled because every method is used. The chosen Strength applies to every result, and both PCCM Raw and PCCM Aligned are created.</p>
+<p><img alt="Style Thief All Modes controls" class="docs-shot docs-shot--compact" height="205" loading="lazy" src="../../assets/images/style-thief/all-modes-crop.png" width="244" /></p>
+<p>All Modes is intended for look development and comparison. It takes longer and can create many images in Blender, particularly when combined with a batch mode.</p>
+<h2 id="colour-management">Colour management<a class="headerlink" href="#colour-management" title="Permanent link">&para;</a></h2>
+<p>Set <strong>Input</strong> to describe the Source Image and <strong>Target</strong> to describe the Target Image. Leave both on <strong>Auto</strong> for normal use:</p>
+<table>
+<thead>
+<tr>
+<th>Profile</th>
+<th>Use it for</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Auto</strong></td>
+<td>Recommended. Uses Blender image metadata, file type, float status, and pixel range to infer the profile.</td>
+</tr>
+<tr>
+<td><strong>sRGB</strong></td>
+<td>Standard display-referred photographs, screenshots, web images, and most PNG/JPEG artwork.</td>
+</tr>
+<tr>
+<td><strong>Linear</strong></td>
+<td>Linear-light images whose values should be interpreted as scene-linear but do not require HDR range reconstruction.</td>
+</tr>
+<tr>
+<td><strong>HDR / Linear</strong></td>
+<td>Scene-linear HDR or EXR imagery whose values can exceed 1.0 and whose dynamic range should be retained.</td>
+</tr>
+</tbody>
+</table>
+<p>Use the override when Auto has incomplete or misleading metadata. For example, select <strong>sRGB</strong> for a normal photograph that was incorrectly tagged Linear, or <strong>HDR / Linear</strong> for an HDRI whose brightest values must remain above 1.0.</p>
+<p>Style Thief supports matching between normal sRGB images and linear or HDR images. Choosing the correct profiles helps prevent unexpected brightness, contrast, and colour changes.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Style Thief is intended for colour imagery. Do not use a colour match on normal maps, roughness maps, masks, depth maps, or other data textures. Blender images tagged Non-Color, Raw, or Data trigger a console warning because recolouring them changes their numeric meaning.</p>
+</div>
+<h2 id="output-settings">Output settings<a class="headerlink" href="#output-settings" title="Permanent link">&para;</a></h2>
+<h3 id="blender-images-and-fake-user">Blender images and Fake User<a class="headerlink" href="#blender-images-and-fake-user" title="Permanent link">&para;</a></h3>
+<p>By default, results are created as Blender image datablocks. <strong>Set Fake User</strong> protects generated images from being removed as unused data when the <code>.blend</code> file is reopened.</p>
+<p>Generated images are not automatically external files unless <strong>Save To Directory</strong> is enabled or a directory-based Batch Input requires file output. Save important images to disk or pack them into the <code>.blend</code> file.</p>
+<h3 id="save-to-directory">Save To Directory<a class="headerlink" href="#save-to-directory" title="Permanent link">&para;</a></h3>
+<p>Enable <strong>Save To Directory</strong>, choose an <strong>Output Directory</strong>, and run the match. The result name includes the friendly method name, such as <code>MK_Ultra</code>, <code>Lab_Shift</code>, <code>Crosscut</code>, <code>Matrix</code>, <code>PCCM_Raw</code>, or <code>PCCM_Aligned</code>.</p>
+<p>For Batch Target, filenames also identify the source and target. Running the same operation again can overwrite an existing file with the same path and name, so use a dedicated output directory when preserving iterations.</p>
+<p>LDR sources retain a suitable LDR extension. HDR and EXR sources can retain HDR output when their HDR range is being preserved.</p>
+<h3 id="shader-nodes">Shader nodes<a class="headerlink" href="#shader-nodes" title="Permanent link">&para;</a></h3>
+<p>The <strong>Nodes</strong> menu controls integration with Image Texture nodes:</p>
+<ul>
+<li><strong>None</strong> makes no node changes.</li>
+<li><strong>Add nodes near existing</strong> creates result Image Texture nodes near Image Texture nodes using the source image.</li>
+<li><strong>Add nodes and replace links</strong> creates the result nodes and transfers the source node's outgoing links to them.</li>
+</ul>
+<p>In Single mode, <strong>Replace Source Image with Result Image</strong> also replaces the Source Image field with the new result after link replacement.</p>
+<p>Use node actions on a copy of a material when you want to compare the original and recoloured setups safely.</p>
+<h2 id="preferences">Preferences<a class="headerlink" href="#preferences" title="Permanent link">&para;</a></h2>
+<p>Open Style Thief in Blender's add-on preferences to change:</p>
+<table>
+<thead>
+<tr>
+<th>Preference</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Screen Grab Monitor</strong></td>
+<td>Capture the first monitor, second monitor, or the combined desktop.</td>
+</tr>
+<tr>
+<td><strong>Screen Grab Mode: Resizable</strong></td>
+<td>Opens a resizable selection window. It can take longer to appear and may open behind Blender.</td>
+</tr>
+<tr>
+<td><strong>Screen Grab Mode: Fast</strong></td>
+<td>Opens a fixed-size selection window more quickly and attempts to keep it on top.</td>
+</tr>
+<tr>
+<td><strong>Rename Suffix / Prefix</strong></td>
+<td>Places the method name after or before the source/result name.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="improving-results">Improving results<a class="headerlink" href="#improving-results" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Start with MK Ultra and Adaptive, then compare methods rather than forcing one method to suit every pair.</li>
+<li>Use All Modes at a reduced resolution during look development if the full images are very large.</li>
+<li>Try Strong when Adaptive is too restrained, and Safe when highlights or recognisable source colours need more protection.</li>
+<li>For PCCM, compare Raw and Aligned. A strange Raw result does not imply that Aligned will also fail.</li>
+<li>Check Input and Target colour profiles whenever a result is unexpectedly bright, dark, flat, or low contrast.</li>
+<li>Use colour targets rather than data textures, and avoid almost monochrome targets unless a deliberately narrow palette is wanted.</li>
+<li>Compare the result at 100% zoom when checking banding, pixelation, clipping, or texture detail.</li>
+</ul>
+<h2 id="troubleshooting-and-support">Troubleshooting and support<a class="headerlink" href="#troubleshooting-and-support" title="Permanent link">&para;</a></h2>
+<p>For common problems, see the <a href="../faq/">Style Thief FAQ</a>.</p>
+<p>When reporting a problem, include the Blender version, Style Thief version, operating system, source and target images where licensing allows, processing mode, method, strength, colour profiles, exact reproduction steps, and the complete error message. A screenshot of the panel and result is also useful.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; BLUE NILE 3D
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.indexes", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

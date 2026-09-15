@@ -1,0 +1,45 @@
+{
+  "product": "Old Modifier Menu",
+  "title": "Add the combination. Then shape the result.",
+  "description": "A saved Stack adds the modifier types in order. Adjust their values in Blender as usual. Follow this example from the starting mesh to the tuned result.",
+  "type": "states",
+  "theme": {
+    "bg": "#070A12",
+    "fg": "#E7E3D6",
+    "accent": "#C8E83E",
+    "surface": "#171B1B",
+    "line": "#717C73",
+    "muted": "#D0D1C9"
+  },
+  "nativePixels": false,
+  "stereogram": false,
+  "defaultState": "added",
+  "credit": "Same object and camera throughout. The final values are manually adjusted, not stored by Stacks.",
+  "states": [
+    {
+      "id": "base",
+      "label": "Base mesh",
+      "image": "./media/old-modifier-menu/omm-340-stack-base.png",
+      "thumb": "./media/old-modifier-menu/thumb-omm-340-stack-base.webp",
+      "alt": "Old Modifier Menu: Base mesh",
+      "caption": "The starting mesh, with no modifiers."
+    },
+    {
+      "id": "added",
+      "label": "Stack added",
+      "image": "./media/old-modifier-menu/omm-340-stack-added.png",
+      "thumb": "./media/old-modifier-menu/thumb-omm-340-stack-added.webp",
+      "alt": "Old Modifier Menu: Stack added",
+      "caption": "Array, Bevel and Weighted Normal added by Old Modifier Menu in one Stack action, using Blender defaults."
+    },
+    {
+      "id": "tuned",
+      "label": "After adjustment",
+      "image": "./media/old-modifier-menu/omm-340-stack-tuned.png",
+      "thumb": "./media/old-modifier-menu/thumb-omm-340-stack-tuned.webp",
+      "alt": "Old Modifier Menu: After adjustment",
+      "caption": "Array and Bevel values adjusted in Blender afterward. Stacks do not store these tuned settings."
+    }
+  ],
+  "aspectRatio": "800 / 640"
+}

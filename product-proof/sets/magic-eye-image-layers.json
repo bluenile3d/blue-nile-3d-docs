@@ -1,0 +1,53 @@
+{
+  "product": "Magic Eye Maker",
+  "title": "Use more than one image in the pattern.",
+  "description": "Combine image layers instead of relying on a single tile. This example uses Stack Bands to place two source images in horizontal bands before generating the stereogram.",
+  "type": "states",
+  "theme": {
+    "bg": "#070A12",
+    "fg": "#E7E3D6",
+    "accent": "#C8E83E",
+    "surface": "#19131C",
+    "line": "#717C73",
+    "muted": "#D0D1C9"
+  },
+  "nativePixels": false,
+  "stereogram": true,
+  "defaultState": "pattern",
+  "credit": "Original Blender scene and patterns by Blue Nile. Generated with Magic Eye Maker 4.0.",
+  "states": [
+    {
+      "id": "first",
+      "label": "First image",
+      "image": "./media/magic-eye-maker/magic-eye-word-plum-ink-layer-preview.png",
+      "thumb": "./media/magic-eye-maker/thumb-magic-eye-word-plum-ink-layer-preview.webp",
+      "alt": "Magic Eye Maker: First image",
+      "caption": "The first source image supplies the organic ink pattern."
+    },
+    {
+      "id": "second",
+      "label": "Second image",
+      "image": "./media/magic-eye-maker/magic-eye-word-graphic-dashes-layer-preview.png",
+      "thumb": "./media/magic-eye-maker/thumb-magic-eye-word-graphic-dashes-layer-preview.webp",
+      "alt": "Magic Eye Maker: Second image",
+      "caption": "The second source image supplies the graphic dashes."
+    },
+    {
+      "id": "pattern",
+      "label": "Combined pattern",
+      "image": "./media/magic-eye-maker/magic-eye-word-image-layers-pattern.png",
+      "thumb": "./media/magic-eye-maker/thumb-magic-eye-word-image-layers-pattern.webp",
+      "alt": "Magic Eye Maker: Combined pattern",
+      "caption": "Stack Bands arranges the two images into one repeating pattern."
+    },
+    {
+      "id": "result",
+      "label": "Stereogram",
+      "image": "./media/magic-eye-maker/magic-eye-word-image-layers-result.png",
+      "thumb": "./media/magic-eye-maker/thumb-magic-eye-word-image-layers-result.webp",
+      "alt": "Magic Eye Maker: Stereogram",
+      "caption": "The banded pattern after the scene depth is applied. This is a whole image, not an A/B split."
+    }
+  ],
+  "aspectRatio": "1200 / 400"
+}

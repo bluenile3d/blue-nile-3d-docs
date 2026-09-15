@@ -1,0 +1,166 @@
+{
+  "style-thief-matching-modes": {
+    "product": "STYLE THIEF",
+    "label": "INTERACTIVE PROOF / MATCHING METHODS",
+    "title": "Ten methods. One image pair.",
+    "description": "Choose a method to see its result. Use Source and Target to check the original images.",
+    "defaultState": "mk-ultra",
+    "credit": "Source and target: Style Thief test set.",
+    "states": [
+      {
+        "id": "source",
+        "group": "REFERENCE",
+        "label": "Source",
+        "image": "../assets/images/style-thief/matching-modes/01_input.webp",
+        "alt": "Original pale and rust-coloured cobblestone source texture before Style Thief matching",
+        "caption": "The source texture supplies the structure and surface detail."
+      },
+      {
+        "id": "target",
+        "group": "REFERENCE",
+        "label": "Target",
+        "image": "../assets/images/style-thief/matching-modes/02_target.webp",
+        "alt": "Moss-covered cobblestone target reference used by Style Thief",
+        "caption": "The target reference supplies the overall colour direction."
+      },
+      {
+        "id": "mk-ultra",
+        "group": "MATCHING METHODS",
+        "label": "MK Ultra",
+        "image": "../assets/images/style-thief/matching-modes/03_mk_ultra.webp",
+        "alt": "Cobblestone source matched to the moss reference with Style Thief MK Ultra",
+        "caption": "A balanced, general-purpose colour transfer."
+      },
+      {
+        "id": "compound-a",
+        "group": "MATCHING METHODS",
+        "label": "Compound A",
+        "image": "../assets/images/style-thief/matching-modes/04_compound_a.webp",
+        "alt": "Cobblestone source matched to the moss reference with Style Thief Compound A",
+        "caption": "A stronger compound interpretation of the target palette."
+      },
+      {
+        "id": "compound-b",
+        "group": "MATCHING METHODS",
+        "label": "Compound B",
+        "image": "../assets/images/style-thief/matching-modes/05_compound_b.webp",
+        "alt": "Cobblestone source matched to the moss reference with Style Thief Compound B",
+        "caption": "An alternative compound match with a different colour balance."
+      },
+      {
+        "id": "raging-heart",
+        "group": "MATCHING METHODS",
+        "label": "Raging Heart",
+        "image": "../assets/images/style-thief/matching-modes/06_raging_heart.webp",
+        "alt": "Cobblestone source matched to the moss reference with Style Thief Raging Heart",
+        "caption": "A warmer global shift based on the colour relationships in the reference."
+      },
+      {
+        "id": "spectrum",
+        "group": "MATCHING METHODS",
+        "label": "Spectrum",
+        "image": "../assets/images/style-thief/matching-modes/07_spectrum.webp",
+        "alt": "Cobblestone source matched to the moss reference with Style Thief Spectrum",
+        "caption": "A smooth histogram-led remap of colour and tone."
+      },
+      {
+        "id": "mv-gaussian",
+        "group": "MATCHING METHODS",
+        "label": "MV Gaussian",
+        "image": "../assets/images/style-thief/matching-modes/08_mv_gaussian.webp",
+        "alt": "Cobblestone source matched to the moss reference with Style Thief MV Gaussian",
+        "caption": "A broad multivariate interpretation of the target palette."
+      },
+      {
+        "id": "lab-shift",
+        "group": "MATCHING METHODS",
+        "label": "Lab Shift",
+        "image": "../assets/images/style-thief/matching-modes/09_lab_shift.webp",
+        "alt": "Cobblestone source matched to the moss reference with Style Thief Lab Shift",
+        "caption": "A direct, controlled palette shift in Lab colour space."
+      },
+      {
+        "id": "crosscut",
+        "group": "MATCHING METHODS",
+        "label": "Crosscut",
+        "image": "../assets/images/style-thief/matching-modes/10_crosscut.webp",
+        "alt": "Cobblestone source matched to the moss reference with Style Thief Crosscut",
+        "caption": "A distinct distribution-based interpretation."
+      },
+      {
+        "id": "matrix",
+        "group": "MATCHING METHODS",
+        "label": "Matrix",
+        "image": "../assets/images/style-thief/matching-modes/11_matrix.webp",
+        "alt": "Cobblestone source matched to the moss reference with Style Thief Matrix",
+        "caption": "A bold global palette transfer."
+      },
+      {
+        "id": "pccm-raw",
+        "group": "PCCM OUTPUT",
+        "label": "Raw",
+        "image": "../assets/images/style-thief/matching-modes/12_pccm_raw.webp",
+        "alt": "Cobblestone source matched to the moss reference with Style Thief PCCM Raw",
+        "caption": "The original high-variance PCCM interpretation."
+      },
+      {
+        "id": "pccm-aligned",
+        "group": "PCCM OUTPUT",
+        "label": "Aligned",
+        "image": "../assets/images/style-thief/matching-modes/13_pccm_aligned.webp",
+        "alt": "Cobblestone source matched to the moss reference with Style Thief PCCM Aligned",
+        "caption": "A more stable PCCM interpretation with aligned light and dark direction."
+      }
+    ]
+  },
+  "style-thief-photo-before-after": {
+    "type": "comparison",
+    "product": "STYLE THIEF",
+    "label": "PHOTOGRAPH / FILM COLOURS",
+    "title": "Borrow the colours of a film photograph.",
+    "description": "Drag the divider to compare the original photo with the result.",
+    "aspectRatio": "16 / 9",
+    "credit": "Photographs by Blue Nile.",
+    "before": {
+      "label": "Original",
+      "image": "../assets/images/style-thief/personal-photo-comparison/source.webp",
+      "alt": "Original green foliage and branching stem photograph by Blue Nile"
+    },
+    "after": {
+      "label": "MK Ultra",
+      "image": "../assets/images/style-thief/personal-photo-comparison/mk-ultra.webp",
+      "alt": "The same foliage with faded blue and pink colours transferred by Style Thief"
+    },
+    "target": {
+      "label": "Colour target",
+      "image": "../assets/images/style-thief/personal-photo-comparison/target.webp",
+      "alt": "Blue Nile film double exposure used as the colour target",
+      "caption": "A film double exposure."
+    }
+  },
+  "style-thief-before-after": {
+    "type": "comparison",
+    "product": "STYLE THIEF",
+    "label": "BEFORE / AFTER",
+    "title": "See the colour change.",
+    "description": "Drag the divider to compare the original texture with the MK Ultra result.",
+    "aspectRatio": "1761 / 1569",
+    "credit": "Source and target: Style Thief test set.",
+    "before": {
+      "label": "Original",
+      "image": "../assets/images/style-thief/matching-modes/01_input.webp",
+      "alt": "Original cobblestone texture before colour matching"
+    },
+    "after": {
+      "label": "MK Ultra",
+      "image": "../assets/images/style-thief/matching-modes/03_mk_ultra.webp",
+      "alt": "The same cobblestone texture after matching to the moss reference with MK Ultra"
+    },
+    "target": {
+      "label": "Target reference",
+      "image": "../assets/images/style-thief/matching-modes/02_target.webp",
+      "alt": "Moss-covered cobblestones used as the colour reference",
+      "caption": "The reference used for this result."
+    }
+  }
+}
