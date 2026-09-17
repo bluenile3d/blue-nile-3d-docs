@@ -22,6 +22,10 @@ Yes. Use **Import Font File** to add an OTF or TTF file. Review its characters, 
 
 Yes. Use **Import Drawings** to convert supported image files into a personal RUNIC library. You can separate marks automatically, divide a regular symbol sheet into a grid, clean the artwork, and review each imported rune before saving.
 
+### Why is RUNIC using a saved font but its browser features are unavailable?
+
+The project still contains the font used by the existing RUNIC object, but the matching entry is missing from **My Runes** on this computer. Existing text remains usable. Reimport the font to restore symbol browsing and random generation, then select the restored entry with **Browse Fonts**.
+
 ## Placement and surfaces
 
 ### Why are my surface runes distorted?
@@ -34,11 +38,11 @@ Select a mesh in Object Mode and choose **Draw RUNES on Surface** to enter curve
 
 ### Why are runes crowded at a sharp curve corner?
 
-Increase **Corner Avoidance**, reduce **Rune Size**, increase **Character Spacing**, or simplify the source curve. For open paths, **Clear Ends** can also create useful breathing room.
+Enable **Avoid Sharp Corners**, increase **Corner Clearance**, reduce **Rune Size**, increase **Character Spacing**, or simplify the source curve. For open paths, **Keep Clear of Ends** can also create useful breathing room.
 
 ### Why does a selected-face result look uneven?
 
-Try **Fit Faces** and adjust **Face Margin**. Face sizes and orientations differ, so a fixed-size rune may be too large for small faces or too small for large ones.
+Try **Fit Faces** and adjust **Face Margin**. Use **Follow Faces** when runes should turn along a connected strip, or **Upright** when they should share one upright orientation. If **Faces per Rune** produces awkward regions on branching geometry, split the selection into separate RUNIC objects.
 
 ## Geometry and export
 
@@ -49,6 +53,10 @@ Open **Appearance → Advanced → Font Repair**. Use it when generated geometry
 ### Thin strokes or sharp corners look broken after beveling. What should I do?
 
 Reduce **Bevel Width** or **Outline Width**, increase segments gradually, and use a stronger font-repair mode only when necessary. Very thin strokes and tight corners have limited room for raised or outlined geometry.
+
+### How do I clean a noisy imported drawing?
+
+In the **Appearance** panel, increase **Simplify Outline** gradually. Enable **Remove Tiny Details** if the result contains unwanted specks or pinholes, then add a small amount of **Shape Smoothing** if the edges still need softening. Check intentional dots, openings, thin strokes, and corners before increasing any setting further.
 
 ### Are the path guide points part of the final model?
 

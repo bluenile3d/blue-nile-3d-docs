@@ -22,8 +22,6 @@ The normal order of work is:
 4. Assign materials or generate UVs if needed.
 5. Keep the RUNIC object editable, or create a separate finished mesh when the design is ready.
 
-![RUNIC controls for text, placement, appearance, materials, and finishing](../assets/images/runic/interface.png){ .docs-shot .docs-shot--compact loading=lazy width=241 height=726 }
-
 ## Creating RUNIC objects
 
 ![RUNIC creation panel with surface drawing, path presets, and library import controls](../assets/images/runic/creation-panel.png){ .docs-shot .docs-shot--compact loading=lazy width=238 height=283 }
@@ -49,9 +47,9 @@ In **Edit Mode**, select one or more edges and click **RUNES along Selected Edge
 
 ### Selected mesh faces
 
-In **Edit Mode**, switch to Face Select, select one or more faces, and click **RUNES on Selected Faces**. RUNIC creates one editable rune object with one placement point per selected face.
+In **Edit Mode**, switch to Face Select, select one or more faces, and click **RUNES on Selected Faces**. By default, RUNIC creates one placement for each selected face.
 
-Use **Fixed** for one consistent rune size, or **Fit Faces** to scale each rune inside its face. **Face Margin**, **Rotate Rune**, and **Surface Offset** refine the result.
+Use **Faces per Rune** to group adjacent selected faces into larger placement regions. **Fixed** uses one consistent rune size, while **Fit Faces** scales each rune to its face or grouped region. **Face Margin**, **Alignment**, **Rotate Rune**, and **Surface Offset** refine the result.
 
 ### Drawing on a mesh surface
 
@@ -117,6 +115,8 @@ Phrase mode is unavailable for a Single Rune object, a face-rune object with one
 
 ### Paths and edges
 
+Use **Fit Sizes to Path** when you want proportional starting values for rune size, spacing, offsets, depth, outline, bevel, and related controls. It makes a one-time adjustment; later edits remain under your control.
+
 Use these controls to arrange runes along a curve or selected edges:
 
 - **Rune Size** controls overall scale.
@@ -125,16 +125,36 @@ Use these controls to arrange runes along a curve or selected edges:
 - **Move Along Path** moves the whole arrangement along the path.
 - **Move Across Path** moves runes sideways from the path.
 - **Reverse Direction** flips the reading direction.
-- **Rotate Runes** rotates the runes around the path.
+- **Roll Around Path** changes which way the rune surfaces face around the path.
+- **Spin Each Rune** turns every symbol within its own plane. A 90-degree spin is useful for vertical rune strings.
 - **Keep Clear of Ends** reserves empty space at open-path ends.
 - **Avoid Sharp Corners** reduces crowding around sharp corners.
-- **Fill Closed Paths** distributes the result around a cyclic curve.
+- **Fill Closed Path** distributes the result around a cyclic curve.
+
+![RUNIC path placement controls](../assets/images/runic/placement-controls.png){ .docs-shot .docs-shot--compact loading=lazy width=400 height=280 }
 
 **Show Path Guide** displays temporary viewport-only guide points. They are not rendered, exported, or retained when the modifier is applied.
 
 ### Single Rune
 
-Single Rune uses a procedural mesh point rather than a curve. Move, rotate, or scale its object using Blender's normal transform tools. Phrase mode is unavailable because it has one placement point.
+Single Rune uses a procedural mesh point rather than a curve. Move, rotate, or scale its object using Blender's normal transform tools. Use **Rotate Rune** or **Spin Each Rune** for an additional turn within the point's plane. Phrase mode is unavailable because it has one placement point.
+
+### Selected faces
+
+Use **Fit Sizes to Faces** for proportional starting values based on the selected geometry. It also switches the result to **Fit Faces**.
+
+- **Faces per Rune** groups connected faces into placement regions. A value of 2 places one rune across each pair of adjacent faces. Disconnected faces and sharply folded regions remain separate.
+- **Upright** keeps every symbol upright relative to the source object.
+- **Follow Faces** turns symbols along a connected strip, such as an arch or curved band. It changes their alignment without bending them.
+- **Fixed** uses one consistent rune size.
+- **Fit Faces** scales each rune proportionally to its face or grouped region.
+- **Face Margin** adds space around a fitted rune. Enter a negative value to extend the rune beyond the normal fit area.
+- **Rotate Rune** turns symbols within the face plane.
+- **Surface Offset** moves the result away from or into the source faces.
+
+![RUNIC selected-face grouping, alignment, fitting, and offset controls](../assets/images/runic/face-placement-controls.png){ .docs-shot .docs-shot--compact loading=lazy width=400 height=244 }
+
+The **Rune placements** count in the Placement panel shows how many runes the current grouping creates. Simple connected face strips give the most predictable grouping.
 
 ## Appearance and geometry
 
@@ -144,15 +164,19 @@ Choose an appearance in the RUNIC panels:
 - **Raised** creates closed geometry with depth.
 - **Outline** creates an outline without a filled body.
 
-Surface workflows use **Filled** and **Outline** labels because the surface supplies the base.
+### Outline cleanup and smoothing
 
-### Repair and smoothing
+The Appearance panel provides several controls for different kinds of shape cleanup:
 
-If raised, outlined, or bevelled geometry shows artifacts around sharp turns, corners, thin strokes, or overlapping details, open **Appearance → Advanced → Font Repair**. Start with the lightest repair mode that removes the visible problem:
+- **Simplify Outline** reduces unnecessary points and small contour bumps. It is especially useful for symbols imported from drawings or scans. Start around 0.3–1 and increase gradually; higher values can remove intentional details or make curves more angular.
+- **Remove Tiny Details** appears when **Simplify Outline** is above zero. Enable it when unwanted specks or pinholes remain, but check that intentional dots and openings are preserved.
+- **Shape Smoothing** softens corners and uneven edges. High values can shrink thin strokes or change the silhouette, so increase it gradually.
+- **Curved Edge Geometry**, under **Appearance → Advanced**, controls the geometry used for genuinely curved font edges. It does not remove noise from the source outline.
+- **Font Repair**, also under **Appearance → Advanced**, targets tiny point clusters that can cause spikes or other artifacts in bevels and outlines. Start with **Safe**, then use a stronger mode only when the visible problem remains.
 
-- Reduce bevel or outline width if fine details collapse.
-- Increase segments gradually when curves look faceted.
-- Use **Clean** rather than **Wrap** if surface symbols become visibly distorted.
+![RUNIC appearance controls including outline simplification, smoothing, reverse depth, bevel, and font repair](../assets/images/runic/appearance-controls.png){ .docs-shot .docs-shot--compact loading=lazy width=400 height=486 }
+
+Reduce bevel or outline width if fine details collapse. Use **Clean** rather than **Wrap** if surface symbols become visibly distorted.
 
 === "Artifacts visible"
 
@@ -161,6 +185,12 @@ If raised, outlined, or bevelled geometry shows artifacts around sharp turns, co
 === "After repair"
 
     [![Raised rune geometry after repairing the tight inner curve](../assets/images/runic/font-repair-after-detail.png){ .docs-shot loading=lazy width=670 height=400 }](../assets/images/runic/font-repair-after-detail.png)
+
+### Raised geometry
+
+**Raised Depth** controls the thickness of a raised rune. Enable **Reverse Depth** to build that thickness on the opposite side of the rune's base while retaining outward-facing normals. On a surface-attached object, reversed geometry may extend inside the target and become hidden.
+
+Reverse Depth does not engrave or cut the source object. Use the raised rune with Blender's Boolean tools when you need recessed geometry.
 
 ## Materials, UVs, and finished meshes
 
