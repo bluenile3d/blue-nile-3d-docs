@@ -1,0 +1,45 @@
+{
+  "product": "Magic Eye Maker",
+  "title": "Keep the scene. Change the pattern.",
+  "description": "Compare a plum palette, acid colour and graphic dashes on the same scene. The visible design can change without rebuilding the hidden objects.",
+  "type": "states",
+  "theme": {
+    "bg": "#070A12",
+    "fg": "#E7E3D6",
+    "accent": "#C8E83E",
+    "surface": "#19131C",
+    "line": "#717C73",
+    "muted": "#D0D1C9"
+  },
+  "nativePixels": false,
+  "stereogram": true,
+  "defaultState": "plum",
+  "credit": "Original Blender scene and patterns by Blue Nile. Generated with Magic Eye Maker 4.0.",
+  "states": [
+    {
+      "id": "plum",
+      "label": "Plum ink",
+      "image": "./media/magic-eye-maker/magic-eye-word-plum-ink-result.png",
+      "thumb": "./media/magic-eye-maker/thumb-magic-eye-word-plum-ink-result.webp",
+      "alt": "Magic Eye Maker: Plum ink",
+      "caption": "Organic Noise in plum and bone."
+    },
+    {
+      "id": "acid",
+      "label": "Acid ink",
+      "image": "./media/magic-eye-maker/magic-eye-word-acid-ink-result.png",
+      "thumb": "./media/magic-eye-maker/thumb-magic-eye-word-acid-ink-result.webp",
+      "alt": "Magic Eye Maker: Acid ink",
+      "caption": "The same Organic Noise seed with a different palette."
+    },
+    {
+      "id": "dashes",
+      "label": "Graphic dashes",
+      "image": "./media/magic-eye-maker/magic-eye-word-graphic-dashes-result.png",
+      "thumb": "./media/magic-eye-maker/thumb-magic-eye-word-graphic-dashes-result.webp",
+      "alt": "Magic Eye Maker: Graphic dashes",
+      "caption": "Graphic Motifs replaces the organic regions with repeating dashes."
+    }
+  ],
+  "aspectRatio": "1200 / 800"
+}
