@@ -103,6 +103,12 @@
    const response=await fetch(`./sets/${id}.json`,{cache:'no-cache'});if(!response.ok)throw Error('These examples are not available yet.');proof=await response.json();
   }
   if(!proof||typeof proof!=='object')throw Error('Invalid comparison data.');
+  if(proof.presentation==='style-thief-classic'){
+   const response=await fetch('./style-thief-classic.html',{cache:'no-cache'});if(!response.ok)throw Error('This comparison layout is not available.');
+   const template=await response.text(),json=JSON.stringify(proof).replace(/</g,'\\u003c').replace(/>/g,'\\u003e').replace(/&/g,'\\u0026').replace(/\u2028/g,'\\u2028').replace(/\u2029/g,'\\u2029');
+   const html=template.replace('</head>',`<script id="bn-proof-data" type="application/json" data-layout="${embed?'superhive':''}">${json}</script></head>`);
+   document.open();document.write(html);document.close();return;
+  }
   theme(proof);document.documentElement.classList.toggle('show-heading',!!proof.showHeadingInEmbed);document.title=`${proof.product||'Blue Nile'} · ${proof.title||'Comparison'}`;root.replaceChildren();root.dataset.proofId=proof.id||id;root.dataset.revision=proof.workshopRevision||'';
   const header=el('header','page-heading');header.append(el('p','eyebrow',`BLUE NILE / ${proof.product||''}`),el('h1','',proof.title||'Compare the results.'),el('p','intro',proof.description||''));root.append(header);
   if(proof.type==='comparison')renderComparison(proof);else renderStates(proof);document.fonts.ready.then(report);
