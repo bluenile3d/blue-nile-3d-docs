@@ -12,11 +12,13 @@ Magic Eye Maker uses the active camera and scene geometry as depth for an autost
 
 The panel is in **3D Viewport → Sidebar → Magic Eye**. Installation may take longer than a smaller add-on because the required components are included in the package.
 
-[![Magic Eye Maker panel with Preview, Generate, output, and depth controls](../assets/images/magic-eye-maker/output-depth-controls.png){ .docs-shot .docs-shot--compact loading=lazy width=486 height=743 }](../assets/images/magic-eye-maker/output-depth-controls.png)
+[![Preview and Generate buttons with the Ready status](../assets/images/magic-eye-maker/preview-generate.png){ .docs-shot .docs-shot--compact loading=lazy width=522 height=59 }](../assets/images/magic-eye-maker/preview-generate.png)
 
 ## Output and frames
 
 Choose a dedicated **Output Folder** for each project. A later run will overwrite existing files with the same name.
+
+Use an absolute Output Folder path. Blender's `//` relative-path prefix is not supported.
 
 **Remove Temp Files** removes the internal `_TempDepth` folder after a run. **Open Folder When Finished** opens the output folder after a successful preview or completed generation run.
 
@@ -28,7 +30,7 @@ For animation depth:
 - **Static Depth** renders depth once and reuses it. Use it when only the visible pattern changes.
 - **Static Depth Frame** selects the source frame. `-1` uses the first output frame.
 
-Set resolution and final image format in Blender's **Output Properties**. Animation output is an image sequence. PNG, TIFF, Targa, BMP, and lossless WebP are supported for final stereograms; other selections use PNG.
+Set resolution and final image format in Blender's **Output Properties**. Animation output is an image sequence. PNG, TIFF, Targa, BMP, and lossless WebP are supported for final stereograms. Other selections use PNG because lossy compression can damage the repeating pixels needed by the stereogram.
 
 ## Depth Map / Viewport
 
@@ -37,6 +39,8 @@ Set resolution and final image format in Blender's **Output Properties**. Animat
 After framing the subject with the active camera, click **Fit Mist Range**. It estimates suitable **Mist Start** and **Mist Range Length** values from render-enabled object bounds inside the camera view.
 
 Start with **Mist Falloff: Linear** and **Depth Gamma: 1**. Refit after moving the camera or important objects. The result is a starting point; occluded geometry, transparency, render-only changes, or animation may require manual adjustment.
+
+Fit Mist Range uses the current frame and does not automatically fit every frame in an animation.
 
 ### Depth controls
 
@@ -51,7 +55,19 @@ Start with **Mist Falloff: Linear** and **Depth Gamma: 1**. Refit after moving t
 
 Fit the Mist range before changing Gamma. Gamma cannot restore detail already clipped or compressed by an unsuitable range.
 
-**Preview Mist** temporarily shows Mist, Gamma, and smoothing in the viewport. It does not show **Normalize Depth**, **Depth Inversion**, **Stereogram Depth Strength**, **Stereogram Smoothing**, or **Reduce Banding**. These controls are found under **Advanced** and affect rendered depth or the final stereogram.
+### Preview Mist and Normal View
+
+**Preview Mist** temporarily shows Mist, Gamma, and smoothing in the viewport. Click **Normal View** to return to the usual display.
+
+[![Depth Map and Viewport controls with Preview Mist, Normal View, Fit Mist Range, falloff, gamma, and smoothing](../assets/images/magic-eye-maker/depth-controls.png){ .docs-shot .docs-shot--compact loading=lazy width=522 height=339 }](../assets/images/magic-eye-maker/depth-controls.png)
+
+Ordinary rendering, Undo/Redo, loading another file, saving, and disabling the add-on also close the temporary preview.
+
+When the scene uses Workbench, Magic Eye Maker temporarily uses Eevee for depth capture because Workbench does not provide a Mist pass. It restores Workbench afterwards.
+
+Magic Eye Maker isolates its temporary viewport preview and depth capture from scene compositor effects, then restores the original compositor state. File Output nodes do not run during Magic Eye depth capture; ordinary Blender renders continue to use the scene compositor normally.
+
+The viewport preview does not show **Normalize Depth**, **Depth Inversion**, **Stereogram Depth Strength**, **Stereogram Smoothing**, or **Reduce Banding**. These controls are found under **Advanced** and affect rendered depth or the final stereogram.
 
 Use **Preview** to render a processed-depth image when judging the final depth mapping.
 
@@ -142,6 +158,8 @@ For dependable playback, use a numbered image sequence with no missing frames. *
 
 ## Pattern animation
 
+[![Output frame range and Pattern Animation controls with Loop Output Range enabled](../assets/images/magic-eye-maker/output-loop-controls.png){ .docs-shot .docs-shot--compact loading=lazy width=522 height=633 }](../assets/images/magic-eye-maker/output-loop-controls.png)
+
 | Mode | Behavior |
 | --- | --- |
 | **Static** | Keeps the pattern placement fixed. |
@@ -158,7 +176,7 @@ Loop Output Range affects pattern movement only. Animated geometry, camera movem
 
 ## Advanced settings
 
-[![Advanced controls grouped into final stereogram, rendered depth, and processing settings](../assets/images/magic-eye-maker/advanced-controls.png){ .docs-shot .docs-shot--compact loading=lazy width=468 height=443 }](../assets/images/magic-eye-maker/advanced-controls.png)
+[![Advanced controls for final stereogram, rendered depth, processing, and depth preview](../assets/images/magic-eye-maker/advanced-controls.png){ .docs-shot .docs-shot--compact loading=lazy width=522 height=473 }](../assets/images/magic-eye-maker/advanced-controls.png)
 
 ### Final Stereogram Only
 

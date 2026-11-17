@@ -1,5 +1,19 @@
 # Magic Eye Maker — FAQ
 
+## Rendering and Blender integration
+
+### Why does a Workbench scene switch to Eevee during depth capture?
+
+Workbench does not provide the Mist pass required for depth capture. Magic Eye Maker temporarily uses Eevee for Preview and Generate, then restores Workbench.
+
+### Why don’t compositor effects or File Output nodes run during Magic Eye depth capture?
+
+Magic Eye Maker isolates its temporary viewport preview and depth capture from scene compositor effects and File Output nodes, then restores the original state. Ordinary Blender renders continue to use those effects normally.
+
+### Why is a Blender render blank or different from the camera view?
+
+Blender's Video Sequencer can replace the scene render. Check the sequencer strips if ordinary Blender renders are also unexpected. Magic Eye Maker temporarily disables sequencer output during its own depth render and restores it afterwards.
+
 ## Depth and viewing
 
 ### The depth preview is flat black, white, or nearly featureless. What should I do?
@@ -55,6 +69,10 @@ Check the selected mode, speed or movement amount, output range, and Loop Count.
 Use a whole-number Loop Count and confirm the output Start, End, and Step values. Loop Output Range controls pattern movement only; scene animation and animated image sources must be looped separately.
 
 ## Output and performance
+
+### Why does the final image look rough or grainy?
+
+Compare the Pattern Preview and processed depth first. Noise and the Noisy preset deliberately add texture. For rough displacement, reduce Stereogram Depth Strength, try Stereogram Smoothing 2 or 3, and smooth abrupt depth edges only as needed.
 
 ### Why did Generate not create new preview images?
 
