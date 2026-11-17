@@ -15,8 +15,8 @@ The comparison below summarizes the available editions. The remaining sections d
 | Modifier Search button | — | Yes |
 | Configurable pie menu | — | Yes |
 | Favorites | — | Yes |
-| Four reusable modifier Stacks | — | Yes |
-| Four custom Geometry Nodes slots | — | Yes |
+| Reusable modifier Stacks with optional saved settings | — | Yes |
+| Custom Geometry Nodes slots | — | Yes |
 | Built-in and custom effectors | — | Yes |
 | Apply, remove, enable/disable, and expand/collapse all | — | Yes |
 | Detailed category and individual-modifier visibility controls | Basic | Yes |
@@ -25,7 +25,7 @@ Install only one edition at a time; one edition replaces the other.
 
 ## Installation
 
-Old Modifier Menu supports **Blender 4.3 or later**. Individual Essentials assets have additional version requirements described under [Blender Essentials assets](#blender-essentials-assets).
+Old Modifier Menu supports **Blender 4.3 or later**. See [point cloud compatibility](#point-clouds-and-gaussian-splats) and the version requirements for [Blender Essentials assets](#blender-essentials-assets).
 
 1. Download the ZIP for your edition.
 2. Leave the downloaded file as a ZIP. Do not extract or rearrange its contents.
@@ -50,7 +50,7 @@ To update the same edition:
 3. Check that your Favorites, Stacks, shortcut, and custom paths are retained.
 4. Use **Save Preferences** if Blender's automatic preference saving is disabled.
 
-If your download contains both `old_modifier_menu_…zip` and `old_mod_menu_…zip`, install the file whose name matches your existing package. They contain the same complete edition. For a fresh installation, use `old_modifier_menu_…zip`.
+The extension package uses `old_modifier_menu_<version>.zip`. If you previously used the legacy `old_mod_menu` package, record the settings you want to keep and disable it before enabling the replacement. Preferences from different package names are stored separately.
 
 When switching editions, record the settings you want to keep, remove the previous edition, and install the replacement. Settings are not guaranteed to transfer between editions. Install only one edition or compatibility package at a time.
 
@@ -78,6 +78,13 @@ The main button opens Old Modifier Menu for the active object. Use the page butt
 - **Essentials:** Hair, Instances, and Simulation.
 
 The menu adjusts to the available space. Use the arrow buttons to move between pages when needed.
+
+Choose **Interface → Menu Placement → Column Layout** in preferences:
+
+- **Keep Categories Together (default):** Keeps each category in one column, allowing complete categories to share a column. A category continues in another column only when it is too tall for the available window space.
+- **Compact:** Uses shorter columns and continues categories in the next column when needed.
+
+**Keep Categories Together** is the default. Updating retains an explicitly saved **Compact** choice; select Keep Categories Together here if you want to switch.
 
 === "Modifiers"
 
@@ -117,6 +124,33 @@ Choose **Interface → Menu Placement → Location** in the add-on preferences:
 
 **Menu Size** changes button height in Modifier Properties and the toolbar. In the header, the setting becomes **Button Width** and changes width without increasing the header's height. Toolbar and header icons retain a minimum button size to keep them distinct and clickable.
 
+### Action and utility button sizes
+
+Under **Interface → Menu Controls**, use **Action Button Size** for modifier actions and **Search & Utility Button Size** for Search, Effector and Modifier Window controls. To size the same groups in the pie, use the sliders under **Interface → Pie Menu**.
+
+These controls make the buttons easier to click without enlarging the modifier catalogue. Blender's icons may remain the same size inside the larger buttons.
+
+- **Modifier Properties:** Search & Utility Button Size makes the Search and Effector buttons wider. They retain the main menu button's height, so the row stays aligned. Menu Size still controls that row's height; Action Button Size controls the separate modifier-action row.
+- **3D View Header:** Sizing changes button width while the header height stays fixed. Adjacent controls stay together when their sizes differ.
+- **Pie menu:** Action and utility buttons fill their shared row without gaps. The row uses the larger of the two size settings for its height, and button widths reflect the relative settings. Search and Modifier Window follow the pie's utility size.
+- **3D View Toolbar:** Controls remain arranged vertically, with sizing applied to their height.
+
+[![Menu Controls and Pie Menu each showing Action Button Size and Search & Utility Button Size](../assets/images/old-modifier-menu/button-size-controls.png){ .docs-shot loading=lazy width=914 height=398 }](../assets/images/old-modifier-menu/button-size-controls.png)
+
+The examples below show mixed sizes. The Properties example uses Action 1 and Utility 2; the header and pie examples use Action 2 and Utility 1.
+
+=== "Modifier Properties"
+
+    ![Wider Search and Effector buttons aligned with the Old Modifier Menu button](../assets/images/old-modifier-menu/properties-button-sizing.png){ .omm-ui-shot .omm-ui-shot--compact loading=lazy width=450 height=98 }
+
+=== "Header"
+
+    ![Header controls with wider action buttons and no gaps between adjacent controls](../assets/images/old-modifier-menu/header-button-sizing.png){ .omm-ui-shot .omm-ui-shot--compact loading=lazy width=320 height=32 }
+
+=== "Pie"
+
+    ![Pie menu actions and a narrower Effector button filling one aligned row between Search and Modifier Window](../assets/images/old-modifier-menu/pie-button-sizing.png){ .omm-ui-shot .omm-ui-shot--compact loading=lazy width=376 height=98 }
+
 ## Adding modifiers
 
 ### From the categorized menu
@@ -140,6 +174,7 @@ Examples:
 - Curves and text show only modifiers Blender supports for those objects.
 - Volumes include volume-specific conversion and deformation choices.
 - Hair curves expose Blender Essentials hair-node assets.
+- [Point clouds](#point-clouds-and-gaussian-splats) offer Mesh Sequence Cache and Geometry Nodes on Blender 4.5 and later.
 - Grease Pencil objects use their own modifier categories.
 
 ### Selection requirements
@@ -161,7 +196,7 @@ To use Search:
 
 The regular interface and pie-menu Search use the same list. Category and individual visibility settings control the menus; they do not hide compatible results from Search.
 
-Search does not index arbitrary external Asset Browser libraries. Configure your own Geometry Nodes groups in the four [Custom Node Modifier slots](#custom-node-modifiers). Favorites and Stack searches select native modifier types, rather than saving configured modifier settings or node assets.
+For Geometry Nodes groups from your own `.blend` files, use [Custom Node Modifier slots](#custom-node-modifiers). Favorites and the Stack **Add Modifier** search select native modifier types. To reuse configured values, [save the object’s Stack](#saving-an-existing-objects-stack).
 
 Press **Right Mouse Button** or **Esc** to cancel without adding a modifier or changing a saved list.
 
@@ -186,13 +221,15 @@ Turning off **Enable Shortcut** disables the binding. Re-enabling it restores th
 
 ### Opening a separate Properties window
 
-**Open Modifier Properties after Adding**, under **Interface → Pie Menu**, controls automatic opening after adding a modifier from the pie's category lists, Favorites, Stacks, or Custom Nodes. It is enabled by default. Search adds its selected modifier without automatically opening the window.
+**Open Modifier Properties after Adding**, under **Interface → Menu Controls**, opens or reuses the separate window after adding through the toolbar, header, or pie. This includes menu choices, Search, Favorites, Stacks, and Custom Nodes. The setting is enabled by default. Additions made inside Modifier Properties stay in that editor.
 
 Turn this setting off to keep working in the existing interface. You can still open the window manually with **Modifier Window** in the pie or the window icon in the toolbar or header.
 
-The separate editor is pinned to the selected object. Opening it again reuses the same window and updates the pinned object.
+The separate editor follows the active object as you change selection. Opening it again reuses the same window.
 
-![Old Modifier Menu controls in Modifier Properties with a Bevel modifier below](../assets/images/old-modifier-menu/modifier-window.png){ .omm-ui-shot .omm-ui-shot--compact loading=lazy width=464 height=280 }
+On **Windows**, opening Old Modifier Menu inside the add-on's floating Properties window widens that window when the menu needs more columns. It stays within the monitor's available width and keeps the wider size until you resize or close it. Pages can still appear when enabled content exceeds the available space. On other operating systems, resize the window manually.
+
+[![Floating Modifier Properties window widened to show Edit, Normals, Generate, Deform and Physics in four columns](../assets/images/old-modifier-menu/floating-window-menu.png){ .docs-shot loading=lazy width=900 height=680 }](../assets/images/old-modifier-menu/floating-window-menu.png)
 
 ## Favorites
 
@@ -230,21 +267,35 @@ The selected modifier is added to the active object. Incompatible Favorites are 
 
 ## Modifier Stacks
 
-A Stack is an ordered preset that adds several modifiers in one action. Four independent Stack slots are available.
+A Stack is an ordered preset that adds several modifiers in one action. Add, remove or reorder Stack slots in preferences. Updating the same extension keeps your existing slots.
 
 ### Creating a Stack
 
 1. Open the **Stacks** tab in the add-on preferences.
 2. Enable **Show Stacks in the Menu**.
-3. Select one of the four Stack tabs and turn on **Enabled**.
+3. Select a Stack in the list, or click **+** beside the list to create one, and turn on **Enabled**.
 4. Enter a descriptive Stack name.
 5. Click **Add Modifier** for that Stack.
 6. Search for and select a modifier.
 7. Repeat until the modifiers appear in the required order.
 
-The visible order is the order in which modifiers are created on the object. Use the arrows beside an entry to move it up or down, or **X** to remove it. A Stack stores modifier types and their order; it does not capture settings from an existing object's modifiers.
+The visible order is the order in which modifiers are created on the object. Use the arrows beside an entry to move it up or down, or **X** to remove it. A Stack built with **Add Modifier** uses Blender’s default settings. Use the arrows beside the slot list to change the order of Stacks in preferences and menus.
 
-[![A Hard Surface Stack containing Mirror, Bevel, Subdivision Surface, and Weighted Normal](../assets/images/old-modifier-menu/preferences-stacks-crop.png){ .docs-shot loading=lazy width=917 height=409 }](../assets/images/old-modifier-menu/preferences-stacks-crop.png)
+[![Stacks tab showing slot controls, Save Object Stack, and a With Settings Stack containing two modifiers](../assets/images/old-modifier-menu/stack-slots.png){ .docs-shot loading=lazy width=914 height=536 }](../assets/images/old-modifier-menu/stack-slots.png)
+
+### Saving an existing object’s Stack
+
+1. Select the object whose modifiers you want to save.
+2. Choose **Save Object Stack…** in the Stacks menu or the **Stacks** preferences tab. If Old Modifier Menu is placed in Modifier Properties and **Show Modifier Actions** is enabled, you can also click the sliders icon beside the actions.
+3. Under **Destination**, choose **New Stack** or select an existing Stack to replace.
+4. Enter a name and leave **Include Modifier Settings** enabled to capture the current values and modifier names. Turn it off to save only the modifier types and order.
+5. Review any limitations shown in the dialog, then click **Save Stack**.
+
+![Save Object Stack dialog showing Destination, Name and the checked Include Modifier Settings option](../assets/images/old-modifier-menu/save-object-stack.png){ .omm-ui-shot .omm-ui-shot--compact loading=lazy width=514 height=198 }
+
+Preferences show **With Settings** when all entries have saved values, **Simple Stack** when all entries use defaults, and **Mixed Settings** when the two are combined. A sliders icon marks Stacks and individual entries with saved values.
+
+Saved settings are a snapshot, not a live connection to the source object. References to objects, textures and Geometry Nodes groups require that data to remain available; the preset does not bundle it for another file. Vertex-group names do not include their weights. Bakes, bindings, animation and mesh-specific data are not included. The save dialog lists additional settings that could not be captured.
 
 ### Running a Stack
 
@@ -252,37 +303,41 @@ The visible order is the order in which modifiers are created on the object. Use
 2. Open the Stacks section in the regular menu or pie menu.
 3. Click the saved Stack name.
 
-Each modifier is added to the active object in the saved order. Running a Stack is one scene operation, so **Undo** removes that addition in one step.
+Each modifier is appended to the active object in the saved order, restoring its settings where captured. Running a Stack is one scene operation, so **Undo** removes that addition in one step.
 
 ### Clearing a Stack
 
-Select the required Stack in preferences, click **Clear**, and confirm. This clears its modifier list without deleting or renaming the Stack slot.
+Select the required Stack in preferences, click **Clear**, and confirm. This clears its modifier list without deleting or renaming the Stack slot. To remove the slot itself, use **−** beside the slot list and confirm.
 
 ### Empty or invalid Stacks
 
 An empty Stack has **(Empty)** after its name and is disabled. Stacks with entries that are incompatible with the active object are also disabled.
 
-If a Stack cannot be added, Blender reports the incompatible entry and leaves the object's existing modifiers unchanged.
+Missing dependencies are reported before adding the Stack. If a saved setting is unavailable in the running Blender version, the Stack is added with a warning identifying settings that could not be restored.
 
 ## Custom Node Modifiers
 
-Four configurable shortcuts are available for Geometry Nodes groups stored in your own `.blend` asset files.
+Create as many shortcuts as needed for Geometry Nodes groups stored in your own `.blend` asset files.
 
 ### Configuring a slot
 
 1. Open the **Assets** tab in Old Modifier Menu preferences.
 2. Enable **Show Custom Node Modifiers**.
-3. Choose one of the four **Custom Node Modifier** slots.
+3. Select a slot, or click **+** beside the list to add one. Set **Menu Name** to the label you want to see.
 4. Set **Blend File** to the source `.blend` file.
 5. Set **Node Group** to the exact node-group datablock name.
-6. Enable that slot.
+6. Turn on **Enabled** for the selected slot.
+
+Use **−** beside the list to remove the selected slot after confirmation. The up/down arrows change its order in preferences and menus. Removing a slot does not remove its source file or any modifiers already added to objects.
+
+[![Assets tab showing Custom Node Modifier slots and the selected slot's Enabled, Menu Name, Blend File and Node Group controls](../assets/images/old-modifier-menu/custom-node-slots.png){ .docs-shot loading=lazy width=914 height=294 }](../assets/images/old-modifier-menu/custom-node-slots.png)
 
 ### Using a custom node modifier
 
 1. Select an object that supports Geometry Nodes modifiers.
 2. Open Old Modifier Menu or its pie menu.
-3. Find **Custom Node Modifiers** in the main menu or open **Custom Nodes** in the pie.
-4. Click the configured node-group name.
+3. Find **Custom Nodes** in the main menu or pie.
+4. Click the configured menu name.
 
 The add-on appends the node group and creates a Geometry Nodes modifier that uses it. If a Geometry Nodes group with the same name already exists in the current file, that existing group is reused. The node group must have a Geometry output.
 
@@ -509,6 +564,14 @@ Volume objects expose Mesh to Volume, Volume Displace, Mesh Sequence Cache, and 
 
 Hair Curves combine compatible built-in modifiers with the enabled Blender Essentials hair assets described above.
 
+### Point clouds and Gaussian splats
+
+Point clouds require Blender 4.5 or later. Select a point cloud and open the **Modifiers** page. Choose **Mesh Sequence Cache** under **Edit**, or **Geometry Nodes** under **Generate**. Blender 5.3 and later offer the same choices for Gaussian splat objects.
+
+![Point cloud modifier menu showing Mesh Sequence Cache under Edit and Geometry Nodes under Generate](../assets/images/old-modifier-menu/point-cloud-menu.png){ .omm-ui-shot .omm-ui-shot--compact loading=lazy width=220 height=164 }
+
+If an entry is hidden, open **Modifiers → Modifiers** in the add-on preferences. Select **Edit** or **Generate**, then enable the category and the modifier you want. Search can still find compatible modifiers when their menu entries are hidden.
+
 ### Grease Pencil categories
 
 Old Modifier Menu represents Blender’s Grease Pencil modifiers in these groups:
@@ -529,16 +592,10 @@ The preferences use five tabs:
 | **Interface** | Menu placement and sizing, control visibility, pie shortcut, and automatic Properties-window opening. |
 | **Modifiers** | Modifiers, Essentials, and Grease Pencil category and individual-entry visibility, with a text filter. |
 | **Favorites** | Saved Favorite modifiers, ordering, sorting, and menu visibility. |
-| **Stacks** | Four ordered modifier lists, names, per-slot controls, and menu visibility. |
-| **Assets** | Four Custom Node Modifier slots and Effector configuration. |
+| **Stacks** | Stack slots, ordered modifier entries, saved settings, and menu visibility. |
+| **Assets** | Custom Node Modifier slots and Effector configuration. |
 
-=== "Interface"
-
-    [![Interface preferences for menu placement, controls, and the pie shortcut](../assets/images/old-modifier-menu/preferences-interface-crop.png){ .docs-shot loading=lazy width=917 height=487 }](../assets/images/old-modifier-menu/preferences-interface-crop.png)
-
-=== "Modifier visibility"
-
-    [![Modifiers preferences showing the Generate category and individual visibility toggles](../assets/images/old-modifier-menu/preferences-modifiers-crop.png){ .docs-shot loading=lazy width=917 height=401 }](../assets/images/old-modifier-menu/preferences-modifiers-crop.png)
+[![Modifiers preferences showing the Generate category and individual visibility toggles](../assets/images/old-modifier-menu/preferences-modifiers-crop.png){ .docs-shot loading=lazy width=917 height=401 }](../assets/images/old-modifier-menu/preferences-modifiers-crop.png)
 
 Settings are stored in Blender preferences. Use **Save Preferences** if automatic saving is disabled. Editing these saved lists is separate from scene undo; adding a modifier or running a Stack can be undone in the scene.
 
@@ -554,8 +611,11 @@ Settings are stored in Blender preferences. Use **Save Preferences** if automati
 These controls are in **Interface**:
 
 - **Location:** Chooses Modifier Properties, 3D View Toolbar, or 3D View Header.
+- **Column Layout:** Chooses Keep Categories Together (the default) or Compact for the main menu. Updates retain an explicitly saved choice.
 - **Menu Size / Button Width:** Changes button height in Modifier Properties and the toolbar, or button width in the header. Header and toolbar icons keep a minimum usable button size.
+- **Action Button Size** and **Search & Utility Button Size** adjust the two groups under **Menu Controls**. See [Action and utility button sizes](#action-and-utility-button-sizes).
 - **Show Search:** Displays the modifier Search button in the regular interface and pie.
+- **Open Modifier Properties after Adding:** Opens or reuses the separate window for viewport menu and Search additions. Additions inside Modifier Properties stay there.
 - **Show Modifier Actions:** Displays Apply All, Remove All, and visibility controls in the regular interface, plus Expand / Collapse in Modifier Properties only. It does not hide the toolbar/header window icon.
 
 ### Pie Menu
@@ -566,7 +626,7 @@ These controls are in **Interface → Pie Menu**:
 - **Input, Shortcut, Trigger:** Set the input type, key or button, and triggering event.
 - **Ctrl, Shift, Alt, OS:** Set the required modifier keys.
 - **Show Modifier Actions:** Displays Apply All, Remove All, and visibility in the pie. Effectors follows its own visibility setting; Modifier Window remains available.
-- **Open Modifier Properties after Adding:** Automatically opens or reuses the separate Properties window after additions from the pie's category lists, Favorites, Stacks, or Custom Nodes.
+- **Action Button Size** and **Search & Utility Button Size** adjust the pie independently of the regular interface.
 
 ### Category visibility
 
@@ -595,17 +655,19 @@ These visibility settings do not hide compatible results from the add-on's Searc
 ### Stacks
 
 - **Show Stacks in the Menu:** Enables the Stacks section.
-- **Stack 1–4 tabs:** Select the list to edit.
+- Select a Stack in the list to edit it. Use **+**, **−**, and the arrows beside the list to add, remove, or reorder slots.
 - **Enabled and name:** Control the selected slot's visibility and display name.
+- **Save Object Stack…** captures the selected object's modifiers and can include their settings.
 - **Add Modifier / Clear:** Add entries or clear the selected list after confirmation.
-- **Up/down arrows and X:** Change the order or remove individual entries. Stacks run from top to bottom.
+- Use the arrows and **X** beside individual entries to reorder or remove them. Stacks run from top to bottom.
 
 ### Custom Node Modifiers {#custom-node-mods}
 
 These controls are in **Assets**:
 
 - **Show Custom Node Modifiers:** Enables the menu section.
-- **Custom Node Modifier 1–4:** Enables each slot.
+- Select a slot and use **Enabled** to show it in the menu. Use **+**, **−**, and the arrows beside the list to add, remove, or reorder slots.
+- **Menu Name** sets the slot’s menu label.
 - **Blend File / Node Group:** Store the source file and exact Geometry Nodes group name for each slot.
 
 ### Hair controls
