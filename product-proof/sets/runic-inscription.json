@@ -1,0 +1,27 @@
+{
+  "product": "RUNIC",
+  "title": "Raised lettering and symbols",
+  "description": "Drag the divider to see the same pendant before and after adding the lettering.",
+  "type": "comparison",
+  "theme": {
+    "bg": "#E7E3D6",
+    "fg": "#070A12",
+    "accent": "#164F4B",
+    "surface": "#D9DDD0",
+    "line": "#6F7971",
+    "muted": "#414B47"
+  },
+  "aspectRatio": "1600 / 1100",
+  "before": {
+    "label": "Without lettering",
+    "image": "./media/runic/runic-pendant-blank.png",
+    "alt": "Original blank demonstration pendant"
+  },
+  "after": {
+    "label": "Raised lettering",
+    "image": "./media/runic/runic-pendant-raised.png",
+    "alt": "Same pendant with raised Runic inscriptions"
+  },
+  "caption": "The lettering is 3D geometry. The pendant is a demonstration model, not included with RUNIC.",
+  "credit": "Demonstration pendant by Blue Nile. Fonts: Elder Futhark — BabelStone; Interlace Set — Peter Baker."
+}

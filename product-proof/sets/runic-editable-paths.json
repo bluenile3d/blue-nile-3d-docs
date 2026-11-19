@@ -1,0 +1,45 @@
+{
+  "product": "RUNIC",
+  "title": "Lettering along curves",
+  "description": "See the same symbols on three curve presets: Line, Arch and Circle.",
+  "type": "states",
+  "theme": {
+    "bg": "#E7E3D6",
+    "fg": "#070A12",
+    "accent": "#164F4B",
+    "surface": "#D9DDD0",
+    "line": "#6F7971",
+    "muted": "#414B47"
+  },
+  "nativePixels": false,
+  "stereogram": false,
+  "defaultState": "line",
+  "credit": "Sample prop by Blue Nile. Font: Elder Futhark — BabelStone.",
+  "states": [
+    {
+      "id": "line",
+      "label": "Line",
+      "image": "./media/runic/runic-path-line.png",
+      "thumb": "./media/runic/thumb-runic-path-line.webp",
+      "alt": "RUNIC: Line",
+      "caption": "Symbols along a straight line."
+    },
+    {
+      "id": "arch",
+      "label": "Arch",
+      "image": "./media/runic/runic-path-arch.png",
+      "thumb": "./media/runic/thumb-runic-path-arch.webp",
+      "alt": "RUNIC: Arch",
+      "caption": "Symbols following an arch."
+    },
+    {
+      "id": "circle",
+      "label": "Circle",
+      "image": "./media/runic/runic-path-circle.png",
+      "thumb": "./media/runic/thumb-runic-path-circle.webp",
+      "alt": "RUNIC: Circle",
+      "caption": "A closed curve carries the symbols around the full circle."
+    }
+  ],
+  "aspectRatio": "1600 / 1100"
+}

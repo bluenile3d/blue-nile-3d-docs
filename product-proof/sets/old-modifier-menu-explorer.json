@@ -1,0 +1,77 @@
+{
+  "product": "Old Modifier Menu",
+  "title": "Find the menu that fits the job.",
+  "description": "Choose an object type or workflow to inspect the actual menu. These buttons switch Blender screenshots; they do not run the addon.",
+  "type": "states",
+  "theme": {
+    "bg": "#E7E3D6",
+    "fg": "#070A12",
+    "accent": "#3E4943",
+    "surface": "#D4D7CD",
+    "line": "#6F7971",
+    "muted": "#414B47"
+  },
+  "nativePixels": true,
+  "stereogram": false,
+  "defaultState": "mesh",
+  "credit": "Captured in Old Modifier Menu 3.4 / Blender 5.2. Named custom tools and saved lists are examples.",
+  "states": [
+    {
+      "id": "mesh",
+      "label": "Mesh",
+      "image": "./media/old-modifier-menu/omm-340-explorer-mesh.png",
+      "thumb": "./media/old-modifier-menu/thumb-omm-340-explorer-mesh.webp",
+      "alt": "Old Modifier Menu: Mesh",
+      "caption": "The mesh menu groups native modifiers, supported node assets and your saved lists."
+    },
+    {
+      "id": "curve",
+      "label": "Curve",
+      "image": "./media/old-modifier-menu/omm-340-explorer-curve.png",
+      "thumb": "./media/old-modifier-menu/thumb-omm-340-explorer-curve.webp",
+      "alt": "Old Modifier Menu: Curve",
+      "caption": "The list changes for a curve. Saved combinations that do not fit this object are unavailable."
+    },
+    {
+      "id": "grease-pencil",
+      "label": "Grease Pencil",
+      "image": "./media/old-modifier-menu/omm-340-explorer-grease-pencil.png",
+      "thumb": "./media/old-modifier-menu/thumb-omm-340-explorer-grease-pencil.webp",
+      "alt": "Old Modifier Menu: Grease Pencil",
+      "caption": "Grease Pencil gets its own modifier categories, including drawing, deformation and colour tools."
+    },
+    {
+      "id": "personal",
+      "label": "Personal shortlist",
+      "image": "./media/old-modifier-menu/omm-340-explorer-personal.png",
+      "thumb": "./media/old-modifier-menu/thumb-omm-340-explorer-personal.webp",
+      "alt": "Old Modifier Menu: Personal shortlist",
+      "caption": "An example personal menu with categories hidden and Favorites, Stacks and custom node shortcuts kept close."
+    },
+    {
+      "id": "search",
+      "label": "Search",
+      "image": "./media/old-modifier-menu/omm-340-explorer-search.png",
+      "thumb": "./media/old-modifier-menu/thumb-omm-340-explorer-search.webp",
+      "alt": "Old Modifier Menu: Search",
+      "caption": "Searching for smooth finds compatible native modifiers and supported node assets."
+    },
+    {
+      "id": "custom-nodes",
+      "label": "Your node tools",
+      "image": "./media/old-modifier-menu/omm-340-explorer-custom-nodes.png",
+      "thumb": "./media/old-modifier-menu/thumb-omm-340-explorer-custom-nodes.webp",
+      "alt": "Old Modifier Menu: Your node tools",
+      "caption": "Four example user-created Geometry Nodes groups. These names are demonstration assets, not included addon presets."
+    },
+    {
+      "id": "effectors",
+      "label": "Helper objects",
+      "image": "./media/old-modifier-menu/omm-340-explorer-effectors.png",
+      "thumb": "./media/old-modifier-menu/thumb-omm-340-explorer-effectors.webp",
+      "alt": "Old Modifier Menu: Helper objects",
+      "caption": "Add a wire cube, wire sphere or empty as a starting point for modifier controls or references."
+    }
+  ],
+  "aspectRatio": "954 / 610"
+}

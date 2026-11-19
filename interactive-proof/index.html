@@ -1,0 +1,612 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Blue Nile Interactive Proof</title>
+  <link rel="icon" href="../assets/images/brand/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600&family=IBM+Plex+Mono:wght@400;500&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --night: #070a12;
+      --ink: #030307;
+      --bone: #e7e3d6;
+      --muted: #bfc0c5;
+      --acid: #c8e83e;
+      --plum: #581044;
+      --red: #f0443e;
+      --line: #59615c;
+      --reference-line: #8a174f;
+    }
+
+    * { box-sizing: border-box; }
+
+    html,
+    body {
+      min-height: 100%;
+      margin: 0;
+      background: var(--ink);
+    }
+
+    body {
+      color: var(--bone);
+      font-family: "Instrument Sans", "Segoe UI", Arial, sans-serif;
+    }
+
+    button { font: inherit; }
+
+    .viewer {
+      width: min(100%, 1180px);
+      margin: 0 auto;
+      padding: clamp(16px, 3vw, 30px);
+    }
+
+    .viewer-header {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      margin-bottom: 18px;
+      border-top: 2px solid var(--acid);
+      padding-top: 14px;
+    }
+
+    .viewer-label,
+    .product-code,
+    .group-label,
+    .active-group,
+    .credit,
+    .status {
+      font-family: "IBM Plex Mono", Consolas, monospace;
+      font-size: 10px;
+      line-height: 1.4;
+      letter-spacing: 0.11em;
+      text-transform: uppercase;
+    }
+
+    .viewer-label {
+      margin: 0 0 7px;
+      color: var(--red);
+    }
+
+    h1 {
+      margin: 0;
+      font-family: "Barlow Condensed", "Arial Narrow", sans-serif;
+      font-size: clamp(30px, 4.1vw, 54px);
+      font-weight: 600;
+      line-height: 0.94;
+      letter-spacing: 0.012em;
+      text-transform: uppercase;
+    }
+
+    .product-code {
+      flex: 0 0 auto;
+      margin: 0 0 4px 24px;
+      color: var(--acid);
+    }
+
+    .viewer-description {
+      max-width: 760px;
+      margin: 0 0 20px;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    .viewer-body {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(252px, 0.43fr);
+      gap: 18px;
+      align-items: start;
+    }
+
+    .stage {
+      min-width: 0;
+      border: 1px solid var(--line);
+      background: var(--night);
+    }
+
+    .image-stage {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 1761 / 1569;
+      overflow: hidden;
+      background: var(--night);
+    }
+
+    .proof-image {
+      position: absolute;
+      inset: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      max-width: none;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .proof-image[hidden] { display: none; }
+
+    .active-copy {
+      min-height: 86px;
+      padding: 14px 16px 16px;
+      border-top: 1px solid var(--line);
+    }
+
+    .active-group {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--red);
+    }
+
+    .active-label {
+      display: inline;
+      margin: 0;
+      color: var(--acid);
+      font-family: "Barlow Condensed", "Arial Narrow", sans-serif;
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 1;
+      text-transform: uppercase;
+    }
+
+    .active-caption {
+      display: inline;
+      margin: 0 0 0 10px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.45;
+    }
+
+    .controls {
+      min-width: 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .control-group {
+      padding: 13px 0 3px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .group-label {
+      display: block;
+      margin: 0 0 9px;
+      color: var(--muted);
+    }
+
+    .tab-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 6px;
+    }
+
+    .tab-button {
+      min-height: 38px;
+      margin: 0;
+      border: 1px solid var(--line);
+      border-radius: 0;
+      padding: 7px 9px;
+      color: var(--bone);
+      background: transparent;
+      font-family: "Barlow Condensed", "Arial Narrow", sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 1;
+      text-align: left;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+
+    .tab-button:hover,
+    .tab-button:focus-visible {
+      border-color: var(--acid);
+      color: var(--acid);
+      outline: 0;
+    }
+
+    .tab-button[aria-selected="true"],
+    .tab-button[aria-pressed="true"] {
+      border-color: var(--acid);
+      color: var(--ink);
+      background: var(--acid);
+    }
+
+    .control-group:first-child .tab-button:not([aria-selected="true"]) {
+      border-color: var(--reference-line);
+    }
+
+    .credit {
+      margin: 15px 0 0;
+      color: var(--muted);
+    }
+
+    .status {
+      margin: 0;
+      padding: 36px;
+      color: var(--muted);
+    }
+
+    .status strong {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--acid);
+      font-family: "Barlow Condensed", "Arial Narrow", sans-serif;
+      font-size: 30px;
+      text-transform: uppercase;
+    }
+
+    .comparison-stage { --reveal: 50%; }
+    .comparison-stage .before-image { clip-path: inset(0 calc(100% - var(--reveal)) 0 0); }
+    .comparison-divider {
+      position: absolute;
+      z-index: 2;
+      top: 0;
+      bottom: 0;
+      left: var(--reveal);
+      width: 2px;
+      background: #e7e3d6;
+      transform: translateX(-50%);
+      box-shadow: 0 0 4px #070a12;
+      pointer-events: none;
+    }
+    .comparison-handle {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      display: grid;
+      place-items: center;
+      width: 44px;
+      height: 44px;
+      border: 2px solid #e7e3d6;
+      border-radius: 50%;
+      color: #e7e3d6;
+      background: #070a12;
+      font: 24px/1 Arial, sans-serif;
+      transform: translate(-50%, -50%);
+    }
+    .comparison-label {
+      position: absolute;
+      z-index: 2;
+      top: 12px;
+      padding: 7px 9px;
+      color: #e7e3d6;
+      background: #070a12;
+      font: 500 10px/1.3 "IBM Plex Mono", monospace;
+      text-transform: uppercase;
+      pointer-events: none;
+    }
+    .comparison-label--before { left: 12px; }
+    .comparison-label--after { right: 12px; }
+    .comparison-range {
+      position: absolute;
+      z-index: 3;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      opacity: 0;
+      cursor: ew-resize;
+      touch-action: pan-y;
+    }
+    .comparison-stage:focus-within { outline: 3px solid var(--acid); outline-offset: 3px; }
+    .comparison-actions { display: flex; flex-wrap: wrap; gap: 6px; padding: 12px; border-top: 1px solid var(--line); }
+    .comparison-actions button { flex: 1 1 100px; text-align: center; }
+    .comparison-target { margin: 0; border-top: 1px solid var(--line); padding-top: 13px; }
+    .comparison-target img { display: block; width: 100%; height: auto; border: 1px solid var(--line); }
+    .comparison-target figcaption { margin-top: 12px; color: var(--muted); font-size: 13px; line-height: 1.5; }
+    .comparison-hint { margin: 15px 0 0; color: var(--muted); font-size: 12px; line-height: 1.5; }
+
+    @media (max-width: 720px) {
+      .viewer { padding: 14px; }
+      .viewer-header { align-items: flex-start; }
+      .product-code { margin-left: 12px; font-size: 8px; }
+      .viewer-description { margin-bottom: 14px; font-size: 13px; }
+      .viewer-body { display: block; }
+      .active-copy { min-height: 78px; padding: 11px 12px 13px; }
+      .active-label { display: block; font-size: 21px; }
+      .active-caption { display: block; margin: 5px 0 0; font-size: 12px; }
+      .controls { margin-top: 12px; }
+      .control-group { padding-top: 10px; }
+      .tab-list {
+        display: flex;
+        gap: 6px;
+        overflow-x: auto;
+        padding-bottom: 7px;
+        scrollbar-color: var(--acid) var(--night);
+      }
+      .tab-button {
+        flex: 0 0 auto;
+        min-width: 108px;
+        min-height: 34px;
+        font-size: 14px;
+      }
+      .credit { margin-top: 11px; font-size: 8px; }
+      .comparison-target { display: grid; grid-template-columns: 90px minmax(0, 1fr); gap: 8px 14px; margin-top: 16px; }
+      .comparison-target .group-label { grid-column: 1 / -1; margin: 0; }
+      .comparison-target figcaption { margin: 0; }
+      .comparison-hint { grid-column: 1 / -1; margin-top: 0; }
+    }
+
+    /* A bounded marketplace window is not a full-width documentation page.
+       Opt in via ?layout=superhive; standalone/user-guide views stay unchanged. */
+    .marketplace .viewer {
+      height: 100vh;
+      min-height: 0;
+      padding: 16px;
+      display: grid;
+      grid-template-rows: auto auto minmax(0, 1fr) auto;
+      gap: 12px;
+    }
+    .marketplace .viewer-header { margin: 0; padding-top: 10px; }
+    .marketplace h1 { font-size: clamp(25px, 4.5vw, 36px); line-height: 1; }
+    .marketplace .product-code { display: none; }
+    .marketplace .viewer-description { margin: 0; font-size: 13px; }
+    .marketplace .viewer-body { display: grid; grid-template-columns: minmax(0, 1fr) 180px; gap: 14px; min-height: 0; align-items: stretch; }
+    .marketplace .stage { display: grid; grid-template-rows: minmax(0, 1fr) auto; min-height: 0; }
+    .marketplace .image-stage { height: 100%; min-height: 0; aspect-ratio: auto !important; }
+    .marketplace .proof-image { object-fit: contain; }
+    .marketplace .active-copy { min-height: 0; padding: 10px; }
+    .marketplace .active-group { font-size: 8px; }
+    .marketplace .active-label { display: block; font-size: 21px; }
+    .marketplace .active-caption { display: block; margin: 4px 0 0; font-size: 12px; }
+    .marketplace .controls { margin: 0; }
+    .marketplace .tab-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); overflow: visible; padding: 0; gap: 5px; }
+    .marketplace .tab-button { min-width: 0; min-height: 34px; padding: 6px; font-size: 14px; overflow-wrap: anywhere; }
+    .marketplace .control-group { padding: 9px 0; }
+    .marketplace .group-label { margin-bottom: 6px; font-size: 9px; }
+    .marketplace .credit { margin: 0; font-size: 8px; }
+    .marketplace .comparison-target { display: block; margin: 0; }
+    .marketplace .comparison-target img { max-height: 220px; object-fit: contain; }
+    .marketplace .comparison-target figcaption { margin-top: 10px; font-size: 12px; }
+    .marketplace .comparison-hint { display: none; }
+    .marketplace .comparison-actions { flex-wrap: nowrap; padding: 8px; }
+    .marketplace .comparison-actions button { flex: 1 1 0; }
+    @media (max-width: 559px) {
+      .marketplace .viewer { padding: 12px; gap: 8px; }
+      .marketplace .viewer-label { font-size: 8px; }
+      .marketplace .viewer-description { font-size: 12px; }
+      .marketplace .viewer-body { grid-template-columns: minmax(0, 1fr); grid-template-rows: minmax(140px, 1fr) auto; gap: 8px; }
+      .marketplace .control-group { padding: 5px 0; }
+      .marketplace .control-group:nth-child(2) .tab-list { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .marketplace .group-label { margin-bottom: 4px; font-size: 8px; }
+      .marketplace .tab-button { min-height: 30px; padding: 4px; font-size: 12px; }
+      .marketplace .active-copy { padding: 7px 9px; }
+      .marketplace .active-group { display: none; }
+      .marketplace .active-label { font-size: 19px; }
+      .marketplace .active-caption { font-size: 11px; }
+      .marketplace .comparison-target { display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: 5px 10px; padding-top: 8px; }
+      .marketplace .comparison-target .group-label { grid-column: 1 / -1; }
+      .marketplace .comparison-target img { max-height: 85px; }
+      .marketplace .comparison-target figcaption { margin: 0; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; }
+    }
+  </style>
+</head>
+<body>
+  <main class="viewer" id="viewer">
+    <p class="status" id="status">Loading interactive proof…</p>
+  </main>
+  <noscript>
+    <p class="status"><strong>JavaScript is required</strong>Open the full documentation to view this comparison.</p>
+  </noscript>
+  <script>
+    (() => {
+      const viewer = document.getElementById("viewer");
+      const params = new URLSearchParams(window.location.search);
+      if (params.get('layout') === 'superhive') document.documentElement.classList.add('marketplace');
+      const proofId = params.get("set") || "style-thief-matching-modes";
+      const dataUrl = new URL("../assets/data/interactive-proofs.json", window.location.href);
+      const customColour = (key) => /^[0-9a-f]{6}$/i.test(params.get(key) || "") ? `#${params.get(key)}` : null;
+      const rootStyle = document.documentElement.style;
+      const background = customColour("bg");
+      const foreground = customColour("fg");
+      const accent = customColour("accent");
+      if (background) rootStyle.setProperty("--ink", background);
+      if (foreground) rootStyle.setProperty("--bone", foreground);
+      if (accent) {
+        rootStyle.setProperty("--acid", accent);
+        rootStyle.setProperty("--red", accent);
+        rootStyle.setProperty("--reference-line", accent);
+      }
+      if (background || foreground) {
+        rootStyle.setProperty("--night", "color-mix(in srgb, var(--ink) 94%, var(--bone))");
+        rootStyle.setProperty("--muted", "color-mix(in srgb, var(--bone) 80%, var(--ink))");
+        rootStyle.setProperty("--line", "color-mix(in srgb, var(--bone) 40%, var(--ink))");
+      }
+
+      // The workshop can fit the frame to its content. Superhive keeps its CSS size.
+      function reportHeight() {
+        if (window.parent === window) return;
+        window.parent.postMessage({ type: "bn-proof-size", height: Math.ceil(viewer.getBoundingClientRect().height) }, "*");
+      }
+      new ResizeObserver(reportHeight).observe(viewer);
+      document.fonts.ready.then(reportHeight);
+
+      const element = (tag, className, text) => {
+        const node = document.createElement(tag);
+        if (className) node.className = className;
+        if (text !== undefined) node.textContent = text;
+        return node;
+      };
+
+      function showError(message) {
+        viewer.textContent = "";
+        const status = element("p", "status");
+        const title = element("strong", "", "Interactive proof unavailable");
+        status.append(title, document.createTextNode(message));
+        viewer.append(status);
+      }
+
+      function renderComparison(proof, header, description) {
+        const body = element("div", "viewer-body viewer-body--comparison");
+        const stage = element("div", "stage");
+        const imageStage = element("div", "image-stage comparison-stage");
+        imageStage.style.aspectRatio = proof.aspectRatio || "4 / 3";
+        const createImage = (state, className) => {
+          const image = element("img", className);
+          image.src = new URL(state.image, window.location.href).href;
+          image.alt = state.alt;
+          image.draggable = false;
+          return image;
+        };
+        const after = createImage(proof.after, "proof-image after-image");
+        const before = createImage(proof.before, "proof-image before-image");
+        const divider = element("div", "comparison-divider");
+        divider.setAttribute("aria-hidden", "true");
+        divider.append(element("span", "comparison-handle", "↔"));
+        const beforeLabel = element("span", "comparison-label comparison-label--before", proof.before.label);
+        const afterLabel = element("span", "comparison-label comparison-label--after", proof.after.label);
+        const range = element("input", "comparison-range");
+        range.type = "range";
+        range.min = "0";
+        range.max = "100";
+        range.value = "50";
+        range.setAttribute("aria-label", `Compare ${proof.before.label} and ${proof.after.label}`);
+        const actions = element("div", "comparison-actions");
+        const shortcuts = [];
+        function reveal(value) {
+          const amount = Math.max(0, Math.min(100, Number(value)));
+          range.value = String(amount);
+          range.setAttribute("aria-valuetext", `${amount}% original, ${100 - amount}% result`);
+          imageStage.style.setProperty("--reveal", `${amount}%`);
+          beforeLabel.hidden = amount < 15;
+          afterLabel.hidden = amount > 85;
+          shortcuts.forEach(({ button, value }) => button.setAttribute("aria-pressed", String(amount === value)));
+        }
+        range.addEventListener("input", () => reveal(range.value));
+        [["Original", 100], ["50 / 50", 50], ["Result", 0]].forEach(([label, value]) => {
+          const button = element("button", "tab-button", label);
+          button.type = "button";
+          button.addEventListener("click", () => reveal(value));
+          shortcuts.push({ button, value });
+          actions.append(button);
+        });
+        imageStage.append(after, before, beforeLabel, afterLabel, divider, range);
+        stage.append(imageStage, actions);
+        const target = element("figure", "comparison-target");
+        target.append(
+          element("span", "group-label", proof.target.label),
+          createImage(proof.target, "target-image"),
+          element("figcaption", "", proof.target.caption),
+          element("p", "comparison-hint", "Drag the divider, or use the buttons below the image. With the slider focused, use the arrow keys for smaller changes."),
+        );
+        body.append(stage, target);
+        viewer.append(header, description, body, element("p", "credit", proof.credit));
+        reveal(50);
+      }
+
+      function renderProof(proof) {
+        viewer.textContent = "";
+        document.title = `${proof.product} — ${proof.title}`;
+
+        const header = element("header", "viewer-header");
+        const headingBlock = element("div");
+        headingBlock.append(
+          element("p", "viewer-label", proof.label),
+          element("h1", "", proof.title),
+        );
+        header.append(headingBlock, element("p", "product-code", `BLUE NILE / ${proof.product}`));
+
+        const description = element("p", "viewer-description", proof.description);
+        if (proof.type === "comparison") {
+          renderComparison(proof, header, description);
+          return;
+        }
+        const body = element("div", "viewer-body");
+        const stage = element("div", "stage");
+        const imageStage = element("div", "image-stage");
+        const activeCopy = element("div", "active-copy");
+        const activeGroup = element("span", "active-group");
+        const activeLabel = element("h2", "active-label");
+        const activeCaption = element("p", "active-caption");
+        const controls = element("div", "controls");
+        const images = new Map();
+        const buttons = [];
+        const groups = new Map();
+
+        proof.states.forEach((state) => {
+          const image = element("img", "proof-image");
+          image.src = new URL(state.image, window.location.href).href;
+          image.alt = state.alt;
+          image.hidden = true;
+          image.dataset.state = state.id;
+          imageStage.append(image);
+          images.set(state.id, image);
+
+          if (!groups.has(state.group)) groups.set(state.group, []);
+          groups.get(state.group).push(state);
+        });
+
+        const activate = (stateId, focus = false) => {
+          const state = proof.states.find((item) => item.id === stateId) || proof.states[0];
+          images.forEach((image, id) => { image.hidden = id !== state.id; });
+          buttons.forEach((button) => {
+            const selected = button.dataset.state === state.id;
+            button.setAttribute("aria-selected", String(selected));
+            button.tabIndex = selected ? 0 : -1;
+            if (selected && focus) button.focus();
+          });
+          activeGroup.textContent = state.group;
+          activeLabel.textContent = state.label;
+          activeCaption.textContent = state.caption;
+        };
+
+        groups.forEach((states, groupName) => {
+          const group = element("div", "control-group");
+          group.append(element("span", "group-label", groupName));
+          const tabList = element("div", "tab-list");
+          tabList.setAttribute("role", "tablist");
+          tabList.setAttribute("aria-label", groupName);
+          states.forEach((state) => {
+            const button = element("button", "tab-button", state.label);
+            button.type = "button";
+            button.dataset.state = state.id;
+            button.setAttribute("role", "tab");
+            button.setAttribute("aria-selected", "false");
+            button.tabIndex = -1;
+            button.addEventListener("click", () => activate(state.id));
+            button.addEventListener("keydown", (event) => {
+              if (!["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown", "Home", "End"].includes(event.key)) return;
+              event.preventDefault();
+              const current = buttons.indexOf(button);
+              const next = event.key === "Home"
+                ? 0
+                : event.key === "End"
+                  ? buttons.length - 1
+                  : (current + (["ArrowLeft", "ArrowUp"].includes(event.key) ? -1 : 1) + buttons.length) % buttons.length;
+              activate(buttons[next].dataset.state, true);
+            });
+            buttons.push(button);
+            tabList.append(button);
+          });
+          group.append(tabList);
+          controls.append(group);
+        });
+
+        activeCopy.append(activeGroup, activeLabel, activeCaption);
+        stage.append(imageStage, activeCopy);
+        body.append(stage, controls);
+        viewer.append(header, description, body, element("p", "credit", proof.credit));
+        activate(proof.defaultState);
+      }
+
+      fetch(dataUrl, { cache: "no-cache" })
+        .then((response) => {
+          if (!response.ok) throw new Error(`Could not load proof data (${response.status}).`);
+          return response.json();
+        })
+        .then((proofs) => {
+          if (!proofs[proofId]) throw new Error(`Unknown proof set: ${proofId}.`);
+          renderProof(proofs[proofId]);
+        })
+        .catch((error) => showError(error.message));
+    })();
+  </script>
+</body>
+</html>
